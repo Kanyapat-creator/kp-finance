@@ -1,0 +1,3037 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KP Finance</title>
+<meta name="application-name" content="KP Finance">
+<meta name="apple-mobile-web-app-title" content="KP Finance">
+<link rel="icon" type="image/png" sizes="64x64" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
+
+<!-- ===== Firebase (cloud sync + login) ===== -->
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
+
+<style>
+  #loginOverlay{ position:fixed; inset:0; z-index:9999; display:none; align-items:center; justify-content:center; background:#0d0d0b; }
+  .login-card{ width:320px; max-width:90vw; background:#17170f; border:1px solid rgba(222,205,150,.15); border-radius:18px; padding:32px 26px; box-shadow:0 30px 80px -20px rgba(0,0,0,.7); text-align:center; font-family:'IBM Plex Sans Thai',sans-serif; }
+  .login-logo{ font-family:'Anuphan',sans-serif; font-weight:700; font-size:24px; color:#ecece6; margin-bottom:4px; }
+  .login-logo span{ color:#e8b923; }
+  .login-logo i{ color:#e8b923; margin-right:6px; }
+  .login-sub{ color:#8f8f82; font-size:13px; margin-bottom:22px; }
+  .login-card input{ width:100%; box-sizing:border-box; margin-bottom:12px; padding:11px 13px; background:#21211a; border:1px solid rgba(222,205,150,.18); border-radius:10px; color:#ecece6; font-size:14px; font-family:inherit; }
+  .login-card input:focus{ outline:none; border-color:#e8b923; }
+  #loginBtn{ width:100%; padding:11px; background:#e8b923; color:#1a1402; border:none; border-radius:10px; font-weight:600; font-size:14px; cursor:pointer; font-family:inherit; margin-top:4px; }
+  #loginBtn:disabled{ opacity:.6; cursor:default; }
+  .login-err{ color:#e0685f; font-size:12.5px; margin-top:12px; min-height:16px; }
+  .branch-sel{ background:var(--surface2); border:1px solid var(--accent); color:var(--accent-strong); padding:6px 10px; border-radius:7px; font-family:inherit; font-size:12px; font-weight:600; cursor:pointer; }
+  .sync-dot{ font-size:11px; color:#8f8f82; margin-left:2px; white-space:nowrap; }
+  .sync-dot.ok{ color:#7bbf6a; } .sync-dot.saving{ color:#e8b923; } .sync-dot.off{ color:#e0685f; }
+  #combinedBanner{ display:none; background:linear-gradient(90deg,rgba(232,185,35,.16),rgba(232,185,35,.05)); border-bottom:1px solid rgba(232,185,35,.35); color:var(--accent-strong); font-size:12.5px; padding:8px 18px; text-align:center; font-family:'IBM Plex Sans Thai',sans-serif; }
+  body.combined-mode .upload-zone{ opacity:.5; pointer-events:none; }
+</style>
+
+<script>
+/* ===== KP Finance — Firebase cloud sync + multi-branch (A / B / Both) ===== */
+const firebaseConfig = {
+  apiKey: "AIzaSyCxx-hs1auMpVNg1ypgonMFyBSz_9CU4MI",
+  authDomain: "kp-finance-4037c.firebaseapp.com",
+  projectId: "kp-finance-4037c",
+  storageBucket: "kp-finance-4037c.firebasestorage.app",
+  messagingSenderId: "97625616841",
+  appId: "1:97625616841:web:97f0198a3bd28c4dbc3818"
+};
+var fbAuth, fbDB, CURRENT_BRANCH = 'A', CURRENT_UID = null, __pushTimer = null;
+(function(){
+  try {
+    firebase.initializeApp(firebaseConfig);
+    fbAuth = firebase.auth();
+    fbDB = firebase.firestore();
+    try { fbAuth.setPersistence(firebase.auth.Auth.Persistence.LOCAL); } catch(e){}
+  } catch(e){ console.error('Firebase init failed', e); }
+})();
+
+function _isTH(){ return (typeof LANG!=='undefined' && LANG==='th'); }
+function branchRef(b){ return fbDB.collection('users').doc(CURRENT_UID).collection('branches').doc(b); }
+
+/* ---- local cache (per branch) ---- */
+function _lget(base,b,def){ try { return JSON.parse(localStorage.getItem(base+'__'+b)) || def; } catch(e){ return def; } }
+function readLocal(b){
+  return {
+    sales:          _lget(STORAGE_SALES,   b, []),
+    expenses:       _lget(STORAGE_EXPENSE, b, []),
+    openingBalance: _lget(STORAGE_BALANCE, b, {amount:0,note:''}),
+    kpi:            _lget(STORAGE_KPI,     b, {}),
+    expenseSheets:  _lget(STORAGE_SHEETS,  b, {})
+  };
+}
+function writeLocal(b,d){
+  try {
+    localStorage.setItem(STORAGE_SALES  +'__'+b, JSON.stringify(d.sales||[]));
+    localStorage.setItem(STORAGE_EXPENSE+'__'+b, JSON.stringify(d.expenses||[]));
+    localStorage.setItem(STORAGE_BALANCE+'__'+b, JSON.stringify(d.openingBalance||{amount:0,note:''}));
+    localStorage.setItem(STORAGE_KPI    +'__'+b, JSON.stringify(d.kpi||{}));
+    localStorage.setItem(STORAGE_SHEETS +'__'+b, JSON.stringify(d.expenseSheets||{}));
+  } catch(e){}
+}
+function _hasData(d){
+  return !!(d && ((d.sales&&d.sales.length)||(d.expenses&&d.expenses.length)||
+    (d.kpi&&Object.keys(d.kpi).length)||(d.expenseSheets&&Object.keys(d.expenseSheets).length)||
+    (d.openingBalance&&+d.openingBalance.amount)));
+}
+function _normalize(d){
+  d = d || {};
+  return {
+    sales: Array.isArray(d.sales)?d.sales:[],
+    expenses: Array.isArray(d.expenses)?d.expenses:[],
+    openingBalance: (d.openingBalance&&typeof d.openingBalance==='object')?d.openingBalance:{amount:0,note:''},
+    kpi: (d.kpi&&typeof d.kpi==='object')?d.kpi:{},
+    expenseSheets: (d.expenseSheets&&typeof d.expenseSheets==='object')?d.expenseSheets:{}
+  };
+}
+/* store the whole branch as ONE JSON string -> avoids any Firestore field-name limits */
+function _serialize(d){ return { data: JSON.stringify(_normalize(d)), updatedAt: Date.now() }; }
+
+/* ---- cloud pull/push ---- */
+async function pullBranch(b){
+  const local = readLocal(b);
+  if(!CURRENT_UID) return local;
+  try {
+    const snap = await branchRef(b).get();
+    if (snap.exists){
+      let d; try { d = _normalize(JSON.parse((snap.data()||{}).data || '{}')); } catch(e){ d = local; }
+      writeLocal(b,d); _sync('ok'); return d;
+    }
+    if (_hasData(local)){ try { await branchRef(b).set(_serialize(local)); } catch(e){} }
+    _sync('ok'); return local;
+  } catch(e){ console.warn('pullBranch offline', e); _sync('off'); return local; }
+}
+function schedulePush(){
+  if (CURRENT_BRANCH==='combined' || !CURRENT_UID) return;
+  const b = CURRENT_BRANCH;
+  let snap;
+  try { snap = JSON.parse(JSON.stringify({ sales:sales, expenses:expenses, openingBalance:openingBalance, kpi:kpi, expenseSheets:expenseSheets })); }
+  catch(e){ snap = { sales:sales, expenses:expenses, openingBalance:openingBalance, kpi:kpi, expenseSheets:expenseSheets }; }
+  clearTimeout(__pushTimer);
+  _sync('saving');
+  __pushTimer = setTimeout(function(){ pushBranchData(b, snap); }, 800);
+}
+async function pushBranchData(b, snap){
+  if(!CURRENT_UID) return;
+  try { await branchRef(b).set(_serialize(snap)); writeLocal(b, snap); _sync('ok'); }
+  catch(e){ console.warn('push failed', e); _sync('off'); }
+}
+
+/* ---- merge for combined (Both) view ---- */
+function _addMap(src,dst){ for (const k in (src||{})) dst[k] = (+dst[k]||0) + (+src[k]||0); }
+function mergeKpi(A,B){
+  const out={}, ms=new Set([].concat(Object.keys(A||{}),Object.keys(B||{})));
+  ms.forEach(function(m){ const x=A[m]||{}, y=B[m]||{};
+    const o={actual:{},budget:{},notes:{},customers:(+x.customers||0)+(+y.customers||0)};
+    _addMap(x.actual,o.actual); _addMap(y.actual,o.actual);
+    _addMap(x.budget,o.budget); _addMap(y.budget,o.budget);
+    const mn=function(src){ for(const k in (src||{})){ if(src[k]) o.notes[k]=(o.notes[k]?o.notes[k]+' | ':'')+src[k]; } };
+    mn(x.notes); mn(y.notes); out[m]=o; });
+  return out;
+}
+function mergeSheets(A,B){
+  const out={}, ms=new Set([].concat(Object.keys(A||{}),Object.keys(B||{})));
+  ms.forEach(function(m){ const x=A[m]||{}, y=B[m]||{};
+    const cats=Array.from(new Set([].concat(x.cats||[], y.cats||[])));
+    const rows={};
+    const add=function(src){ const r=(src&&src.rows)||{}; for(const day in r){ const rec=r[day]||{}; if(!rows[day]) rows[day]={vals:{},cust:0,daily:0}; const v=rec.vals||{}; for(const c in v) rows[day].vals[c]=(+rows[day].vals[c]||0)+(+v[c]||0); rows[day].cust=(+rows[day].cust||0)+(+rec.cust||0); rows[day].daily=(+rows[day].daily||0)+(+rec.daily||0); } };
+    add(x); add(y); out[m]={cats:cats, rows:rows}; });
+  return out;
+}
+function mergeData(a,b){ a=_normalize(a); b=_normalize(b);
+  return { sales:a.sales.concat(b.sales), expenses:a.expenses.concat(b.expenses),
+    openingBalance:{amount:(+a.openingBalance.amount||0)+(+b.openingBalance.amount||0), note:(_isTH()?'รวม A+B':'Combined A+B')},
+    kpi:mergeKpi(a.kpi,b.kpi), expenseSheets:mergeSheets(a.expenseSheets,b.expenseSheets) };
+}
+
+/* ---- assign into app globals ---- */
+function assignData(d){ d=_normalize(d); sales=d.sales; expenses=d.expenses; openingBalance=d.openingBalance; kpi=d.kpi; expenseSheets=d.expenseSheets; }
+
+/* ---- branch switching ---- */
+async function switchBranch(b){
+  if(!CURRENT_UID){ return; }
+  if((dirty.expenses||dirty.kpi)){
+    if(!confirm(_isTH()?'มีการแก้ไขที่ยังไม่บันทึก จะสลับสาขาหรือไม่? (ข้อมูลที่ยังไม่บันทึกจะหาย)':'You have unsaved edits. Switch anyway? Unsaved changes will be lost.')){
+      const s=document.getElementById('branchSel'); if(s) s.value=CURRENT_BRANCH; return;
+    }
+  }
+  dirty.expenses=false; dirty.kpi=false;
+  CURRENT_BRANCH=b;
+  const sel=document.getElementById('branchSel'); if(sel) sel.value=b;
+  _combinedUI(b==='combined');
+  if(b==='combined'){
+    const res=await Promise.all([pullBranch('A'), pullBranch('B')]);
+    assignData(mergeData(res[0], res[1]));
+  } else {
+    assignData(await pullBranch(b));
+  }
+  if(typeof currentMonth!=='undefined') currentMonth='';
+  refreshAll();
+  if(typeof initOpeningBalanceUI==='function') initOpeningBalanceUI();
+  if(typeof initExpenseMonthUI==='function') initExpenseMonthUI();
+  if(typeof initKpiUI==='function') initKpiUI();
+}
+function _combinedUI(on){
+  const ban=document.getElementById('combinedBanner');
+  if(ban){ ban.style.display = on?'block':'none';
+    if(on) ban.textContent = _isTH()
+      ? '🔒 มุมมองรวม (สาขา A + สาขา B) — อ่านอย่างเดียว สลับไปสาขาเดียวเพื่อแก้ไขหรือนำเข้า'
+      : '🔒 Combined view (Place A + Place B) — read-only. Switch to a single place to edit or import.';
+  }
+  document.body.classList.toggle('combined-mode', on);
+}
+
+/* ---- sync indicator ---- */
+function _sync(state){
+  const el=document.getElementById('syncDot'); if(!el) return;
+  if(state==='ok'){ el.textContent = _isTH()?'● ซิงค์แล้ว':'● Synced'; el.className='sync-dot ok'; }
+  else if(state==='saving'){ el.textContent=_isTH()?'● กำลังบันทึก…':'● Saving…'; el.className='sync-dot saving'; }
+  else { el.textContent=_isTH()?'● ออฟไลน์':'● Offline'; el.className='sync-dot off'; }
+}
+
+/* ---- auth ---- */
+function friendlyAuthErr(e){
+  const c=(e&&e.code)||'';
+  if(c.indexOf('wrong-password')>=0||c.indexOf('invalid-credential')>=0||c.indexOf('invalid-login')>=0) return _isTH()?'อีเมลหรือรหัสผ่านไม่ถูกต้อง':'Wrong email or password.';
+  if(c.indexOf('user-not-found')>=0) return _isTH()?'ไม่พบบัญชีนี้':'No account with that email.';
+  if(c.indexOf('too-many-requests')>=0) return _isTH()?'พยายามหลายครั้งเกินไป ลองใหม่ภายหลัง':'Too many attempts. Try again later.';
+  if(c.indexOf('invalid-email')>=0) return _isTH()?'รูปแบบอีเมลไม่ถูกต้อง':'Invalid email format.';
+  if(c.indexOf('network')>=0) return _isTH()?'เชื่อมต่ออินเทอร์เน็ตไม่ได้':'Network error. Check your connection.';
+  return (e&&e.message)||'Sign in failed.';
+}
+function doLogin(){
+  const email=(document.getElementById('loginEmail').value||'').trim();
+  const pass=document.getElementById('loginPass').value||'';
+  const err=document.getElementById('loginErr'); if(err) err.textContent='';
+  const btn=document.getElementById('loginBtn'); if(btn){ btn.disabled=true; btn.textContent=_isTH()?'กำลังเข้าสู่ระบบ…':'Signing in…'; }
+  fbAuth.signInWithEmailAndPassword(email,pass).catch(function(e){
+    if(err) err.textContent=friendlyAuthErr(e);
+    if(btn){ btn.disabled=false; btn.textContent=_isTH()?'เข้าสู่ระบบ':'Sign in'; }
+  });
+}
+function doLogout(){ if(confirm(_isTH()?'ออกจากระบบ?':'Sign out?')) fbAuth.signOut(); }
+function _onLoginKey(e){ if(e&&e.key==='Enter') doLogin(); }
+function showLogin(){ const o=document.getElementById('loginOverlay'); if(o) o.style.display='flex'; const b=document.getElementById('loginBtn'); if(b){ b.disabled=false; b.textContent=_isTH()?'เข้าสู่ระบบ':'Sign in'; } }
+function showApp(){ const o=document.getElementById('loginOverlay'); if(o) o.style.display='none'; }
+function startAuthGate(){
+  if(!fbAuth){ const err=document.getElementById('loginErr'); if(err) err.textContent='Firebase failed to load. Check your internet.'; showLogin(); return; }
+  fbAuth.onAuthStateChanged(function(user){
+    if(user){ CURRENT_UID=user.uid; const ue=document.getElementById('userEmail'); if(ue) ue.textContent=user.email||''; showApp(); switchBranch(CURRENT_BRANCH||'A'); }
+    else { CURRENT_UID=null; showLogin(); }
+  });
+}
+</script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Anuphan:wght@500;600;700&display=swap');
+
+  :root {
+    --bg: #0d0d0b;
+    --surface: #17170f;
+    --surface2: #21211a;
+    --border: rgba(222,205,150,.12);
+    --accent: #e8b923;
+    --accent-strong: #f4d268;
+    --accent2: #a39f90;
+    --danger: #e0685f;
+    --green: #e8b923;
+    --yellow: #e8b923;
+    --text: #ecece6;
+    --muted: #8f8f82;
+    --radius: 20px;
+    --glass: rgba(28,28,22,.55);
+    --glass2: rgba(42,42,32,.5);
+    --glass-border: rgba(222,205,150,.14);
+    --glow: rgba(232,185,35,.13);
+    --emph: #070706;
+    --emph-text: #f1efe6;
+    --nav-active-bg: var(--accent);
+    --nav-active-text: #1a1402;
+  }
+
+  /* ── Light theme = cream / gold / black (DEFAULT, matches reference) ── */
+  :root[data-theme="light"] {
+    --bg: #f3efe3;
+    --surface: #ffffff;
+    --surface2: #f8f4ea;
+    --border: rgba(40,34,12,.07);
+    --accent: #e3a800;
+    --accent-strong: #ffcb3d;
+    --accent2: #8d8876;
+    --danger: #d2483d;
+    --green: #e3a800;
+    --yellow: #e3a800;
+    --text: #1c1a12;
+    --muted: #66614d;
+    --glass: rgba(255,255,255,.74);
+    --glass2: rgba(255,255,255,.55);
+    --glass-border: rgba(40,34,12,.06);
+    --glow: rgba(240,196,30,.16);
+    --emph: #1b1b18;
+    --emph-text: #f3f0e6;
+    --nav-active-bg: #1b1b18;
+    --nav-active-text: #f3f0e6;
+  }
+
+  /* ── Settings panel rows ── */
+  /* (removed dead .settings-list — settings is now a header dropdown) */
+  .settings-row {
+    display:flex; align-items:center; justify-content:space-between; width:100%;
+    padding:13px 15px; background:var(--surface2); border:1px solid var(--border);
+    border-radius:9px; color:var(--text); font-family:inherit; font-size:14px;
+    cursor:pointer; text-align:left; transition:border-color .15s, background .15s;
+  }
+  .settings-row:hover { border-color:var(--accent); }
+  .settings-row.danger { color:var(--danger); }
+  .settings-row.danger:hover { border-color:var(--danger); background:rgba(224,90,90,.08); }
+  .settings-ico { margin-right:9px; }
+  .settings-val { color:var(--muted); font-size:13px; font-weight:500; }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'IBM Plex Sans Thai', sans-serif;
+    font-size: 14px;
+    min-height: 100vh;
+  }
+
+  /* ── Top bar ── */
+  header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 28px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    position: sticky; top: 0; z-index: 50;
+  }
+  .logo { font-size: 16px; font-weight: 600; letter-spacing: .5px; }
+  .logo span { color: var(--accent); }
+  .header-actions { display: flex; gap: 10px; align-items: center; }
+
+  /* ── Layout ── */
+  .app { display: flex; min-height: calc(100vh - 53px); }
+  .sidebar {
+    width: 200px; flex-shrink: 0;
+    background: var(--surface);
+    border-right: 1px solid var(--border);
+    padding: 20px 0;
+  }
+  .nav-item {
+    display: flex; align-items: center; gap: 10px;
+    padding: 10px 20px; cursor: pointer;
+    color: var(--muted); font-size: 13px;
+    transition: all .15s; border-left: 3px solid transparent;
+    user-select: none;
+  }
+  .nav-item:not(.active):hover { color: var(--text); }
+  .nav-item.active { color: var(--accent); border-left-color: var(--accent); background: var(--surface2); }
+  .nav-section { padding: 18px 20px 6px; font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+
+  main { flex: 1; padding: 28px; overflow-x: hidden; }
+
+  /* ── Page sections ── */
+  .page { display: none; }
+  .page.active { display: block; }
+
+  /* ── Cards / KPI ── */
+  .kpi-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; margin-bottom: 28px; }
+  .kpi {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+  }
+  .kpi-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .8px; margin-bottom: 8px; }
+  .kpi-value { font-family: 'IBM Plex Mono', monospace; font-size: 22px; font-weight: 500; }
+  .kpi-value.green { color: var(--green); }
+  .kpi-value.red { color: var(--accent2); }
+  .kpi-value.blue { color: var(--accent); }
+  .kpi-sub { font-size: 11px; color: var(--muted); margin-top: 4px; }
+
+  /* ── Section header ── */
+  .section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+  .section-title { font-size: 15px; font-weight: 600; }
+
+  /* ── Buttons ── */
+  .btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 7px 14px; border-radius: 7px; font-size: 12px; font-weight: 500;
+    cursor: pointer; border: none; transition: all .15s; font-family: inherit;
+  }
+  .btn-primary { background: var(--emph); color: var(--emph-text); }
+  .btn-primary:hover { filter: brightness(1.15); }
+  .btn-success { background: var(--emph); color: var(--emph-text); }
+  .btn-success:hover { filter: brightness(1.1); }
+  .btn-danger { background: var(--danger); color: #fff; }
+  .btn-danger:hover { filter: brightness(1.1); }
+  .btn-ghost { background: var(--surface2); color: var(--text); border: 1px solid var(--border); }
+  .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+  .btn-sm { padding: 4px 10px; font-size: 11px; border-radius: 5px; }
+
+  /* ── Table ── */
+  .table-wrap { overflow-x: auto; }
+
+  /* ── Expense daily×category table: sticky header + first column ── */
+  #expenseTableWrap { max-height: 70vh; overflow: auto; }
+  #expenseTableWrap thead th { position: sticky; top: 0; z-index: 2; }
+  #expenseTableWrap thead th:first-child { left: 0; z-index: 4; }
+  #expenseTableWrap tbody td:first-child,
+  #expenseTableWrap tfoot td:first-child { position: sticky; left: 0; background: var(--surface); z-index: 1; }
+  #expenseTableWrap tfoot td { position: sticky; bottom: 0; background: var(--surface2); z-index: 2; }
+  #expenseTableWrap tfoot td:first-child { z-index: 3; }
+  table { width: 100%; border-collapse: collapse; }
+  thead th {
+    background: var(--surface2);
+    text-align: left; padding: 10px 14px;
+    font-size: 11px; text-transform: uppercase; letter-spacing: .7px; color: var(--muted);
+    border-bottom: 1px solid var(--border);
+  }
+  tbody tr { border-bottom: 1px solid var(--border); transition: background .1s; }
+  tbody tr:hover { background: var(--surface2); }
+  tbody td { padding: 10px 14px; font-size: 13px; }
+  .mono { font-family: 'IBM Plex Mono', monospace; }
+  .text-right { text-align: right; }
+  .text-center { text-align: center; }
+  .badge {
+    display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 10px; font-weight: 600;
+  }
+  .badge-sale { background: rgba(217,164,0,.22); color: var(--accent); }
+  .badge-expense { background: rgba(150,148,135,.22); color: var(--accent2); }
+
+  /* ── Chart container ── */
+  .chart-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 28px; }
+  @media (max-width: 900px) { .chart-grid { grid-template-columns: 1fr; } }
+  .chart-card {
+    position: relative;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+  }
+  .chart-card canvas { max-height: 280px; }
+  .chart-expand {
+    position: absolute; top: 12px; right: 12px; width: 28px; height: 28px;
+    border-radius: 8px; border: 1px solid var(--glass-border); background: var(--glass2);
+    color: var(--muted); cursor: pointer; display: flex; align-items: center; justify-content: center;
+    font-size: 12px; transition: all .18s; z-index: 2;
+  }
+  .chart-expand:hover { color: var(--accent); border-color: var(--accent); }
+  .chart-title { font-size: 13px; font-weight: 600; margin-bottom: 16px; color: var(--muted); text-transform: uppercase; letter-spacing: .6px; }
+
+  /* ── Upload zone ── */
+  .upload-zone {
+    border: 2px dashed var(--border);
+    border-radius: var(--radius);
+    padding: 40px 24px;
+    text-align: center;
+    cursor: pointer;
+    transition: all .2s;
+    background: var(--surface);
+    margin-bottom: 20px;
+  }
+  .upload-zone:hover, .upload-zone.drag { border-color: var(--accent); background: rgba(217,164,0,.06); }
+  .upload-icon { font-size: 36px; margin-bottom: 12px; }
+  .upload-label { font-size: 15px; font-weight: 500; margin-bottom: 6px; }
+  .upload-hint { font-size: 12px; color: var(--muted); }
+  input[type=file] { display: none; }
+
+  /* ── Form ── */
+  .form-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 14px; margin-bottom: 16px; }
+  .form-group label { display: block; font-size: 11px; color: var(--muted); margin-bottom: 5px; text-transform: uppercase; letter-spacing: .6px; }
+  .form-group input, .form-group select, .form-group textarea {
+    width: 100%; background: var(--surface2); border: 1px solid var(--border);
+    color: var(--text); border-radius: 7px; padding: 8px 12px; font-size: 13px;
+    font-family: inherit; outline: none; transition: border .15s;
+  }
+  .form-group input:focus, .form-group select:focus { border-color: var(--accent); }
+  .form-group textarea { resize: vertical; min-height: 60px; }
+
+  /* ── Toast ── */
+  #toast {
+    position: fixed; bottom: 24px; right: 24px;
+    background: var(--surface2); border: 1px solid var(--border);
+    padding: 12px 18px; border-radius: 8px;
+    font-size: 13px; z-index: 999;
+    transform: translateY(80px); opacity: 0;
+    transition: all .3s;
+    box-shadow: 0 8px 30px rgba(0,0,0,.4);
+  }
+  #toast.show { transform: translateY(0); opacity: 1; }
+  #toast.ok { border-left: 3px solid var(--green); }
+  #toast.err { border-left: 3px solid var(--danger); }
+
+  /* ── Month filter ── */
+  .filter-row { display: flex; gap: 10px; align-items: center; margin-bottom: 20px; flex-wrap: wrap; }
+  .filter-row select, .filter-row input {
+    background: var(--surface2); border: 1px solid var(--border);
+    color: var(--text); padding: 7px 12px; border-radius: 7px; font-size: 13px; font-family: inherit;
+  }
+
+  .empty-state { text-align: center; padding: 50px; color: var(--muted); }
+  .empty-icon { font-size: 40px; margin-bottom: 10px; }
+
+  /* ── Confirm modal ── */
+  .modal-overlay {
+    display: none; position: fixed; inset: 0; background: rgba(0,0,0,.6);
+    z-index: 100; align-items: center; justify-content: center;
+  }
+  .modal-overlay.show { display: flex; }
+  .modal {
+    background: var(--surface2); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 28px; max-width: 380px; width: 90%;
+    box-shadow: 0 20px 60px rgba(0,0,0,.5);
+  }
+  .modal h3 { font-size: 16px; margin-bottom: 10px; }
+  .modal p { color: var(--muted); font-size: 13px; margin-bottom: 20px; line-height: 1.6; }
+  .modal-actions { display: flex; gap: 10px; justify-content: flex-end; }
+
+  /* Settings dropdown (toggles down from the header button) */
+  .settings-wrap { position:relative; }
+  .settings-menu { position:absolute; top:calc(100% + 8px); right:0; min-width:248px;
+    background:var(--surface2); border:1px solid var(--glass-border); border-radius:14px; padding:8px;
+    box-shadow:0 22px 54px -18px rgba(0,0,0,.5); z-index:80; display:none; flex-direction:column; gap:6px; }
+  .settings-menu.open { display:flex; animation: popIn .2s cubic-bezier(.22,.61,.36,1); }
+
+  /* ── Chart detail modal ── */
+  .chart-modal {
+    background: var(--surface2); border: 1px solid var(--glass-border);
+    border-radius: var(--radius); width: min(720px, 94vw); max-height: 90vh;
+    overflow: auto; padding: 20px 22px;
+    box-shadow: 0 30px 80px -20px rgba(0,0,0,.6);
+    animation: popIn .3s cubic-bezier(.22,.61,.36,1);
+  }
+  .chart-modal.full { width: 96vw; height: 92vh; max-height: none; }
+  .cm-head { display: flex; justify-content: space-between; align-items: center; }
+  .cm-title { font-size: 16px; font-weight: 600; color: var(--text); }
+  .cm-head-actions { display: flex; gap: 8px; }
+  .cm-iconbtn {
+    width: 32px; height: 32px; border: 1px solid var(--glass-border); border-radius: 9px;
+    background: var(--glass2); color: var(--text); cursor: pointer;
+    display: flex; align-items: center; justify-content: center; transition: border-color .18s;
+  }
+  .cm-iconbtn:hover { border-color: var(--accent); }
+  .cm-pills { display: flex; gap: 6px; margin: 12px 0; }
+  .cm-pill {
+    padding: 5px 12px; border-radius: 999px; border: 1px solid var(--glass-border);
+    font-size: 12px; color: var(--muted); cursor: pointer; background: transparent;
+  }
+  .cm-pill.on { background: var(--emph); color: var(--emph-text); border-color: var(--emph); }
+  .cm-chartwrap { position: relative; height: 300px; }
+  .cm-chartwrap canvas { max-height: none !important; }
+  .chart-modal.full .cm-chartwrap { height: 48vh; }
+  .cm-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 10px; margin-top: 14px; }
+  .cm-stat { background: var(--glass2); border-radius: 10px; padding: 9px 12px; }
+  .cm-stat .l { font-size: 10px; text-transform: uppercase; letter-spacing: .4px; color: var(--muted); }
+  .cm-stat .v { font-family: 'IBM Plex Mono', monospace; font-size: 15px; font-weight: 500; color: var(--text); margin-top: 2px; }
+  .cm-breakdown { margin-top: 16px; }
+  .cm-breakdown:empty { display: none; }
+  .cm-tablewrap { margin-top: 16px; max-height: 240px; overflow: auto; }
+  .cm-export { display: flex; gap: 10px; margin-top: 16px; justify-content: flex-end; }
+
+  /* ── Misc ── */
+  .mt { margin-top: 24px; }
+  .mb { margin-bottom: 16px; }
+  .green-text { color: var(--green); }
+  .red-text { color: var(--accent2); }
+  .profit-bar-wrap { background: var(--surface2); border-radius: 4px; height: 6px; margin-top: 6px; overflow: hidden; }
+  .profit-bar { height: 100%; border-radius: 4px; background: var(--green); transition: width .5s; }
+
+  /* ═══════════════════════════════════════════════════
+     CashMate-style overrides — glass · ambient · motion
+     ═══════════════════════════════════════════════════ */
+
+  /* Atmospheric ambient background */
+  body::before {
+    content:''; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+    background:
+      radial-gradient(1100px 720px at 80% -10%, var(--glow), transparent 62%),
+      radial-gradient(900px 620px at 10% 110%, var(--glow), transparent 60%);
+    animation: glowPulse 12s ease-in-out infinite alternate;
+  }
+  @keyframes glowPulse { from { opacity:.5; } to { opacity:1; } }
+
+  /* Light theme background: white (top-left) → gold (bottom-right), soft */
+  :root[data-theme="light"] body {
+    background:
+      radial-gradient(1200px 950px at -8% -12%, #ffffff 0%, rgba(255,255,255,0) 55%),
+      radial-gradient(900px 820px at 114% 116%, #f6d57e 0%, rgba(246,213,126,0) 55%),
+      #f6f1e4;
+    background-attachment: fixed;
+  }
+  :root[data-theme="light"] body::before { background: none; animation: none; }
+
+  /* Display font for headings & key numbers */
+  .logo, .section-title, .chart-title, .kpi-value, .modal h3, .upload-label {
+    font-family: 'Anuphan','IBM Plex Sans Thai',sans-serif;
+  }
+  .section-title { letter-spacing:.2px; font-weight:600; }
+
+  /* Glassmorphism on primary panels */
+  header, .sidebar, .kpi, .chart-card, .modal, .upload-zone, #toast {
+    background: var(--glass) !important;
+    -webkit-backdrop-filter: blur(22px) saturate(118%); backdrop-filter: blur(22px) saturate(118%);
+    border-color: var(--glass-border);
+  }
+  header { border-bottom:1px solid var(--glass-border); }
+  .sidebar { border-right:1px solid var(--glass-border); }
+  .kpi, .chart-card { box-shadow: 0 10px 34px -18px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.05); }
+  .modal { box-shadow: 0 34px 80px -24px rgba(0,0,0,.62), inset 0 1px 0 rgba(255,255,255,.06); }
+
+  /* Olive primary button keeps dark text for contrast */
+  .btn-primary { color: var(--emph-text); font-weight:600; }
+  /* Dark mode: filled buttons (e.g. the All filter) go gold so they don't vanish on the dark bg */
+  :root:not([data-theme="light"]) .btn-primary,
+  :root:not([data-theme="light"]) .btn-success { background: var(--accent) !important; color:#1a1402 !important; border-color:transparent !important; }
+  .btn-primary, .btn-success { border:1px solid var(--glass-border); }
+
+  /* Highlighted KPI cards — Balance (olive) & Expense (gold) */
+  .kpi.kpi-gold, .kpi.kpi-ink {
+    border-color: transparent;
+    -webkit-backdrop-filter:none; backdrop-filter:none;
+  }
+  .kpi.kpi-gold { background: linear-gradient(135deg, #e6a900, #c07f00) !important; box-shadow: 0 18px 44px -16px var(--glow); }
+  .kpi.kpi-gold .kpi-label { color: #ffffff !important; }
+  .kpi.kpi-gold .kpi-sub { color: rgba(255,255,255,.8); }
+  .kpi.kpi-gold .kpi-value { color:#ffffff !important; text-shadow:0 1px 3px rgba(0,0,0,.3); }
+  .kpi.kpi-ink { background: var(--emph) !important; box-shadow: 0 18px 44px -18px rgba(0,0,0,.45); border:1px solid rgba(232,185,35,.42) !important; }
+  .kpi.kpi-ink .kpi-label, .kpi.kpi-ink .kpi-sub { color: rgba(243,240,230,.58); }
+  .kpi.kpi-ink .kpi-value { color: var(--emph-text) !important; }
+  /* Dark mode: Total Expense card pops like Total Balance (gold fill, white text) */
+  :root:not([data-theme="light"]) .kpi.kpi-ink { background: linear-gradient(135deg, #e6a900, #c07f00) !important; border-color:transparent !important; }
+  :root:not([data-theme="light"]) .kpi.kpi-ink .kpi-label,
+  :root:not([data-theme="light"]) .kpi.kpi-ink .kpi-sub { color: rgba(255,255,255,.8) !important; }
+  :root:not([data-theme="light"]) .kpi.kpi-ink .kpi-value { color:#ffffff !important; }
+  .kpi.clickable { cursor:pointer; }
+  .kpi.clickable:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  #expenseTableWrap input:focus, #kpiTbody input:focus { box-shadow: 0 0 0 2px var(--accent); }
+  /* Hide number-input spinner arrows (the up/down nudge buttons) */
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button { -webkit-appearance:none; appearance:none; margin:0; }
+  input[type=number] { -moz-appearance:textfield; appearance:textfield; }
+
+  /* Black "ink" card (e.g. Recent Transactions) — readable over the bright bg */
+  .ink-card { background: var(--emph); color: var(--emph-text); border:1px solid var(--glass-border);
+    border-radius: var(--radius); padding: 18px 22px; box-shadow: 0 18px 44px -20px rgba(0,0,0,.5); }
+  .ink-card .section-title { color: var(--emph-text); }
+  .ink-card thead th { background: transparent; color: rgba(243,240,230,.5); border-bottom-color: rgba(255,255,255,.1); }
+  .ink-card tbody tr { border-bottom-color: rgba(255,255,255,.07); }
+  .ink-card tbody tr:hover { background: rgba(255,255,255,.04); }
+  .ink-card td { color: var(--emph-text); }
+  .ink-card .badge-sale { background: rgba(232,185,35,.22); color: #f0c84a; }
+  .ink-card .badge-expense { background: rgba(255,255,255,.12); color: #d8d4c4; }
+
+  /* Nav: rounded active pill + accent rail */
+  .nav-item { border-radius:0 9px 9px 0; margin-right:10px; position:relative; z-index:1; }
+  .nav-item.active { background: transparent !important; color: var(--nav-active-text); border-left-color: transparent; box-shadow: none; }
+  /* Sliding active indicator — a pill that glides to the selected tab */
+  .nav-indicator { position:absolute; left:0; right:10px; top:0; height:42px; border-radius:0 13px 13px 0;
+    background: var(--nav-active-bg); box-shadow:0 6px 18px -8px rgba(0,0,0,.3); z-index:0; opacity:0; pointer-events:none;
+    transition: transform .32s cubic-bezier(.22,.61,.36,1), height .28s ease, opacity .2s ease; }
+  .nav-item.active .nav-ico { color: var(--nav-active-text); }
+  /* Delay the active text/icon colour so it lands as the sliding pill arrives (avoids a flash) */
+  .nav-item.active, .nav-item.active .nav-ico { transition: color .16s ease .15s; }
+
+  /* Rounder controls */
+  .btn, .filter-row select, .filter-row input,
+  .form-group input, .form-group select, .form-group textarea,
+  header select { border-radius:12px !important; }
+
+  /* Unified select styling (KPI / yearly-comparison dropdowns matched the rest) */
+  select { background: var(--surface2); color: var(--text); border:1px solid var(--border);
+    border-radius:12px; padding:7px 11px; font-family:inherit; font-size:12px; cursor:pointer; outline:none; }
+  select:focus { border-color: var(--accent); }
+
+  /* Upload hover in theme color */
+  .upload-zone:hover, .upload-zone.drag { background: var(--glass2) !important; border-color: var(--accent); }
+
+  /* Custom scrollbar */
+  *::-webkit-scrollbar { width:10px; height:10px; }
+  *::-webkit-scrollbar-thumb { background: var(--glass2); border-radius:8px; border:2px solid transparent; background-clip:padding-box; }
+  *::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+  /* ═══ ANIMATIONS ═══ */
+  @keyframes fadeUp { from { opacity:0; transform: translateY(14px); } to { opacity:1; transform:none; } }
+  /* (removed dead @keyframes pageIn — page transitions are JS-driven via playCascade) */
+  @keyframes popIn  { from { opacity:0; transform: scale(.92) translateY(10px); } to { opacity:1; transform:none; } }
+
+  /* Stagger cascade is driven in JS (playCascade, Web Animations API) for reliable replay on every tab open */
+
+  /* Children do NOT animate individually — the page container fades up as one unit */
+  .kpi { animation: none; }
+  .kpi-grid > .kpi:nth-child(2){animation-delay:0} .kpi-grid > .kpi:nth-child(3){animation-delay:0}
+  .kpi-grid > .kpi:nth-child(4){animation-delay:0} .kpi-grid > .kpi:nth-child(5){animation-delay:0}
+  .kpi-grid > .kpi:nth-child(6){animation-delay:0}
+
+  .chart-card { animation: none; }
+  .chart-grid .chart-card:nth-child(2){ animation-delay:0; }
+
+  tbody tr { animation: none; }
+  tbody tr:nth-child(1){animation-delay:0} tbody tr:nth-child(2){animation-delay:0}
+  tbody tr:nth-child(3){animation-delay:0} tbody tr:nth-child(4){animation-delay:0}
+  tbody tr:nth-child(5){animation-delay:0} tbody tr:nth-child(6){animation-delay:0}
+  tbody tr:nth-child(7){animation-delay:0} tbody tr:nth-child(8){animation-delay:0}
+
+  /* Hover micro-interactions — smooth, no jiggle */
+  .kpi, .chart-card, .nav-item, .btn, .settings-row, .upload-zone {
+    transition: transform .28s cubic-bezier(.22,.61,.36,1), box-shadow .28s ease, border-color .25s ease, background .25s ease, color .2s ease, filter .25s ease;
+    will-change: transform;
+  }
+  .kpi:hover { transform: translateY(-3px); box-shadow: 0 20px 40px -20px rgba(0,0,0,.55); border-color: var(--accent); }
+  .kpi.kpi-gold:hover { transform: translateY(-3px); box-shadow: 0 24px 52px -18px var(--glow); border-color:transparent; }
+  .kpi.kpi-ink:hover  { transform: translateY(-3px); box-shadow: 0 24px 52px -18px rgba(0,0,0,.5); border-color:transparent; }
+  .chart-card:hover { transform: translateY(-3px); box-shadow: 0 22px 44px -22px rgba(0,0,0,.5); }
+  .nav-item:hover { transform: translateX(3px); }
+  .btn:hover { transform: translateY(-1px); filter: brightness(1.05); }
+  .btn:active { transform: translateY(0) scale(.97); }
+  .logo:hover span { filter: brightness(1.12); }
+  .modal { animation: popIn .32s cubic-bezier(.22,.61,.36,1); }
+
+  /* (removed dead #expensePanel rules — the dashboard graph now swaps in place) */
+
+  /* Reference-style floating chart tooltip */
+  .chart-tip { position:absolute; pointer-events:none; z-index:40; transform:translate(-50%,-118%);
+    background:var(--surface2); border:1px solid var(--glass-border); border-radius:10px; padding:8px 11px;
+    font-size:12px; box-shadow:0 10px 26px rgba(0,0,0,.42); white-space:nowrap; opacity:0; transition:opacity .12s ease; }
+  .chart-tip.show { opacity:1; }
+  .chart-tip .ct-date { color:var(--muted); font-size:11px; margin-bottom:3px; }
+  .chart-tip .ct-val  { font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:14px; }
+  .chart-tip .ct-chg  { color:var(--muted); font-size:11px; margin-top:2px; }
+
+  /* NOTE: the global "reduce motion" override was removed — it was fully suppressing the app's
+     intentional motion (modal pop, sidebar icon-rail slide, hover lifts) whenever the OS
+     "reduce motion" accessibility setting is enabled. Motion now always plays. */
+
+  /* ═══ Flaticon UIcons + collapsible sidebar ═══ */
+  .fi { display:inline-flex; align-items:center; line-height:0; vertical-align:middle; }
+  .logo { display:flex; align-items:center; gap:7px; cursor:pointer; }
+  .logo-ico { color:var(--accent); font-size:17px; }
+  .btn .fi { font-size:13px; }
+  .nav-ico { font-size:17px; width:22px; justify-content:center; flex-shrink:0; }
+
+  .nav-toggle {
+    display:flex; align-items:center; gap:9px;
+    width:auto; height:38px; margin:0 0 12px 16px; padding:0 13px;
+    background:var(--glass2); border:1px solid var(--glass-border); border-radius:10px;
+    color:var(--text); cursor:pointer; font-size:15px;
+    transition:transform .18s ease, color .18s ease, border-color .18s ease;
+  }
+  .nav-toggle-label { font-size:13px; white-space:nowrap; }
+  .sidebar.collapsed .nav-toggle { width:38px; padding:0; justify-content:center; }
+  .sidebar.collapsed .nav-toggle-label { display:none; }
+  .nav-toggle:hover { color:var(--accent); border-color:var(--accent); transform:translateY(-1px); }
+
+  .sidebar { transition: width .26s cubic-bezier(.22,.61,.36,1); overflow:hidden;
+    position: sticky; top: var(--header-h, 56px); align-self: flex-start; height: calc(100vh - var(--header-h, 56px)); }
+  .nav-item { white-space:nowrap; position:relative; }
+  .nav-label { transition:opacity .14s ease; }
+
+  .sidebar.collapsed { width:66px; }
+  .sidebar.collapsed .nav-label { opacity:0; width:0; overflow:hidden; }
+  .sidebar.collapsed .nav-section { opacity:0; height:6px; padding:0; margin:0; }
+  .sidebar.collapsed .nav-item { justify-content:center; padding-left:0; padding-right:0; gap:0; }
+  .sidebar.collapsed .nav-toggle { margin-left:14px; }
+
+  /* Hover tooltip when collapsed */
+  .sidebar.collapsed .nav-item::after {
+    content: attr(data-tip);
+    position:absolute; left:60px; top:50%; transform:translateY(-50%);
+    background:var(--surface2); color:var(--text); border:1px solid var(--glass-border);
+    padding:5px 10px; border-radius:8px; font-size:12px; white-space:nowrap;
+    opacity:0; pointer-events:none; transition:opacity .15s ease; z-index:60;
+    box-shadow:0 6px 18px rgba(0,0,0,.4);
+  }
+  .sidebar.collapsed .nav-item:hover::after { opacity:1; }
+</style>
+</head>
+<body>
+
+<div id="loginOverlay">
+  <div class="login-card">
+    <div class="login-logo"><i class="fi fi-rr-chart-pie-alt"></i>KP <span>Finance</span></div>
+    <div class="login-sub">Sign in to continue</div>
+    <input id="loginEmail" type="email" placeholder="Email" autocomplete="username" onkeydown="_onLoginKey(event)">
+    <input id="loginPass" type="password" placeholder="Password" autocomplete="current-password" onkeydown="_onLoginKey(event)">
+    <button id="loginBtn" onclick="doLogin()">Sign in</button>
+    <div id="loginErr" class="login-err"></div>
+  </div>
+</div>
+
+<header>
+  <div class="logo" onclick="navigate('dashboard')" role="button" tabindex="0" title="Dashboard" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();navigate('dashboard');}"><i class="fi fi-rr-chart-pie-alt logo-ico"></i>KP <span>Finance</span></div>
+  <div class="header-actions">
+    <select id="branchSel" class="branch-sel" onchange="switchBranch(this.value)" title="Location / สถานที่">
+      <option value="A">Place A</option>
+      <option value="B">Place B</option>
+      <option value="combined">Both (total)</option>
+    </select>
+    <span id="syncDot" class="sync-dot"></span>
+    <button id="fAllBtn" class="btn btn-primary btn-sm" onclick="filterAll()" data-i18n="hdr.all">All</button>
+    <select id="fMonth" onchange="onPickFilter()" style="background:var(--surface2);border:1px solid var(--border);color:var(--text);padding:6px 10px;border-radius:7px;font-family:inherit;font-size:12px;"></select>
+    <select id="fYear" onchange="onPickFilter()" style="background:var(--surface2);border:1px solid var(--border);color:var(--text);padding:6px 10px;border-radius:7px;font-family:inherit;font-size:12px;"></select>
+    <button id="langBtn" class="btn btn-ghost btn-sm" onclick="toggleLang()" title="Language / ภาษา" aria-label="Language"><i class="fi fi-rr-globe"></i> <span id="langLabel">ไทย</span></button>
+    <div class="settings-wrap">
+      <button id="settingsBtn" class="btn btn-ghost btn-sm" onclick="toggleSettingsMenu(event)" aria-label="Settings"><i class="fi fi-rr-settings"></i> <span data-i18n="hdr.settings">Settings</span></button>
+      <div class="settings-menu" id="settingsMenu">
+        <button class="settings-row" onclick="toggleTheme()">
+          <span><span class="settings-ico"><i class="fi fi-rr-brightness"></i></span> <span data-i18n="settings.theme">Theme (color)</span></span>
+          <span id="themeStateLabel" class="settings-val">Dark</span>
+        </button>
+        <button class="settings-row" onclick="exportCSV(); closeSettingsModal();">
+          <span><span class="settings-ico"><i class="fi fi-rr-cloud-download-alt"></i></span> <span data-i18n="settings.exportCsv">Export CSV (report)</span></span>
+          <span class="settings-val">›</span>
+        </button>
+        <button class="settings-row" onclick="backupJSON(); closeSettingsModal();">
+          <span><span class="settings-ico"><i class="fi fi-rr-disk"></i></span> <span data-i18n="settings.backup">Backup all data (.json)</span></span>
+          <span class="settings-val">›</span>
+        </button>
+        <button class="settings-row" onclick="document.getElementById('restoreFile').click(); closeSettingsModal();">
+          <span><span class="settings-ico"><i class="fi fi-rr-cloud-upload-alt"></i></span> <span data-i18n="settings.restore">Restore data (.json)</span></span>
+          <span class="settings-val">›</span>
+        </button>
+        <button class="settings-row" onclick="closeSettingsModal(); navigate('import');">
+          <span><span class="settings-ico"><i class="fi fi-rr-cloud-upload-alt"></i></span> <span data-i18n="settings.import">Import Data</span></span>
+          <span class="settings-val">›</span>
+        </button>
+        <button class="settings-row danger" onclick="closeSettingsModal(); openClearModal();">
+          <span><span class="settings-ico"><i class="fi fi-rr-trash"></i></span> <span data-i18n="settings.clear">Clear Data</span></span>
+          <span class="settings-val">›</span>
+        </button>
+        <button class="settings-row" onclick="closeSettingsModal(); doLogout();">
+          <span><span class="settings-ico"><i class="fi fi-rr-sign-out-alt"></i></span> <span>Sign out</span></span>
+          <span class="settings-val" id="userEmail" style="font-size:11px;max-width:130px;overflow:hidden;text-overflow:ellipsis;"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div id="combinedBanner">🔒 <span data-combined-th="โหมดรวม (สาขา A + B) — อ่านอย่างเดียว สลับไปสาขาเดียวเพื่อแก้ไขหรือนำเข้า">Combined view (Place A + Place B) — read-only. Switch to a single place to edit or import.</span></div>
+
+<div class="app">
+  <nav class="sidebar" id="sidebar">
+    <button class="nav-toggle" id="navToggle" onclick="toggleSidebar()" aria-label="Menu"><i class="fi fi-rr-menu-burger"></i><span class="nav-toggle-label" data-i18n="nav.menu">Menu</span></button>
+    <div class="nav-indicator" id="navIndicator"></div>
+    <div class="nav-section" data-i18n="nav.overview">Overview</div>
+    <div class="nav-item active" onclick="navigate('dashboard')" data-tip="Dashboard"><i class="fi fi-rr-apps nav-ico"></i><span class="nav-label" data-i18n="nav.dashboard">Dashboard</span></div>
+    <div class="nav-item" onclick="navigate('charts')" data-tip="Charts"><i class="fi fi-rr-chart-histogram nav-ico"></i><span class="nav-label" data-i18n="nav.charts">Charts</span></div>
+    <div class="nav-item" onclick="navigate('yearly')" data-tip="Yearly Compare"><i class="fi fi-rr-calendar nav-ico"></i><span class="nav-label" data-i18n="nav.yearly">Yearly Compare</span></div>
+    <div class="nav-section" data-i18n="nav.data">Data</div>
+    <div class="nav-item" onclick="navigate('sales')" data-tip="Sales"><i class="fi fi-rr-coins nav-ico"></i><span class="nav-label" data-i18n="nav.sales">Sales</span></div>
+    <div class="nav-item" onclick="navigate('expenses')" data-tip="Expenses"><i class="fi fi-rr-receipt nav-ico"></i><span class="nav-label" data-i18n="nav.expenses">Expenses</span></div>
+    <div class="nav-item" onclick="navigate('kpi')" data-tip="Expense KPI"><i class="fi fi-rr-bullseye-arrow nav-ico"></i><span class="nav-label" data-i18n="nav.kpi">Expense KPI</span></div>
+  </nav>
+
+  <main>
+    <!-- DASHBOARD -->
+    <div id="page-dashboard" class="page active">
+      <div class="section-header mb">
+        <div class="section-title" data-i18n="dash.title">Business Overview</div>
+        <span id="dash-period" style="font-size:12px;color:var(--muted)"></span>
+      </div>
+      <div class="kpi-grid" id="kpiGrid"></div>
+      <div class="chart-card" style="margin-bottom:20px;" id="dashGraphCard">
+        <div class="chart-title" id="dashGraphTitle" data-i18n="dash.balanceChart">Total Balance — by filter above (month=daily · year/all=monthly)</div>
+        <button class="chart-expand" onclick="openChartModal(dashGraph)" aria-label="Expand"><i class="fi fi-rr-expand"></i></button>
+        <canvas id="balanceLineDash"></canvas>
+      </div>
+      <div class="chart-grid">
+        <div class="chart-card">
+          <div class="chart-title" data-i18n="charts.expenseShare">Expense Breakdown</div>
+          <button class="chart-expand" onclick="openChartModal('categories')" aria-label="Expand"><i class="fi fi-rr-expand"></i></button>
+          <canvas id="expenseDonutDash"></canvas>
+        </div>
+        <div class="chart-card">
+          <div class="chart-title" data-i18n="charts.gauge">Profit Margin</div>
+          <button class="chart-expand" onclick="openChartModal('margin')" aria-label="Expand"><i class="fi fi-rr-expand"></i></button>
+          <canvas id="marginGauge"></canvas>
+        </div>
+      </div>
+      <div class="chart-card" style="margin-bottom:20px;">
+        <div class="chart-title" data-i18n="dash.incomeVsExpense">Income vs Expense (daily)</div>
+        <button class="chart-expand" onclick="openChartModal('incomeexpense')" aria-label="Expand"><i class="fi fi-rr-expand"></i></button>
+        <canvas id="barChart"></canvas>
+      </div>
+      <div class="ink-card">
+        <div class="section-header" style="margin-bottom:14px;">
+          <div class="section-title" data-i18n="dash.recent">Recent Transactions</div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr>
+              <th data-i18n="th.date">Date</th><th data-i18n="th.type">Type</th>
+              <th class="text-right" data-i18n="th.total">Total</th>
+              <th class="text-right" data-i18n="th.paid">Paid</th>
+              <th data-i18n="th.note">Note</th>
+            </tr></thead>
+            <tbody id="recentTbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- CHARTS -->
+    <div id="page-charts" class="page">
+      <div class="section-title mb" data-i18n="charts.title">Charts & Statistics</div>
+      <div class="chart-card" style="margin-bottom:20px;">
+        <div class="chart-title" data-i18n="dash.balanceChart">Total Balance — by filter above (month=daily · year/all=monthly)</div>
+        <button class="chart-expand" onclick="openChartModal('balance')" aria-label="Expand"><i class="fi fi-rr-expand"></i></button>
+        <canvas id="balanceLineCharts"></canvas>
+      </div>
+      <div class="chart-grid">
+        <div class="chart-card">
+          <div class="chart-title" data-i18n="charts.monthlySales">Cumulative Monthly Sales</div>
+          <button class="chart-expand" onclick="openChartModal('income')" aria-label="Expand"><i class="fi fi-rr-expand"></i></button>
+          <canvas id="monthlySalesBar"></canvas>
+        </div>
+        <div class="chart-card">
+          <div class="chart-title" data-i18n="charts.expenseShare">Expense Breakdown (KPI)</div>
+          <button class="chart-expand" onclick="openChartModal('categories')" aria-label="Expand"><i class="fi fi-rr-expand"></i></button>
+          <canvas id="expensePie"></canvas>
+        </div>
+      </div>
+      <div class="chart-grid">
+        <div class="chart-card">
+          <div class="chart-title" data-i18n="charts.monthlyProfit">Monthly Net Profit</div>
+          <button class="chart-expand" onclick="openChartModal('profit')" aria-label="Expand"><i class="fi fi-rr-expand"></i></button>
+          <canvas id="monthlyProfitLine"></canvas>
+        </div>
+        <div class="chart-card">
+          <div class="chart-title" data-i18n="charts.dailyExpense">Daily Expenses</div>
+          <button class="chart-expand" onclick="openChartModal('expense')" aria-label="Expand"><i class="fi fi-rr-expand"></i></button>
+          <canvas id="expenseBar"></canvas>
+        </div>
+      </div>
+      <div class="chart-card" style="margin-bottom:20px;">
+        <div class="chart-title" data-i18n="charts.expenseTrend">Expense Trend</div>
+        <button class="chart-expand" onclick="openChartModal('expense')" aria-label="Expand"><i class="fi fi-rr-expand"></i></button>
+        <canvas id="expenseTrendCharts"></canvas>
+      </div>
+      <div class="chart-card" style="margin-bottom:20px;">
+        <div class="chart-title" data-i18n="charts.ieStacked">Income vs Expense (monthly)</div>
+        <button class="chart-expand" onclick="openChartModal('incomeexpense')" aria-label="Expand"><i class="fi fi-rr-expand"></i></button>
+        <canvas id="incomeExpenseStacked"></canvas>
+      </div>
+    </div>
+
+    <!-- YEARLY COMPARISON -->
+    <div id="page-yearly" class="page">
+      <div class="section-header mb">
+        <div class="section-title" data-i18n="yearly.title">Monthly Sales Comparison (by year)</div>
+        <div style="display:flex;gap:8px;align-items:center;">
+          <select id="yearA" onchange="refreshYearly()"></select>
+          <span style="color:var(--muted);font-size:12px;" data-i18n="yearly.vs">vs</span>
+          <select id="yearB" onchange="refreshYearly()"></select>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr>
+            <th data-i18n="th.month">Month</th>
+            <th class="text-right" id="yh-salesA">Sales</th>
+            <th class="text-right" id="yh-salesB">Sales</th>
+            <th class="text-right" data-i18n="yearly.pct">% change</th>
+            <th class="text-right" id="yh-expA">Expense</th>
+            <th class="text-right" id="yh-expB">Expense</th>
+            <th class="text-right" data-i18n="th.profit">Profit</th>
+          </tr></thead>
+          <tbody id="yearlyTbody"></tbody>
+        </table>
+      </div>
+      <div style="font-size:11px;color:var(--muted);margin-top:10px;" data-i18n="yearly.note">
+        Sales = actual paid amount · Profit = Sales − Expense of the compared year (right columns)
+      </div>
+    </div>
+
+    <!-- SALES -->
+    <div id="page-sales" class="page">
+      <div class="section-header mb">
+        <div class="section-title" data-i18n="sales.title">Sales</div>
+        <span id="sales-total" class="mono green-text" style="font-size:13px"></span>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr>
+            <th data-i18n="th.date">Date</th>
+            <th class="text-right" data-i18n="th.total">Total</th>
+            <th class="text-right" data-i18n="th.goodsValue">Goods Value</th>
+            <th class="text-right" data-i18n="th.vat">VAT</th>
+            <th class="text-right" data-i18n="th.paid">Paid</th>
+            <th class="text-right" data-i18n="th.outstanding">Outstanding</th>
+            <th class="text-center" data-i18n="th.delete">Delete</th>
+          </tr></thead>
+          <tbody id="salesTbody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- EXPENSES -->
+    <div id="page-expenses" class="page">
+      <div class="section-header mb">
+        <div class="section-title" data-i18n="expenses.title">Daily Expenses</div>
+        <span id="expense-total" class="mono red-text" style="font-size:13px"></span>
+      </div>
+
+      <div class="filter-row">
+        <label style="font-size:12px;color:var(--muted)" data-i18n="th.month">Month</label>
+        <select id="exMonthSel" onchange="changeExpenseMonth()"></select>
+        <select id="exYearSel" onchange="changeExpenseMonth()"></select>
+        <button class="btn btn-success btn-sm" onclick="saveExpenseMonth()"><i class="fi fi-rr-disk"></i> <span data-i18n="exp.saveMonth">Save This Month</span></button>
+      </div>
+
+      <div class="table-wrap" id="expenseTableWrap"></div>
+
+      <div style="font-size:11px;color:var(--muted);margin-top:10px;line-height:1.7;">
+        <span data-i18n-html="exp.hint1">Same table as the imported Excel — edit any cell then click <strong style="color:var(--text)">Save This Month</strong></span><br>
+        <span data-i18n-html="exp.hint2">The <strong style="color:var(--accent2)">Daily Expense</strong> column = the actual expense used to calculate the Dashboard · Category columns → KPI · If you don't want to fill every day, just enter the total in one day's Daily Expense cell</span>
+      </div>
+    </div>
+
+    <!-- KPI EXPENSES -->
+    <div id="page-kpi" class="page">
+      <div class="section-header mb">
+        <div class="section-title" data-i18n="kpi.title">Operating Expense KPI</div>
+        <div style="display:flex;gap:8px;align-items:center;">
+          <select id="kpiMonthSel" onchange="changeKpiMonth()"></select>
+          <select id="kpiYearSel" onchange="changeKpiMonth()"></select>
+          <button class="btn btn-success btn-sm" onclick="saveKPI()"><i class="fi fi-rr-disk"></i> <span data-i18n="common.save">Save</span></button>
+        </div>
+      </div>
+
+      <div class="kpi-grid" id="kpiSummary" style="margin-bottom:20px;"></div>
+
+      <div style="display:grid;grid-template-columns:1.5fr 1fr;gap:20px;align-items:start;">
+        <div class="table-wrap">
+          <table>
+            <thead><tr>
+              <th data-i18n="th.item">Item</th>
+              <th class="text-right" data-i18n="th.budget">Budget</th>
+              <th class="text-right" data-i18n="th.actual">Actual</th>
+              <th class="text-right" data-i18n="th.pctUsed">% Used</th>
+              <th data-i18n="th.note">Note</th>
+            </tr></thead>
+            <tbody id="kpiTbody"></tbody>
+            <tfoot><tr style="border-top:2px solid var(--border);font-weight:600;background:var(--surface2)">
+              <td data-i18n="th.totalRow">Total</td>
+              <td class="text-right mono" id="kpiBudgetTotal">-</td>
+              <td class="text-right mono red-text" id="kpiActualTotal">-</td>
+              <td class="text-right mono" id="kpiPctTotal">-</td>
+              <td></td>
+            </tr></tfoot>
+          </table>
+        </div>
+        <div class="chart-card">
+          <div class="chart-title" data-i18n="kpi.shareActual">Expense Breakdown (Actual)</div>
+          <button class="chart-expand" onclick="openChartModal('categories')" aria-label="Expand"><i class="fi fi-rr-expand"></i></button>
+          <canvas id="kpiPie"></canvas>
+        </div>
+      </div>
+      <div style="font-size:11px;color:var(--muted);margin-top:10px;line-height:1.7;">
+        <span data-i18n-html="kpi.hint1"><strong style="color:var(--text)">Actual</strong> is filled from the Excel file but editable · <strong style="color:var(--text)">Budget</strong> is entered manually · Sales target = 10 × actual KPI spend</span><br>
+        <span data-i18n-html="kpi.hint2">These category figures are a subset of total expenses — shown only to track KPI, they don't affect the Dashboard</span>
+      </div>
+    </div>
+
+    <!-- IMPORT -->
+    <div id="page-import" class="page">
+      <div class="section-title mb" data-i18n="import.title">Import Data</div>
+
+      <!-- Opening Balance -->
+      <div style="background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--yellow);border-radius:var(--radius);padding:24px;margin-bottom:20px;">
+        <div style="font-size:14px;font-weight:600;margin-bottom:4px;"><i class="fi fi-rr-coins"></i> <span data-i18n="import.ob.title">Opening Balance</span></div>
+        <div style="font-size:12px;color:var(--muted);margin-bottom:18px;" data-i18n="import.ob.desc">Enter the cash you already had before using this system; it will be included in the Dashboard for all periods.</div>
+        <div style="display:flex;gap:12px;align-items:flex-end;flex-wrap:wrap;">
+          <div class="form-group" style="flex:1;min-width:200px;">
+            <label data-i18n="import.ob.label">Opening Balance (THB)</label>
+            <input type="number" id="openingBalanceInput" placeholder="0.00" step="0.01" min="0"
+              style="font-size:18px;padding:10px 14px;font-family:'IBM Plex Mono',monospace;">
+          </div>
+          <div class="form-group" style="flex:1;min-width:200px;">
+            <label data-i18n="import.ob.note">Note (optional)</label>
+            <input type="text" id="openingBalanceNote" data-i18n-ph="import.ob.placeholder" placeholder="e.g. cash carried over as of 1 Jan 2568">
+          </div>
+          <button class="btn btn-success" onclick="saveOpeningBalance()" style="margin-bottom:1px;white-space:nowrap;" data-i18n="import.ob.save">Save Opening Balance</button>
+        </div>
+        <div id="openingBalanceStatus" style="font-size:12px;color:var(--muted);margin-top:10px;"></div>
+      </div>
+
+      <!-- Sales import -->
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px;margin-bottom:20px;">
+        <div style="font-size:14px;font-weight:600;margin-bottom:6px;"><i class="fi fi-rr-cloud-upload-alt"></i> <span data-i18n="import.sales.title">Import Sales File (.XLS / HTML from accounting system)</span></div>
+        <div style="font-size:12px;color:var(--muted);margin-bottom:16px;" data-i18n="import.sales.desc">Supports files exported from accounting software, e.g. daily income summary reports — monthly or full year (R06.111) · HTML format saved as .XLS · Duplicate days are overwritten with the new data</div>
+        <div class="upload-zone" id="salesDropZone" onclick="document.getElementById('salesFile').click()"
+          ondragover="handleDrag(event,'salesDropZone')" ondragleave="handleDragLeave('salesDropZone')" ondrop="handleDrop(event,'sales')">
+          <div class="upload-icon"><i class="fi fi-rr-cloud-upload-alt"></i></div>
+          <div class="upload-label" data-i18n="upload.clickDrag">Click or drag a file here</div>
+          <div class="upload-hint" data-i18n="import.sales.hint">Supports .XLS, .HTML exported from the accounting system (R06.111)</div>
+        </div>
+        <input type="file" id="salesFile" accept=".xls,.html,.htm" onchange="importSalesFile(this)">
+        <div id="salesImportStatus" style="font-size:12px;color:var(--muted);margin-top:8px;"></div>
+      </div>
+
+      <!-- Daily expense .xlsx import -->
+      <div style="background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--accent2);border-radius:var(--radius);padding:24px;margin-bottom:20px;">
+        <div style="font-size:14px;font-weight:600;margin-bottom:6px;"><i class="fi fi-rr-clipboard-list"></i> <span data-i18n="import.exp.title">Import Daily Expense Table (.xlsx)</span></div>
+        <div style="font-size:12px;color:var(--muted);margin-bottom:16px;" data-i18n-html="import.exp.desc">
+          Excel file following the template (date · categories · customers · <strong style="color:var(--accent2)">Daily Expense</strong>)<br>
+          The <strong style="color:var(--accent2)">Daily Expense</strong> column → actual expense per day (Dashboard) · other categories → KPI · month read from the table header · duplicate days are overwritten
+        </div>
+        <div class="upload-zone" id="dailyExpDropZone" onclick="document.getElementById('dailyExpFile').click()"
+          ondragover="handleDrag(event,'dailyExpDropZone')" ondragleave="handleDragLeave('dailyExpDropZone')" ondrop="handleDrop(event,'dailyexp')">
+          <div class="upload-icon"><i class="fi fi-rr-cloud-upload-alt"></i></div>
+          <div class="upload-label" data-i18n="upload.clickXlsx">Click or drag a .xlsx file</div>
+          <div class="upload-hint" data-i18n="import.exp.hint">Daily expense summary table</div>
+        </div>
+        <input type="file" id="dailyExpFile" accept=".xlsx,.xls" onchange="importDailyExpenseXLSX(this)">
+        <div id="dailyExpImportStatus" style="font-size:12px;color:var(--muted);margin-top:8px;"></div>
+      </div>
+
+      <!-- Format guide -->
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;">
+        <div style="font-size:13px;font-weight:600;margin-bottom:12px;"><i class="fi fi-rr-book"></i> <span data-i18n="import.guide.title">Format Guide</span></div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.8;" data-i18n-html="import.guide.body">
+          <strong style="color:var(--text)">Sales file (.XLS from the KP accounting system):</strong><br>
+          The system reads columns: day month year | Total | Goods Value | VAT | Paid | Outstanding<br><br>
+          <strong style="color:var(--text)">Daily expense file (.xlsx):</strong><br>
+          The header row contains the word "วันที่" (Date) · must include "รายจ่ายรายวัน" (Daily Expense) and "จำนวนลูกค้า" (Customers) columns · other columns in between are treated as KPI categories<br>
+          The table header states the month/year, e.g. "...เดือน พฤษภาคม ปี 2569"
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- Toast -->
+<div id="toast"></div>
+
+<!-- Confirm modal -->
+<div class="modal-overlay" id="clearModal">
+  <div class="modal">
+    <h3><i class="fi fi-rr-triangle-warning"></i> <span data-i18n="clear.title">Clear All Data?</span></h3>
+    <p data-i18n="clear.body">This will permanently delete all sales, expenses, KPI, and opening balance data from the system. This cannot be undone.</p>
+    <div class="modal-actions">
+      <button class="btn btn-ghost" onclick="closeClearModal()" data-i18n="common.cancel">Cancel</button>
+      <button class="btn btn-danger" onclick="clearAll()" data-i18n="clear.confirm">Clear Data</button>
+    </div>
+  </div>
+</div>
+
+<!-- Settings modal -->
+<!-- Settings is now a dropdown menu in the header (.settings-wrap) -->
+
+<div class="modal-overlay" id="chartModal" onclick="if(event.target===this)closeChartModal()">
+  <div class="chart-modal" id="chartModalBox">
+    <div class="cm-head">
+      <div class="cm-title" id="cmTitle">Chart</div>
+      <div class="cm-head-actions">
+        <button class="cm-iconbtn" id="cmFullBtn" onclick="toggleChartModalFull()" aria-label="Full page"><i class="fi fi-rr-expand"></i></button>
+        <button class="cm-iconbtn" onclick="closeChartModal()" aria-label="Close"><i class="fi fi-rr-cross-small"></i></button>
+      </div>
+    </div>
+    <div class="cm-pills" id="cmPills"></div>
+    <div class="cm-chartwrap"><canvas id="cmCanvas"></canvas></div>
+    <div class="cm-stats" id="cmStats"></div>
+    <div class="cm-breakdown" id="cmBreakdown"></div>
+    <div class="cm-tablewrap" id="cmTable"></div>
+    <div class="cm-export">
+      <button class="btn btn-ghost btn-sm" onclick="cmExportCSV()"><i class="fi fi-rr-cloud-download-alt"></i> CSV</button>
+      <button class="btn btn-ghost btn-sm" onclick="cmExportPNG()"><i class="fi fi-rr-picture"></i> PNG</button>
+    </div>
+  </div>
+</div>
+
+<input type="file" id="restoreFile" accept=".json,application/json" style="display:none" onchange="restoreJSONFile(this)">
+
+<script>
+// ═══════════════════════════════════════════════════
+//  I18N — Thai ⇄ English
+// ═══════════════════════════════════════════════════
+const I18N = {
+  // nav / header (static)
+  'nav.overview':  { en:'Overview',       th:'ภาพรวม' },
+  'nav.dashboard': { en:'Dashboard',      th:'แดชบอร์ด' },
+  'nav.charts':    { en:'Charts',         th:'กราฟ' },
+  'nav.yearly':    { en:'Yearly Compare', th:'เทียบรายปี' },
+  'nav.data':      { en:'Data',           th:'ข้อมูล' },
+  'nav.menu':      { en:'Menu',           th:'เมนู' },
+  'nav.sales':     { en:'Sales',          th:'ยอดขาย' },
+  'nav.expenses':  { en:'Expenses',       th:'ค่าใช้จ่าย' },
+  'nav.kpi':       { en:'Expense KPI',    th:'KPI ค่าใช้จ่าย' },
+  'hdr.all':       { en:'All',            th:'ทั้งหมด' },
+  'hdr.settings':  { en:'Settings',       th:'ตั้งค่า' },
+
+  // dashboard (static)
+  'dash.title':           { en:'Business Overview', th:'ภาพรวมธุรกิจ' },
+  'dash.balanceChart':    { en:'Total Balance — by filter above (month=daily · year/all=monthly)', th:'ยอดเงินรวม (Balance) — ตามตัวกรองด้านบน (เดือน=รายวัน · ปี/ทั้งหมด=รายเดือน)' },
+  'dash.incomeVsExpense': { en:'Income vs Expense (daily)', th:'รายได้ vs ค่าใช้จ่าย (รายวัน)' },
+  'dash.netProfit':       { en:'Net Profit (daily)', th:'กำไรสุทธิ (รายวัน)' },
+  'dash.incomeChart':     { en:'Income', th:'รายได้' },
+  'dash.marginChart':     { en:'Profit Margin', th:'อัตรากำไร' },
+  'dash.recent':          { en:'Recent Transactions', th:'รายการล่าสุด' },
+
+  // shared table headers
+  'th.date':        { en:'Date',        th:'วันที่' },
+  'th.type':        { en:'Type',        th:'ประเภท' },
+  // chart detail modal
+  'cm.daily':      { en:'Daily',    th:'รายวัน' },
+  'cm.monthly':    { en:'Monthly',  th:'รายเดือน' },
+  'cm.all':        { en:'All time', th:'ทั้งหมด' },
+  'cm.total':      { en:'Total',    th:'รวม' },
+  'cm.avg':        { en:'Average',  th:'เฉลี่ย' },
+  'cm.peak':       { en:'Peak',     th:'สูงสุด' },
+  'cm.net':        { en:'Net',      th:'สุทธิ' },
+  'cm.points':     { en:'Points',   th:'จุดข้อมูล' },
+  'cm.value':      { en:'Value',    th:'มูลค่า' },
+  'cm.categories': { en:'Categories', th:'หมวดหมู่' },
+  'cm.top':        { en:'Top',      th:'สูงสุด' },
+  'th.total':       { en:'Total',       th:'ยอดรวม' },
+  'th.paid':        { en:'Paid',        th:'ยอดชำระ' },
+  'th.note':        { en:'Note',        th:'หมายเหตุ' },
+  'th.month':       { en:'Month',       th:'เดือน' },
+  'th.sales':       { en:'Sales',       th:'ยอดขาย' },
+  'th.expense':     { en:'Expense',     th:'รายจ่าย' },
+  'th.profit':      { en:'Profit',      th:'กำไร' },
+  'th.goodsValue':  { en:'Goods Value', th:'มูลค่าสินค้า' },
+  'th.vat':         { en:'VAT',         th:'VAT' },
+  'th.outstanding': { en:'Outstanding', th:'ค้างชำระ' },
+  'th.delete':      { en:'Delete',      th:'ลบ' },
+  'th.item':        { en:'Item',        th:'รายการ' },
+  'th.budget':      { en:'Budget',      th:'ประมาณการ' },
+  'th.actual':      { en:'Actual',      th:'เกิดขึ้นจริง' },
+  'th.pctUsed':     { en:'% Used',      th:'% ใช้ไป' },
+  'th.totalRow':    { en:'Total',       th:'รวม' },
+
+  // charts page (static)
+  'charts.title':        { en:'Charts & Statistics', th:'กราฟและสถิติ' },
+  'charts.monthlySales': { en:'Cumulative Monthly Sales', th:'ยอดขายสะสมรายเดือน' },
+  'charts.expenseShare': { en:'Expense Breakdown (KPI)', th:'สัดส่วนค่าใช้จ่าย (KPI)' },
+  'charts.monthlyProfit':{ en:'Monthly Net Profit', th:'กำไรสุทธิรายเดือน' },
+  'charts.dailyExpense': { en:'Daily Expenses', th:'ค่าใช้จ่ายรายวัน' },
+  'charts.expenseTrend': { en:'Expense Trend', th:'แนวโน้มค่าใช้จ่าย' },
+  'charts.ieStacked':    { en:'Income vs Expense (monthly)', th:'รายได้ vs ค่าใช้จ่าย (รายเดือน)' },
+  'charts.gauge':        { en:'Profit Margin', th:'อัตรากำไร' },
+  'chart.totalLabel':    { en:'Total', th:'รวม' },
+
+  // yearly (static)
+  'yearly.title': { en:'Monthly Sales Comparison (by year)', th:'เทียบยอดขายรายเดือน (รายปี)' },
+  'yearly.vs':    { en:'vs', th:'เทียบกับ' },
+  'yearly.pct':   { en:'% change', th:'% เพิ่ม/ลด' },
+  'yearly.note':  { en:'Sales = actual paid amount · Profit = Sales − Expense of the compared year (right columns)', th:'ยอดขาย = ยอดรับชำระจริง (paid) · กำไร = ยอดขาย − รายจ่าย ของปีที่เทียบ (คอลัมน์ขวา)' },
+
+  // sales page (static)
+  'sales.title': { en:'Sales', th:'ยอดขาย' },
+
+  // expenses page (static)
+  'expenses.title': { en:'Daily Expenses', th:'ค่าใช้จ่ายรายวัน' },
+  'exp.saveMonth':  { en:'Save This Month', th:'บันทึกเดือนนี้' },
+  'exp.hint1':      { en:'Same table as the imported Excel — edit any cell then click <strong style="color:var(--text)">Save This Month</strong>', th:'ตารางเดียวกับไฟล์ Excel ที่นำเข้า — แก้ไขได้ทุกช่อง แล้วกด <strong style="color:var(--text)">บันทึกเดือนนี้</strong>' },
+  'exp.hint2':      { en:'The <strong style="color:var(--accent2)">Daily Expense</strong> column = the actual expense used to calculate the Dashboard · Category columns → KPI · If you don\'t want to fill every day, just enter the total in one day\'s Daily Expense cell', th:'คอลัมน์ <strong style="color:var(--accent2)">รายจ่ายรายวัน</strong> = ค่าใช้จ่ายจริงที่ใช้คำนวณ Dashboard · คอลัมน์หมวด → KPI · ถ้าไม่อยากกรอกทุกวัน ใส่ยอดรวมที่ช่องรายจ่ายรายวันวันเดียวก็ได้' },
+
+  // kpi page (static)
+  'kpi.title':       { en:'Operating Expense KPI', th:'KPI ค่าใช้จ่ายดำเนินงาน' },
+  'common.save':     { en:'Save', th:'บันทึก' },
+  'kpi.shareActual': { en:'Expense Breakdown (Actual)', th:'สัดส่วนค่าใช้จ่าย (เกิดขึ้นจริง)' },
+  'kpi.hint1':       { en:'<strong style="color:var(--text)">Actual</strong> is filled from the Excel file but editable · <strong style="color:var(--text)">Budget</strong> is entered manually · Sales target = 10 × actual KPI spend', th:'<strong style="color:var(--text)">เกิดขึ้นจริง</strong> เติมจากไฟล์ Excel แต่แก้ไขได้ · <strong style="color:var(--text)">ประมาณการ</strong> กรอกเอง · เป้าหมายยอดขาย = 10 × ยอด KPI ที่ใช้จริง' },
+  'kpi.hint2':       { en:'These category figures are a subset of total expenses — shown only to track KPI, they don\'t affect the Dashboard', th:'ตัวเลขหมวดเหล่านี้เป็น subset ของค่าใช้จ่ายรวม — แสดงเพื่อติดตาม KPI เท่านั้น ไม่กระทบ Dashboard' },
+
+  // import page (static)
+  'import.title':        { en:'Import Data', th:'นำเข้าข้อมูล' },
+  'import.ob.title':     { en:'Opening Balance', th:'ยอดเงินตั้งต้น (Opening Balance)' },
+  'import.ob.desc':      { en:'Enter the cash you already had before using this system; it will be included in the Dashboard for all periods.', th:'ใส่ยอดเงินที่มีอยู่แล้วก่อนเริ่มใช้งานระบบนี้ จะนำไปรวมใน Dashboard ทุกช่วงเวลา' },
+  'import.ob.label':     { en:'Opening Balance (THB)', th:'ยอดเงินตั้งต้น (บาท)' },
+  'import.ob.note':      { en:'Note (optional)', th:'หมายเหตุ (optional)' },
+  'import.ob.placeholder':{ en:'e.g. cash carried over as of 1 Jan 2568', th:'เช่น ยอดเงินสดยกมา ณ 1 ม.ค. 2568' },
+  'import.ob.save':      { en:'Save Opening Balance', th:'บันทึกยอดตั้งต้น' },
+  'import.sales.title':  { en:'Import Sales File (.XLS / HTML from accounting system)', th:'นำเข้าไฟล์ยอดขาย (.XLS / HTML จากระบบบัญชี)' },
+  'import.sales.desc':   { en:'Supports files exported from accounting software, e.g. daily income summary reports — monthly or full year (R06.111) · HTML format saved as .XLS · Duplicate days are overwritten with the new data', th:'รองรับไฟล์ที่ export จากโปรแกรมบัญชี เช่น รายงานสรุปรายได้ประจำวัน — ทั้งแบบรายเดือน หรือ ทั้งปี (R06.111) · ฟอร์แมต HTML ที่บันทึกเป็น .XLS · วันซ้ำจะถูกทับด้วยข้อมูลใหม่' },
+  'upload.clickDrag':    { en:'Click or drag a file here', th:'คลิกหรือลากไฟล์มาวาง' },
+  'import.sales.hint':   { en:'Supports .XLS, .HTML exported from the accounting system (R06.111)', th:'รองรับ .XLS, .HTML ที่ export จากระบบบัญชี (R06.111)' },
+  'import.exp.title':    { en:'Import Daily Expense Table (.xlsx)', th:'นำเข้าตารางค่าใช้จ่ายรายวัน (.xlsx)' },
+  'import.exp.desc':     { en:'Excel file following the template (date · categories · customers · <strong style="color:var(--accent2)">Daily Expense</strong>)<br>The <strong style="color:var(--accent2)">Daily Expense</strong> column → actual expense per day (Dashboard) · other categories → KPI · month read from the table header · duplicate days are overwritten', th:'ไฟล์ Excel ตามเทมเพลต (วันที่ · หมวดต่างๆ · จำนวนลูกค้า · <strong style="color:var(--accent2)">รายจ่ายรายวัน</strong>)<br>คอลัมน์ <strong style="color:var(--accent2)">รายจ่ายรายวัน</strong> → ค่าใช้จ่ายจริงต่อวัน (Dashboard) · หมวดอื่น → KPI · เดือนอ่านจากหัวตาราง · วันซ้ำถูกทับ' },
+  'upload.clickXlsx':    { en:'Click or drag a .xlsx file', th:'คลิกหรือลากไฟล์ .xlsx' },
+  'import.exp.hint':     { en:'Daily expense summary table', th:'ตารางสรุปค่าใช้จ่ายรายวัน' },
+  'import.guide.title':  { en:'Format Guide', th:'คำแนะนำ Format' },
+  'import.guide.body':   { en:'<strong style="color:var(--text)">Sales file (.XLS from the KP accounting system):</strong><br>The system reads columns: day month year | Total | Goods Value | VAT | Paid | Outstanding<br><br><strong style="color:var(--text)">Daily expense file (.xlsx):</strong><br>The header row contains the word "วันที่" (Date) · must include "รายจ่ายรายวัน" (Daily Expense) and "จำนวนลูกค้า" (Customers) columns · other columns in between are treated as KPI categories<br>The table header states the month/year, e.g. "...เดือน พฤษภาคม ปี 2569"', th:'<strong style="color:var(--text)">ไฟล์ยอดขาย (.XLS จากระบบบัญชี KP):</strong><br>ระบบจะอ่าน column: วัน เดือน ปี | ยอดรวม | มูลค่าสินค้า | ภาษีมูลค่าเพิ่ม | ยอดชำระ | ยอดค้างชำระ<br><br><strong style="color:var(--text)">ไฟล์ค่าใช้จ่ายรายวัน (.xlsx):</strong><br>แถวหัวข้อมีคำว่า "วันที่" · ต้องมีคอลัมน์ "รายจ่ายรายวัน" และ "จำนวนลูกค้า" · คอลัมน์อื่นระหว่างนั้นถือเป็นหมวด KPI<br>หัวตารางระบุเดือน/ปี เช่น "...เดือน พฤษภาคม ปี 2569"' },
+
+  // clear modal (static)
+  'clear.title':   { en:'Clear All Data?', th:'ล้างข้อมูลทั้งหมด?' },
+  'clear.body':    { en:'This will permanently delete all sales, expenses, KPI, and opening balance data from the system. This cannot be undone.', th:'การดำเนินการนี้จะลบข้อมูลยอดขาย ค่าใช้จ่าย KPI และยอดเงินตั้งต้นทั้งหมดออกจากระบบ ไม่สามารถกู้คืนได้' },
+  'common.cancel': { en:'Cancel', th:'ยกเลิก' },
+  'clear.confirm': { en:'Clear Data', th:'ล้างข้อมูล' },
+
+  // settings modal (static)
+  'settings.title':     { en:'Settings', th:'ตั้งค่า' },
+  'settings.body':      { en:'These actions affect all your data — choose carefully.', th:'การกระทำเหล่านี้มีผลต่อข้อมูลทั้งระบบ — เลือกด้วยความระมัดระวัง' },
+  'settings.theme':     { en:'Theme (color)', th:'ธีม (สี)' },
+  'settings.exportCsv': { en:'Export CSV (report)', th:'Export CSV (รายงาน)' },
+  'settings.backup':    { en:'Backup all data (.json)', th:'สำรองข้อมูลทั้งหมด (.json)' },
+  'settings.restore':   { en:'Restore data (.json)', th:'กู้คืนข้อมูล (.json)' },
+  'settings.import':    { en:'Import Data', th:'นำเข้าข้อมูล' },
+  'settings.clear':     { en:'Clear Data', th:'ล้างข้อมูล' },
+  'common.close':       { en:'Close', th:'ปิด' },
+
+  // dynamic (JS)
+  'dash.periodAll':     { en:'All Time', th:'ทุกช่วงเวลา' },
+  'month.all':          { en:'All Months', th:'ทุกเดือน' },
+  'kpi.carriedBalance': { en:'Carried Balance', th:'ยอดยกมา' },
+  'kpi.totalBalance':   { en:'Total Balance', th:'ยอดเงินรวม' },
+  'kpi.totalPaid':      { en:'Total Paid', th:'ยอดรับชำระ' },
+  'kpi.totalExpenses':  { en:'Total Expenses', th:'ค่าใช้จ่ายรวม' },
+  'kpi.netProfit':      { en:'Net Profit', th:'กำไรสุทธิ' },
+  'kpi.profitMargin':   { en:'Profit Margin', th:'อัตรากำไร' },
+  'kpi.subCarry':       { en:'Carried in + this month\'s profit (continuous)', th:'ยกมา + กำไรเดือนนี้ (สะสมต่อเนื่อง)' },
+  'kpi.subAllTime':     { en:'Opening + all cumulative profit', th:'ตั้งต้น + กำไรสะสมทั้งหมด' },
+  'kpi.subEndMonth':    { en:'Balance at end of ', th:'คงเหลือสิ้นเดือน ' },
+  'kpi.subEndYear':     { en:'Balance at end of ', th:'คงเหลือสิ้นปี ' },
+  'kpi.days':           { en:' days', th:' วัน' },
+  'kpi.items':          { en:' items', th:' รายการ' },
+  'kpi.netMargin':      { en:'Net Margin', th:'Net Margin' },
+  'badge.sale':         { en:'Sale', th:'ยอดขาย' },
+  'badge.expense':      { en:'Expense', th:'ค่าใช้จ่าย' },
+  'ds.sales':           { en:'Sales', th:'ยอดขาย' },
+  'ds.expense':         { en:'Expense', th:'ค่าใช้จ่าย' },
+  'ds.profit':          { en:'Profit', th:'กำไร' },
+  'ds.income':          { en:'Income', th:'รายได้' },
+  'ds.paid':            { en:'Paid', th:'ยอดรับชำระ' },
+  'ds.totalBalanceDaily':{ en:'Total Balance (daily)', th:'ยอดเงินรวม (รายวัน)' },
+  'ds.totalBalance':    { en:'Total Balance', th:'ยอดเงินรวม' },
+  'col.customers':      { en:'Customers', th:'จำนวนลูกค้า' },
+  'col.dailyExpense':   { en:'Daily Expense', th:'รายจ่ายรายวัน' },
+  'empty.noCompare':    { en:'No data to compare', th:'ยังไม่มีข้อมูลให้เทียบ' },
+  'empty.noData':       { en:'No data yet', th:'ยังไม่มีข้อมูล' },
+  'empty.noSales':      { en:'No sales data yet', th:'ยังไม่มีข้อมูลยอดขาย' },
+  'empty.goImport':     { en:'Go to "Import Data" to add data', th:'ไปที่ "นำเข้าข้อมูล" เพื่อเพิ่มข้อมูล' },
+  'empty.noKpi':        { en:'No KPI data for this month', th:'ยังไม่มีข้อมูล KPI เดือนนี้' },
+  'empty.importXlsx':   { en:'Import the daily-expense file (.xlsx) on the "Import Data" page', th:'นำเข้าไฟล์ค่าใช้จ่ายรายวัน (.xlsx) ที่หน้า "นำเข้าข้อมูล"' },
+  'empty.pickMonth':    { en:'Select month/year', th:'เลือกเดือน/ปี' },
+  'toast.badAmount':    { en:'Please enter a valid amount', th:'กรุณากรอกยอดเงินที่ถูกต้อง' },
+  'toast.obSaved':      { en:'Opening balance saved', th:'บันทึกยอดเงินตั้งต้นแล้ว' },
+  'toast.expSaved':     { en:'This month\'s expenses saved', th:'บันทึกค่าใช้จ่ายเดือนนี้แล้ว' },
+  'toast.pickMonthFirst':{ en:'Select month/year first', th:'เลือกเดือน/ปีก่อน' },
+  'toast.backupOk':     { en:'All data backed up (.json) successfully', th:'สำรองข้อมูลทั้งหมด (.json) สำเร็จ' },
+  'toast.notAppFile':   { en:'Not a backup file for this app', th:'ไม่ใช่ไฟล์สำรองของแอปนี้' },
+  'toast.badJson':      { en:'Invalid file (could not read JSON)', th:'ไฟล์ไม่ถูกต้อง (อ่าน JSON ไม่ได้)' },
+  'toast.cleared':      { en:'All data cleared', th:'ล้างข้อมูลทั้งหมดแล้ว' },
+  'toast.kpiSaved':     { en:'KPI budget saved', th:'บันทึกงบประมาณ KPI แล้ว' },
+  'toast.deleted':      { en:'Item deleted', th:'ลบรายการแล้ว' },
+  'toast.csvOk':        { en:'Export CSV successful', th:'Export CSV สำเร็จ' },
+  'toast.salesNoTable': { en:'No data table found — use only .XLS/.HTML exported from the accounting system', th:'ไม่พบตารางข้อมูล — ใช้ไฟล์ .XLS/.HTML ที่ export จากระบบบัญชีเท่านั้น' },
+  'toast.readFail':     { en:'Could not read file: ', th:'อ่านไฟล์ไม่ได้: ' },
+  'toast.expMonthFail': { en:'Could not read month/year from the table header — put "month ... year ..." in the header', th:'อ่านเดือน/ปีจากหัวตารางไม่ได้ — ใส่ "เดือน ... ปี ..." ในหัวตาราง' },
+  'toast.expNoRows':    { en:'No daily data found in the file', th:'ไม่พบข้อมูลรายวันในไฟล์' },
+  'confirm.unsavedExp': { en:'You have unsaved expense data. Discard changes?', th:'มีข้อมูลค่าใช้จ่ายที่ยังไม่ได้บันทึก จะทิ้งการแก้ไขไหม?' },
+  'confirm.unsavedKpi': { en:'You have unsaved KPI data. Discard changes?', th:'มีข้อมูล KPI ที่ยังไม่ได้บันทึก จะทิ้งการแก้ไขไหม?' },
+  'confirm.delete':     { en:'Delete this item?', th:'ลบรายการนี้?' },
+  'ob.savedStatus':     { en:'Saved: ', th:'บันทึกแล้ว: ' },
+  'ob.current':         { en:'Current: ', th:'ยอดปัจจุบัน: ' },
+  'cur.thb':            { en:'THB', th:'บาท' },
+  'theme.dark':         { en:'Dark', th:'มืด' },
+  'theme.light':        { en:'Light', th:'สว่าง' },
+  'sales.totalPrefix':  { en:'Total: ', th:'รวม: ' },
+  'exp.totalPrefix':    { en:'Total Daily Expense: ', th:'รายจ่ายรายวันรวม: ' },
+  'kpi.realMonth':      { en:'Actual expense for month', th:'ค่าใช้จ่ายจริงทั้งเดือน' },
+  'kpi.fromDaily':      { en:'from "Daily Expense"', th:'จาก "รายจ่ายรายวัน"' },
+  'kpi.spentLabel':     { en:'KPI spent', th:'KPI ที่ใช้จริง (spent)' },
+  'kpi.spentSub':       { en:'sum of tracked categories', th:'รวมหมวดที่ติดตาม' },
+  'kpi.custUnit':       { en:'people', th:'คน' },
+  'kpi.salesTarget':    { en:'Sales Target', th:'เป้าหมายยอดขาย' },
+  'kpi.targetSub':      { en:'10 × actual KPI spend', th:'10 × KPI ที่ใช้จริง' },
+  'import.salesNoFound':{ en:'No data table found in the file (not an .XLS/.HTML report from the accounting system)', th:'ไม่พบตารางข้อมูลในไฟล์ (ไม่ใช่รายงาน .XLS/.HTML จากระบบบัญชี)' },
+  'import.salesOkStatus':{ en:'Imported successfully — added {added} days, updated(overwritten) {updated} days · {total} days total', th:'นำเข้าสำเร็จ — เพิ่ม {added} วัน, อัปเดต(ทับ) {updated} วัน · รวม {total} วัน' },
+  'import.salesOkToast': { en:'Sales imported: added {added}, updated {updated}', th:'นำเข้ายอดขาย: เพิ่ม {added}, อัปเดต {updated}' },
+  'import.expOkStatus':  { en:'Imported {month} successfully — {days} days · total daily expense {total} THB · {cats} categories · {cust} customers', th:'นำเข้า {month} สำเร็จ — {days} วัน · รายจ่ายรายวันรวม {total} บาท · หมวด {cats} · ลูกค้า {cust} คน' },
+  'import.expOkToast':   { en:'Expenses for {month} imported', th:'นำเข้าค่าใช้จ่าย {month} แล้ว' },
+  'restore.confirm':     { en:'Restoring will overwrite ALL data in the app with this file\n(sales {nSales} days · expense sheets {nSheets} months · opening balance {ob})\nContinue?', th:'กู้คืนจะเขียนทับข้อมูลทั้งหมดในแอปด้วยไฟล์นี้\n(ยอดขาย {nSales} วัน · ชีตค่าใช้จ่าย {nSheets} เดือน · ยอดตั้งต้น {ob})\nดำเนินการต่อ?' },
+  'restore.success':     { en:'Restore successful — sales {nSales} days, sheets {nSheets} months', th:'กู้คืนข้อมูลสำเร็จ — ยอดขาย {nSales} วัน, ชีต {nSheets} เดือน' }
+};
+// tiny template helper: tf('key', {added:1,...}) replaces {tokens}
+function tf(k, vars){ return t(k).replace(/\{(\w+)\}/g, (m,p) => (vars[p] != null ? vars[p] : m)); }
+let LANG = (localStorage.getItem('kpft_lang') === 'th') ? 'th' : 'en';
+function t(k){ const e = I18N[k]; return e ? (e[LANG] || e.en) : k; }
+const MONTHS_TH = ['ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.'];
+const MONTHS_EN = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+function monthName(i){ return (LANG==='en'?MONTHS_EN:MONTHS_TH)[i]; }
+function eraPrefix(){ return LANG==='en' ? 'BE' : 'พ.ศ.'; }
+function applyLang(){
+  document.documentElement.lang = LANG;
+  document.querySelectorAll('[data-i18n]').forEach(el => { el.textContent = t(el.getAttribute('data-i18n')); });
+  document.querySelectorAll('[data-i18n-html]').forEach(el => { el.innerHTML = t(el.getAttribute('data-i18n-html')); });
+  document.querySelectorAll('[data-i18n-ph]').forEach(el => { el.placeholder = t(el.getAttribute('data-i18n-ph')); });
+  document.querySelectorAll('.nav-item').forEach(it => { const l = it.querySelector('.nav-label'); if (l) it.setAttribute('data-tip', l.textContent); });
+  const ll = document.getElementById('langLabel'); if (ll) ll.textContent = (LANG==='en' ? 'ไทย' : 'EN');
+  if (typeof refreshAll === 'function') refreshAll();
+  if (typeof initOpeningBalanceUI === 'function') initOpeningBalanceUI();
+}
+function toggleLang(){ LANG = (LANG==='en'?'th':'en'); localStorage.setItem('kpft_lang', LANG); applyLang(); }
+
+// ═══════════════════════════════════════════════════
+//  STATE & STORAGE
+// ═══════════════════════════════════════════════════
+const STORAGE_SALES    = 'kp_sales';
+const STORAGE_EXPENSE  = 'kp_expenses';
+const STORAGE_BALANCE  = 'kp_opening_balance';
+const STORAGE_KPI      = 'kp_kpi';
+const STORAGE_SHEETS   = 'kp_expense_sheets';
+
+// Default daily-expense columns (matches template) for months with no imported sheet yet
+const DEFAULT_EXP_CATS = ['เงินเดือน','ค่าขนส่ง','ค่าพัสดุปลายทาง','ค่าอาหาร','ค่าน้ำมัน','ค่าเช่า','ค่าน้ำ/ไฟ/โทรศัพท์','บัตรเครดิต','supplyuse','ค่าเสื่อมอุปกรณ์','ประกัน'];
+
+let sales          = load(STORAGE_SALES,   []);
+let expenses       = load(STORAGE_EXPENSE, []);
+let openingBalance = load(STORAGE_BALANCE, { amount: 0, note: '' });
+// kpi = { 'YYYY-MM': { actual:{cat:amt}, budget:{cat:amt}, notes:{cat:txt}, customers:n } }
+let kpi            = load(STORAGE_KPI,     {});
+// expenseSheets = { 'YYYY-MM': { cats:[...], rows:{ day:{vals:{cat:amt}, cust:n, daily:n} } } }
+let expenseSheets  = load(STORAGE_SHEETS,  {});
+let charts         = {};
+
+// unsaved-changes tracking (M5)
+let dirty = { expenses: false, kpi: false };
+let lastExpYM = '', lastKpiYM = '';
+let currentPage = 'dashboard';
+
+function load(key, def) {
+  // branch-aware local cache (key is suffixed with the active branch)
+  const k = key + '__' + CURRENT_BRANCH;
+  const raw = localStorage.getItem(k);
+  try { return JSON.parse(raw) || def; }
+  catch (err) {
+    // don't silently lose corrupt data — back it up so a later save() can't overwrite it unseen
+    try { localStorage.setItem(k + '_corrupt_' + Date.now(), raw); } catch (e) {}
+    console.warn('load(): corrupt data for', k, '— backed up, using default.', err);
+    return def;
+  }
+}
+function save() {
+  // "Both / combined" is read-only — never write merged data back to a branch
+  if (CURRENT_BRANCH === 'combined') {
+    if (typeof toast === 'function') toast(_isTH()?'มุมมองรวม (A+B) อ่านอย่างเดียว — สลับไปสาขา A หรือ B เพื่อแก้ไข':'Combined view is read-only — switch to Place A or B to edit.', 'err');
+    return;
+  }
+  const sfx = '__' + CURRENT_BRANCH;
+  localStorage.setItem(STORAGE_SALES   + sfx, JSON.stringify(sales));
+  localStorage.setItem(STORAGE_EXPENSE + sfx, JSON.stringify(expenses));
+  localStorage.setItem(STORAGE_BALANCE + sfx, JSON.stringify(openingBalance));
+  localStorage.setItem(STORAGE_KPI     + sfx, JSON.stringify(kpi));
+  localStorage.setItem(STORAGE_SHEETS  + sfx, JSON.stringify(expenseSheets));
+  schedulePush();  // push this branch to the cloud (debounced)
+}
+
+function saveOpeningBalance() {
+  const raw = parseFloat(document.getElementById('openingBalanceInput').value);
+  const note = document.getElementById('openingBalanceNote').value.trim();
+  if (isNaN(raw) || raw < 0) { toast(t('toast.badAmount'), 'err'); return; }
+  openingBalance = { amount: raw, note };
+  save(); refreshAll();
+  document.getElementById('openingBalanceStatus').innerHTML =
+    `<i class="fi fi-rr-check"></i> ${t('ob.savedStatus')}${fmt(raw)} ${t('cur.thb')}${note ? ' — ' + note : ''}`;
+  toast(t('toast.obSaved'), 'ok');
+}
+
+function initOpeningBalanceUI() {
+  document.getElementById('openingBalanceInput').value = openingBalance.amount || '';
+  document.getElementById('openingBalanceNote').value  = openingBalance.note  || '';
+  if (openingBalance.amount) {
+    document.getElementById('openingBalanceStatus').innerHTML =
+      `<i class="fi fi-rr-check"></i> ${t('ob.current')}${fmt(openingBalance.amount)} ${t('cur.thb')}${openingBalance.note ? ' — ' + openingBalance.note : ''}`;
+  }
+}
+
+// ═══════════════════════════════════════════════════
+//  NAVIGATION
+// ═══════════════════════════════════════════════════
+const NAV_ORDER = ['dashboard','charts','yearly','sales','expenses','kpi','import'];
+
+// Stagger-cascade page transition — sections fade up one after another. JS-driven
+// (Web Animations API) so it reliably replays on every tab open and isn't suppressed.
+function playCascade(pg){
+  if (!pg || !pg.children || !pg.animate && !pg.children[0]) return;
+  const kids = pg.children;
+  for (let i = 0; i < kids.length; i++){
+    try {
+      kids[i].animate(
+        [{ opacity:0, transform:'translateY(18px)' }, { opacity:1, transform:'translateY(0)' }],
+        { duration:460, delay: Math.min(i*65, 520), easing:'cubic-bezier(.22,.61,.36,1)', fill:'backwards' }
+      );
+    } catch(e){}
+  }
+}
+function navigate(page) {
+  // warn before leaving a page with unsaved edits (M5)
+  if (currentPage === 'expenses' && dirty.expenses && !confirm(t('confirm.unsavedExp'))) return;
+  if (currentPage === 'kpi' && dirty.kpi && !confirm(t('confirm.unsavedKpi'))) return;
+  dirty.expenses = false; dirty.kpi = false;
+  currentPage = page;
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page-' + page).classList.add('active');
+  // re-trigger the page fade-up so it replays on every switch
+  const _pg = document.getElementById('page-' + page);
+  playCascade(_pg);
+  if (page === 'dashboard') { dashGraph = 'balance'; const _t = document.getElementById('dashGraphTitle'); if (_t){ _t.setAttribute('data-i18n','dash.balanceChart'); _t.textContent = t('dash.balanceChart'); } }
+  document.querySelectorAll('.nav-item').forEach((n,i) => {
+    n.classList.toggle('active', NAV_ORDER[i] === page);
+  });
+  moveNavIndicator();
+  refreshAll();
+  if (page === 'import') initOpeningBalanceUI();
+}
+
+// ═══════════════════════════════════════════════════
+//  FILTER
+// ═══════════════════════════════════════════════════
+let currentMonth = '';
+const MONTHS_ABBR = ['ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.'];
+
+// ── month/year dropdown helpers ──
+function allYears() {
+  const ys = new Set();
+  [...sales, ...expenses].forEach(r => { const y = (r.date||'').slice(0,4); if (y) ys.add(y); });
+  Object.keys(kpi).forEach(m => ys.add(m.slice(0,4)));
+  Object.keys(expenseSheets).forEach(m => ys.add(m.slice(0,4)));
+  const arr = [...ys].filter(Boolean).sort();
+  if (!arr.length) arr.push(String(new Date().getFullYear()));
+  return arr;
+}
+function fillMonthSelect(sel, withAll) {
+  // months are static — fill once per language; re-render on language change
+  // but preserve the user's current choice.
+  if (!sel) return;
+  const want = withAll ? 13 : 12;
+  if (sel.options.length === want && sel.dataset.lang === LANG) return;
+  const cur = sel.value;
+  let html = withAll ? `<option value="">${t('month.all')}</option>` : '';
+  html += MONTHS_ABBR.map((n,i) => `<option value="${String(i+1).padStart(2,'0')}">${monthName(i)}</option>`).join('');
+  sel.innerHTML = html;
+  sel.dataset.lang = LANG;
+  if ([...sel.options].some(o => o.value === cur)) sel.value = cur;
+}
+function fillYearSelect(sel) {
+  if (!sel) return;
+  const cur = sel.value;
+  sel.innerHTML = allYears().map(y => `<option value="${y}">${+y+543}</option>`).join('');  // value=ค.ศ., แสดง พ.ศ.
+  if ([...sel.options].some(o => o.value === cur)) sel.value = cur;
+  else sel.value = allYears().slice(-1)[0];
+}
+function setMonthYear(monthSel, yearSel, ym) {
+  if (!ym || !monthSel || !yearSel) return;
+  fillYearSelect(yearSel);
+  yearSel.value = ym.slice(0,4);
+  monthSel.value = ym.slice(5,7);
+}
+
+function buildFilterOptions() {
+  fillMonthSelect(document.getElementById('fMonth'), true);  // includes "ทุกเดือน"
+  fillYearSelect(document.getElementById('fYear'));
+  setAllBtn(!currentMonth);
+}
+function setAllBtn(active) {
+  const b = document.getElementById('fAllBtn');
+  if (b) b.className = 'btn btn-sm ' + (active ? 'btn-primary' : 'btn-ghost');
+}
+
+// "ทั้งหมด" button → show everything from the beginning
+function filterAll() {
+  const m = document.getElementById('fMonth'); if (m) m.value = '';
+  currentMonth = '';
+  refreshAll();
+}
+// month/year change → 'YYYY' (whole year) or 'YYYY-MM' (one month)
+function onPickFilter() {
+  const y = (document.getElementById('fYear')||{}).value;
+  const m = (document.getElementById('fMonth')||{}).value;
+  currentMonth = y ? (m ? `${y}-${m}` : y) : '';
+  refreshAll();
+}
+
+function filtered(arr) {
+  if (!currentMonth) return arr;
+  return arr.filter(r => (r.date||'').startsWith(currentMonth));
+}
+
+// Display year as พ.ศ. (stored years are ค.ศ.)
+function formatMonth(m) {
+  if (!m) return '';
+  const [y, mo] = m.split('-');
+  const be = +y > 2400 ? +y : +y + 543;
+  if (!mo) return `${eraPrefix()} ${be}`;
+  return `${monthName(+mo-1)} ${be}`;
+}
+
+// ═══════════════════════════════════════════════════
+//  REFRESH ALL VIEWS
+// ═══════════════════════════════════════════════════
+function refreshAll() {
+  buildFilterOptions();
+  const fSales = filtered(sales);
+  const fExp   = filtered(expenses);
+
+  refreshDashboard(fSales, fExp);
+  refreshSalesTable(fSales);
+  refreshExpenseTable(fExp);
+  refreshCharts(fSales, fExp);
+  buildYearOptions();
+  refreshYearly();
+  if (!dirty.kpi) renderKPI();
+  updatePeriodLabel();
+}
+
+// ═══════════════════════════════════════════════════
+//  YEARLY COMPARISON
+// ═══════════════════════════════════════════════════
+function buildYearOptions() {
+  const years = new Set();
+  [...sales, ...expenses].forEach(r => { const y = (r.date||'').slice(0,4); if (y) years.add(y); });
+  Object.keys(kpi).forEach(m => { const y = m.slice(0,4); if (y) years.add(y); });
+  Object.keys(expenseSheets).forEach(m => { const y = m.slice(0,4); if (y) years.add(y); });
+  const arr = [...years].sort();
+  const selA = document.getElementById('yearA');
+  const selB = document.getElementById('yearB');
+  if (!selA || !selB) return;
+  const curA = selA.value, curB = selB.value;
+  [selA, selB].forEach(sel => {
+    sel.innerHTML = '';
+    arr.forEach(y => {
+      const o = document.createElement('option');
+      o.value = y; o.text = eraPrefix() + ' ' + (+y + 543);
+      sel.appendChild(o);
+    });
+  });
+  if (!arr.length) return;
+  // Default: B = latest year, A = year before
+  selB.value = arr.includes(curB) ? curB : arr[arr.length-1];
+  if (arr.includes(curA)) selA.value = curA;
+  else selA.value = arr.length > 1 ? arr[arr.length-2] : arr[arr.length-1];
+}
+
+function yearMonthAgg(year) {
+  const s = Array(12).fill(0), e = Array(12).fill(0);
+  sales.forEach(r => { if ((r.date||'').slice(0,4) === year) s[+r.date.slice(5,7)-1] += (r.paid   || 0); });
+  expenses.forEach(r => { if ((r.date||'').slice(0,4) === year) e[+r.date.slice(5,7)-1] += (r.amount || 0); });
+  return { s: s.map(round2), e: e.map(round2) };
+}
+
+function refreshYearly() {
+  const selA = document.getElementById('yearA');
+  const selB = document.getElementById('yearB');
+  const tbody = document.getElementById('yearlyTbody');
+  if (!selA || !selB || !tbody) return;
+  const yA = selA.value, yB = selB.value;
+  if (!yA || !yB) {
+    tbody.innerHTML = `<tr><td colspan="7"><div class="empty-state"><div class="empty-icon"><i class="fi fi-rr-calendar"></i></div>${t('empty.noCompare')}</div></td></tr>`;
+    return;
+  }
+  document.getElementById('yh-salesA').textContent = `${t('th.sales')} ${eraPrefix()+(+yA+543)}`;
+  document.getElementById('yh-salesB').textContent = `${t('th.sales')} ${eraPrefix()+(+yB+543)}`;
+  document.getElementById('yh-expA').textContent   = `${t('th.expense')} ${eraPrefix()+(+yA+543)}`;
+  document.getElementById('yh-expB').textContent   = `${t('th.expense')} ${eraPrefix()+(+yB+543)}`;
+
+  const A = yearMonthAgg(yA), B = yearMonthAgg(yB);
+  const names = MONTHS_ABBR.map((_,i) => monthName(i));
+
+  const pctCell = (sA, sB) => {
+    if (!sA) return '<td class="text-right mono" style="color:var(--muted)">—</td>';
+    const p = (sB - sA) / sA * 100;
+    return `<td class="text-right mono ${p>=0?'green-text':'red-text'}">${p>=0?'+':''}${p.toFixed(1)}%</td>`;
+  };
+
+  let totSA=0, totSB=0, totEA=0, totEB=0;
+  let rows = names.map((nm,i) => {
+    const sA=A.s[i], sB=B.s[i], eA=A.e[i], eB=B.e[i];
+    totSA+=sA; totSB+=sB; totEA+=eA; totEB+=eB;
+    const profit = sB - eB;
+    return `<tr>
+      <td>${nm}</td>
+      <td class="text-right mono">${sA?fmt(sA):'-'}</td>
+      <td class="text-right mono">${sB?fmt(sB):'-'}</td>
+      ${pctCell(sA, sB)}
+      <td class="text-right mono">${eA?fmt(eA):'-'}</td>
+      <td class="text-right mono">${eB?fmt(eB):'-'}</td>
+      <td class="text-right mono ${profit>=0?'green-text':'red-text'}">${(sB||eB)?fmt(profit):'-'}</td>
+    </tr>`;
+  }).join('');
+
+  const totProfit = totSB - totEB;
+  rows += `<tr style="border-top:2px solid var(--border);font-weight:600;background:var(--surface2);">
+    <td>${t('th.totalRow')}</td>
+    <td class="text-right mono">${fmt(totSA)}</td>
+    <td class="text-right mono">${fmt(totSB)}</td>
+    ${pctCell(totSA, totSB)}
+    <td class="text-right mono">${fmt(totEA)}</td>
+    <td class="text-right mono">${fmt(totEB)}</td>
+    <td class="text-right mono ${totProfit>=0?'green-text':'red-text'}">${fmt(totProfit)}</td>
+  </tr>`;
+
+  tbody.innerHTML = rows;
+}
+
+function updatePeriodLabel() {
+  document.getElementById('dash-period').textContent = currentMonth ? formatMonth(currentMonth) : t('dash.periodAll');
+}
+
+// ═══════════════════════════════════════════════════
+//  DASHBOARD
+// ═══════════════════════════════════════════════════
+function prevMonth(ym) {
+  // ym = "YYYY-MM", returns previous month as "YYYY-MM"
+  const [y, m] = ym.split('-').map(Number);
+  if (m === 1) return `${y-1}-12`;
+  return `${y}-${String(m-1).padStart(2,'0')}`;
+}
+
+// Cumulative net profit (paid sales − expenses) for every record with
+// month <= throughYm. Pass '' / null to include all records.
+// Lexicographic compare works because dates are fixed-width "YYYY-MM-DD".
+function cumNetProfit(throughYm) {
+  const within = r => !throughYm || (r.date || '').slice(0,7) <= throughYm;
+  const s = sales.filter(within).reduce((a,r) => a + (r.paid   || 0), 0);
+  const e = expenses.filter(within).reduce((a,r) => a + (r.amount || 0), 0);
+  return round2(s - e);
+}
+
+function refreshDashboard(fSales, fExp) {
+  const totalSales   = round2(fSales.reduce((s,r) => s + (r.paid||0), 0));
+  const totalExp     = round2(fExp.reduce((s,r) => s + (r.amount||0), 0));
+  const profit       = totalSales - totalExp;
+  const margin       = totalSales ? ((profit/totalSales)*100).toFixed(1) : 0;
+
+  const ob = openingBalance.amount || 0;
+
+  // ── Carried-forward running balance (carries continuously month→month) ──
+  // ยอดยกมา  = ยอดตั้งต้น + กำไรสะสมถึงสิ้นเดือนก่อน  (final balance of previous month)
+  // ยอดเงินรวม = ยอดตั้งต้น + กำไรสะสมถึงสิ้นเดือนที่เลือก (= ยกมา + กำไรเดือนนี้)
+  let carriedCard = '';
+  let runningBal, runningSub;
+  if (currentMonth && currentMonth.length === 7) {            // a specific month
+    const pm         = prevMonth(currentMonth);
+    const carriedIn  = ob + cumNetProfit(pm);
+    runningBal       = ob + cumNetProfit(currentMonth);
+    runningSub       = t('kpi.subCarry');
+    carriedCard = `
+    <div class="kpi" style="border-color:rgba(245,200,66,.25);background:rgba(245,200,66,.04);">
+      <div class="kpi-label" style="color:var(--yellow)">${t('kpi.carriedBalance')}</div>
+      <div class="kpi-value ${carriedIn>=0?'green':'red'}">${fmt(carriedIn)}</div>
+      <div class="kpi-sub">${t('kpi.subEndMonth')}${formatMonth(pm)}</div>
+    </div>`;
+  } else if (currentMonth && currentMonth.length === 4) {     // a whole year
+    runningBal = ob + cumNetProfit(`${currentMonth}-12`);     // balance at end of that year
+    runningSub = `${t('kpi.subEndYear')}${formatMonth(currentMonth)}`;
+  } else {                                                    // all-time
+    runningBal = ob + cumNetProfit('');
+    runningSub = t('kpi.subAllTime');
+  }
+
+  // Opening balance is the one-time starting point only — it feeds runningBal
+  // but is NOT shown as its own card anywhere.
+
+  // Running total card — always shown (the headline number)
+  const runningCard = `
+    <div class="kpi kpi-gold clickable" onclick="showDashGraph('balance')">
+      <div class="kpi-label">${t('kpi.totalBalance')}</div>
+      <div class="kpi-value ${runningBal>=0?'green':'red'}">${fmt(runningBal)}</div>
+      <div class="kpi-sub">${runningSub}</div>
+    </div>`;
+
+  document.getElementById('kpiGrid').innerHTML = `
+    <div class="kpi clickable" onclick="showDashGraph('income')">
+      <div class="kpi-label">${t('kpi.totalPaid')}</div>
+      <div class="kpi-value blue">${fmt(totalSales)}</div>
+      <div class="kpi-sub">${fSales.length}${t('kpi.days')}</div>
+    </div>
+    <div class="kpi kpi-ink clickable" onclick="showDashGraph('expense')">
+      <div class="kpi-label">${t('kpi.totalExpenses')}</div>
+      <div class="kpi-value red">${fmt(totalExp)}</div>
+      <div class="kpi-sub">${fExp.length}${t('kpi.items')}</div>
+    </div>
+    <div class="kpi clickable" onclick="showDashGraph('profit')">
+      <div class="kpi-label">${t('kpi.netProfit')}</div>
+      <div class="kpi-value ${profit>=0?'green':'red'}">${fmt(profit)}</div>
+      <div class="profit-bar-wrap"><div class="profit-bar" style="width:${Math.min(100,Math.max(0,+margin))}%;background:${profit>=0?'var(--green)':'var(--accent2)'}"></div></div>
+    </div>
+    <div class="kpi clickable" onclick="showDashGraph('margin')">
+      <div class="kpi-label">${t('kpi.profitMargin')}</div>
+      <div class="kpi-value ${profit>=0?'green':'red'}">${margin}%</div>
+      <div class="kpi-sub">${t('kpi.netMargin')}</div>
+    </div>
+    ${carriedCard}
+    ${runningCard}
+  `;
+  document.querySelectorAll('#kpiGrid .kpi.clickable').forEach(c => { c.tabIndex = 0; c.setAttribute('role','button'); });
+
+  // Recent
+  const all = [
+    ...fSales.map(r => ({...r, type:'sale'})),
+    ...fExp.map(r => ({...r, type:'expense', total: r.amount, paid: r.amount, note: r.note + (r.category?' ('+r.category+')':'') }))
+  ].sort((a,b) => (b.date||'').localeCompare(a.date||'')).slice(0,15);
+
+  document.getElementById('recentTbody').innerHTML = all.length ? all.map(r => `
+    <tr>
+      <td class="mono">${formatDate(r.date)}</td>
+      <td><span class="badge ${r.type==='sale'?'badge-sale':'badge-expense'}">${r.type==='sale'?t('badge.sale'):t('badge.expense')}</span></td>
+      <td class="text-right mono">${fmt(r.total||r.amount)}</td>
+      <td class="text-right mono ${r.type==='sale'?'green-text':'red-text'}">${fmt(r.paid||r.amount)}</td>
+      <td style="color:var(--muted);font-size:12px">${r.note||''}</td>
+    </tr>
+  `).join('') : `<tr><td colspan="5"><div class="empty-state"><div class="empty-icon"><i class="fi fi-rr-box"></i></div>${t('empty.noData')}</div></td></tr>`;
+
+  // Bar chart — period-aware (daily for a specific month, monthly for year/all)
+  const barB = periodBuckets();
+  const sData = barB.keys.map(k => sumBucket(sales, 'paid', k, barB.daily));
+  const eData = barB.keys.map(k => sumBucket(expenses, 'amount', k, barB.daily));
+
+  drawBar('barChart', barB.labels, [
+    { label:t('ds.sales'), data: sData, backgroundColor:'rgba(217,164,0,.7)' },
+    { label:t('ds.expense'), data: eData, backgroundColor:inkChart() }
+  ]);
+  // Daily Net Profit chart removed from the dashboard to declutter — monthly profit lives on the Charts tab
+
+  drawDashGraph();
+
+  // Expense-by-category donut (reuses the same aggregation that feeds 'expensePie')
+  const dashCatAgg = {};
+  const dashCatMonths = currentMonth ? Object.keys(kpi).filter(m => m.startsWith(currentMonth)) : Object.keys(kpi);
+  dashCatMonths.forEach(m => {
+    const d = kpi[m]; if (!d || !d.actual) return;
+    Object.entries(d.actual).forEach(([cat, v]) => { dashCatAgg[cat] = (dashCatAgg[cat] || 0) + (v || 0); });
+  });
+  const dashPieLabels = [], dashPieVals = [];
+  Object.entries(dashCatAgg).forEach(([k, v]) => { if (v > 0) { dashPieLabels.push(k); dashPieVals.push(v); } });
+  drawPie('expenseDonutDash', dashPieLabels, dashPieVals);
+
+  drawMarginGauge('marginGauge');
+
+}
+
+// ═══════════════════════════════════════════════════
+//  SALES TABLE
+// ═══════════════════════════════════════════════════
+function refreshSalesTable(fSales) {
+  const total = fSales.reduce((s,r) => s+(r.paid||0), 0);
+  document.getElementById('sales-total').textContent = t('sales.totalPrefix') + fmt(total) + ' ' + t('cur.thb');
+  document.getElementById('salesTbody').innerHTML = fSales.length ? fSales.map((r,i) => `
+    <tr>
+      <td class="mono">${formatDate(r.date)}</td>
+      <td class="text-right mono green-text">${fmt(r.total)}</td>
+      <td class="text-right mono">${fmt(r.goodsValue)}</td>
+      <td class="text-right mono">${fmt(r.vat)}</td>
+      <td class="text-right mono green-text">${fmt(r.paid)}</td>
+      <td class="text-right mono ${r.unpaid>0?'red-text':''}">${fmt(r.unpaid)}</td>
+      <td class="text-center"><button class="btn btn-danger btn-sm" onclick="deleteSale(${sales.indexOf(r)})" aria-label="Delete" title="Delete"><i class="fi fi-rr-cross-small"></i></button></td>
+    </tr>
+  `).join('') : `<tr><td colspan="7"><div class="empty-state"><div class="empty-icon"><i class="fi fi-rr-chart-line-up"></i></div>${t('empty.noSales')}<br><small style="color:var(--muted)">${t('empty.goImport')}</small></div></td></tr>`;
+}
+
+// ═══════════════════════════════════════════════════
+//  EXPENSE — FULL DAILY×CATEGORY TABLE (matches Excel template)
+//  Stored in expenseSheets[ym]. The "รายจ่ายรายวัน" column is the
+//  authoritative monthly expense; categories feed KPI.
+// ═══════════════════════════════════════════════════
+function expenseForDate(d) {
+  return expenses.filter(r => r.date === d).reduce((a,r) => a + (r.amount||0), 0);
+}
+function daysInMonth(ym) {
+  const [y,m] = ym.split('-').map(Number);
+  return new Date(y, m, 0).getDate();
+}
+function getExpYM() {
+  const m = document.getElementById('exMonthSel'), y = document.getElementById('exYearSel');
+  return (m && y && m.value && y.value) ? `${y.value}-${m.value}` : '';
+}
+
+const EXP_CELL = "width:78px;text-align:right;background:var(--surface2);border:1px solid var(--border);color:var(--text);border-radius:5px;padding:4px 6px;font-family:'IBM Plex Mono',monospace;font-size:12px;outline:none;";
+
+function renderExpenseMonth() {
+  const wrap = document.getElementById('expenseTableWrap');
+  if (!wrap) return;
+  const ym = getExpYM();
+  if (!ym) { wrap.innerHTML = `<div class="empty-state">${t('empty.pickMonth')}</div>`; document.getElementById('expense-total').textContent=''; return; }
+
+  const sheet = expenseSheets[ym];
+  const cats = sheet ? sheet.cats : DEFAULT_EXP_CATS;
+  const nDays = daysInMonth(ym);
+
+  const head = `<th style="width:46px">${t('th.date')}</th>`
+    + cats.map(c => `<th class="text-right" style="font-size:10px;min-width:80px">${c}</th>`).join('')
+    + `<th class="text-right" style="font-size:10px">${t('col.customers')}</th>`
+    + `<th class="text-right" style="font-size:10px;color:var(--accent2)">${t('col.dailyExpense')}</th>`;
+
+  let body = '';
+  for (let d = 1; d <= nDays; d++) {
+    const r = sheet && sheet.rows[d] ? sheet.rows[d] : null;
+    const dailyVal = r ? r.daily : expenseForDate(`${ym}-${String(d).padStart(2,'0')}`);
+    body += `<tr><td class="mono">${d}</td>`
+      + cats.map((c,ci) => `<td><input type="number" step="0.01" id="ex-${d}-c${ci}" value="${r && r.vals[c] ? r.vals[c] : ''}" oninput="onExpEdit()" style="${EXP_CELL}"></td>`).join('')
+      + `<td><input type="number" step="1" id="ex-${d}-cust" value="${r && r.cust ? r.cust : ''}" oninput="onExpEdit()" style="${EXP_CELL}"></td>`
+      + `<td><input type="number" step="0.01" id="ex-${d}-daily" value="${dailyVal ? dailyVal : ''}" oninput="onExpEdit()" style="${EXP_CELL}color:var(--accent2);"></td></tr>`;
+  }
+
+  const foot = `<td>${t('th.totalRow')}</td>`
+    + cats.map((c,ci) => `<td class="text-right mono" id="tf-c${ci}">-</td>`).join('')
+    + '<td class="text-right mono" id="tf-cust">-</td>'
+    + '<td class="text-right mono red-text" id="tf-daily">-</td>';
+
+  wrap.innerHTML = `<table><thead><tr>${head}</tr></thead><tbody>${body}</tbody>`
+    + `<tfoot><tr style="border-top:2px solid var(--border);font-weight:600;background:var(--surface2)">${foot}</tr></tfoot></table>`;
+  lastExpYM = ym;
+  recalcExpenseSheet();
+}
+
+function recalcExpenseSheet() {
+  const ym = getExpYM(); if (!ym) return;
+  const sheet = expenseSheets[ym];
+  const cats = sheet ? sheet.cats : DEFAULT_EXP_CATS;
+  const nDays = daysInMonth(ym);
+  const catTot = cats.map(() => 0);
+  let custTot = 0, dailyTot = 0;
+  for (let d = 1; d <= nDays; d++) {
+    cats.forEach((c,ci) => { const el = document.getElementById(`ex-${d}-c${ci}`); const v = el ? parseFloat(el.value) : NaN; if (!isNaN(v)) catTot[ci] += v; });
+    const cu = parseFloat((document.getElementById(`ex-${d}-cust`)||{}).value); if (!isNaN(cu)) custTot += cu;
+    const dy = parseFloat((document.getElementById(`ex-${d}-daily`)||{}).value); if (!isNaN(dy)) dailyTot += dy;
+  }
+  cats.forEach((c,ci) => { const el = document.getElementById(`tf-c${ci}`); if (el) el.textContent = fmt(catTot[ci]); });
+  const cuEl = document.getElementById('tf-cust'); if (cuEl) cuEl.textContent = custTot.toLocaleString();
+  const dyEl = document.getElementById('tf-daily'); if (dyEl) dyEl.textContent = fmt(dailyTot);
+  const lbl = document.getElementById('expense-total'); if (lbl) lbl.textContent = t('exp.totalPrefix') + fmt(dailyTot) + ' ' + t('cur.thb');
+}
+
+function saveExpenseMonth() {
+  const ym = getExpYM();
+  if (!ym) { toast(t('toast.pickMonthFirst'), 'err'); return; }
+  const existing = expenseSheets[ym];
+  const cats = existing ? existing.cats.slice() : DEFAULT_EXP_CATS.slice();
+  const nDays = daysInMonth(ym);
+  const rows = {};
+  for (let d = 1; d <= nDays; d++) {
+    const vals = {}; let any = false;
+    cats.forEach((c,ci) => { const v = parseFloat((document.getElementById(`ex-${d}-c${ci}`)||{}).value); vals[c] = isNaN(v) ? 0 : v; if (!isNaN(v) && v) any = true; });
+    const cu = parseFloat((document.getElementById(`ex-${d}-cust`)||{}).value) || 0;
+    const dy = parseFloat((document.getElementById(`ex-${d}-daily`)||{}).value) || 0;
+    if (any || cu || dy) rows[d] = { vals, cust: cu, daily: dy };
+  }
+  expenseSheets[ym] = { cats, rows };
+  deriveExpensesFromSheet(ym);
+  dirty.expenses = false;
+  save(); refreshAll();
+  toast(t('toast.expSaved'), 'ok');
+}
+
+// Rebuild expenses[] (daily totals) and kpi[ym] (category sums) from the sheet.
+// H1 guard: if the sheet has no category/customer detail but a prior import did,
+// keep the existing KPI actuals/customers instead of zeroing them.
+function deriveExpensesFromSheet(ym) {
+  const sheet = expenseSheets[ym]; if (!sheet) return;
+  expenses = expenses.filter(r => !(r.date||'').startsWith(ym));
+  const actual = {}; sheet.cats.forEach(c => actual[c] = 0);
+  let customers = 0;
+  Object.entries(sheet.rows).forEach(([day, r]) => {
+    const dateStr = `${ym}-${String(day).padStart(2,'0')}`;
+    if ((r.daily||0) > 0) expenses.push({ date: dateStr, amount: r.daily, category: '', note: '' });
+    sheet.cats.forEach(c => actual[c] += (r.vals[c]||0));
+    customers += r.cust || 0;
+  });
+  const prev = kpi[ym] || {};
+  const newCatTotal = Object.values(actual).reduce((a,v) => a + v, 0);
+  const prevCatTotal = prev.actual ? Object.values(prev.actual).reduce((a,v) => a + v, 0) : 0;
+  if (newCatTotal === 0 && customers === 0 && prevCatTotal > 0) {
+    // no category detail in the sheet — preserve existing KPI data
+    kpi[ym] = { actual: prev.actual, customers: prev.customers || 0, budget: prev.budget || {}, notes: prev.notes || {} };
+  } else {
+    kpi[ym] = { actual, customers, budget: prev.budget || {}, notes: prev.notes || {} };
+  }
+}
+
+function initExpenseMonthUI() {
+  const mSel = document.getElementById('exMonthSel'), ySel = document.getElementById('exYearSel');
+  if (!mSel || !ySel) return;
+  fillMonthSelect(mSel); fillYearSelect(ySel);
+  // default: latest month that has a sheet or expense data
+  const months = [...new Set([...Object.keys(expenseSheets), ...expenses.map(r => (r.date||'').slice(0,7))])].filter(Boolean).sort();
+  const ym = months.length ? months[months.length-1] : new Date().toISOString().slice(0,7);
+  ySel.value = ym.slice(0,4); mSel.value = ym.slice(5,7);
+  renderExpenseMonth();
+}
+
+// Called by refreshAll(); keep the expense table in sync (skip while editing).
+function refreshExpenseTable() {
+  const mSel = document.getElementById('exMonthSel');
+  if (mSel) { fillMonthSelect(mSel); fillYearSelect(document.getElementById('exYearSel')); }
+  if (dirty.expenses) { recalcExpenseSheet(); return; }
+  renderExpenseMonth();
+}
+
+// month/year change + edit guards for the ค่าใช้จ่าย page (M5)
+function changeExpenseMonth() {
+  if (dirty.expenses && !confirm(t('confirm.unsavedExp'))) {
+    if (lastExpYM) { document.getElementById('exYearSel').value = lastExpYM.slice(0,4); document.getElementById('exMonthSel').value = lastExpYM.slice(5,7); }
+    return;
+  }
+  dirty.expenses = false;
+  renderExpenseMonth();
+}
+function onExpEdit() { dirty.expenses = true; recalcExpenseSheet(); }
+
+// ═══════════════════════════════════════════════════
+//  CHARTS PAGE
+// ═══════════════════════════════════════════════════
+function refreshCharts(fSales, fExp) {
+  // Monthly sales bar — period-aware
+  const salesB = periodBuckets();
+  drawBar('monthlySalesBar', salesB.labels, [{
+    label:t('ds.paid'), data: salesB.keys.map(k => sumBucket(sales, 'paid', k, salesB.daily)),
+    backgroundColor:'rgba(217,164,0,.75)'
+  }]);
+
+  // Expense pie — ALL imported expense categories (from the daily expense file)
+  const catAgg = {};
+  const catMonths = currentMonth ? Object.keys(kpi).filter(m => m.startsWith(currentMonth)) : Object.keys(kpi);
+  catMonths.forEach(m => {
+    const d = kpi[m]; if (!d || !d.actual) return;
+    Object.entries(d.actual).forEach(([cat, v]) => {
+      catAgg[cat] = (catAgg[cat] || 0) + (v || 0);
+    });
+  });
+  const pieLabels = [], pieVals = [];
+  Object.entries(catAgg).forEach(([k, v]) => { if (v > 0) { pieLabels.push(k); pieVals.push(v); } });
+  drawPie('expensePie', pieLabels, pieVals);
+
+  // Monthly profit line — period-aware
+  const profitB = periodBuckets();
+  const profitData = profitB.keys.map(k => round2(sumBucket(sales,'paid',k,profitB.daily) - sumBucket(expenses,'amount',k,profitB.daily)));
+  drawLine('monthlyProfitLine', profitB.labels, [{
+    label:t('ds.profit'), data: profitData,
+    borderColor:'#d9a400', backgroundColor:'rgba(217,164,0,.16)', fill:true, tension:.35
+  }]);
+
+  // Expense bar — period-aware
+  const expB = periodBuckets();
+  drawBar('expenseBar', expB.labels, [{
+    label:t('ds.expense'), data: expB.keys.map(k => sumBucket(expenses, 'amount', k, expB.daily)),
+    backgroundColor:inkChart()
+  }]);
+
+  drawBalanceChart('balanceLineCharts');
+  drawExpenseTrend('expenseTrendCharts');
+  drawIncomeExpenseStacked('incomeExpenseStacked');
+}
+
+// ═══════════════════════════════════════════════════
+//  BALANCE GROWTH (running balance per month, all-time)
+//  balance(month) = opening + cumulative net profit through end of month
+// ═══════════════════════════════════════════════════
+function drawBalanceChart(id) {
+  if (!document.getElementById(id)) return;
+  const ob = openingBalance.amount || 0;
+
+  // Specific month → DAILY running balance, continuing from carried-in (ยอดยกมา)
+  if (currentMonth && currentMonth.length === 7) {
+    const ym = currentMonth;
+    const carriedIn = ob + cumNetProfit(prevMonth(ym));
+    const nDays = daysInMonth(ym);
+    let bal = carriedIn;
+    const labels = [], data = [];
+    for (let d = 1; d <= nDays; d++) {
+      const ds = `${ym}-${String(d).padStart(2,'0')}`;
+      const dp = sales.filter(s => s.date === ds).reduce((a,s) => a + (s.paid||0), 0);
+      const de = expenses.filter(e => e.date === ds).reduce((a,e) => a + (e.amount||0), 0);
+      bal += dp - de;
+      labels.push(String(d)); data.push(round2(bal));
+    }
+    drawLine(id, labels, [{
+      label: t('ds.totalBalanceDaily'), data,
+      borderColor: '#d9a400', backgroundColor: 'rgba(217,164,0,.16)',
+      fill: true, tension: .3, pointRadius: 2
+    }]);
+    return;
+  }
+
+  // Specific year → 12 monthly end-balances; else all-time months
+  let months;
+  if (currentMonth && currentMonth.length === 4) {
+    months = Array.from({length:12}, (_,i) => `${currentMonth}-${String(i+1).padStart(2,'0')}`);
+  } else {
+    months = [...new Set([...sales, ...expenses].map(r => (r.date||'').slice(0,7)).filter(Boolean))].sort();
+  }
+  const data = months.map(m => ob + cumNetProfit(m));
+  drawLine(id, months.map(formatMonth), [{
+    label: t('ds.totalBalance'), data,
+    borderColor: '#d9a400', backgroundColor: 'rgba(217,164,0,.16)',
+    fill: true, tension: .3, pointRadius: 3
+  }]);
+}
+
+// ═══════════════════════════════════════════════════
+//  CHART HELPERS
+// ═══════════════════════════════════════════════════
+const CHART_DEFAULTS = {
+  responsive: true,
+  maintainAspectRatio: true,
+  animation: { duration: 850, easing: 'easeOutQuart' },
+  plugins: { legend: { labels: { color:'#7a85a0', font:{size:11} } } },
+  scales: {
+    x: { ticks:{color:'#7a85a0',font:{size:10}}, grid:{color:'rgba(128,128,128,.15)'} },
+    y: { ticks:{color:'#7a85a0',font:{size:10},callback:v=>fmt(v)}, grid:{color:'rgba(128,128,128,.2)'} }
+  }
+};
+
+// returns {keys, labels} for the current filter. For a specific month, keys are full dates 'YYYY-MM-DD'; otherwise keys are 'YYYY-MM'.
+function periodBuckets(){
+  if (currentMonth && currentMonth.length === 7){
+    const ym = currentMonth, n = daysInMonth(ym), keys=[], labels=[];
+    for (let d=1; d<=n; d++){ keys.push(`${ym}-${String(d).padStart(2,'0')}`); labels.push(String(d)); }
+    return { keys, labels, daily:true };
+  }
+  let months;
+  if (currentMonth && currentMonth.length === 4) months = Array.from({length:12},(_,i)=>`${currentMonth}-${String(i+1).padStart(2,'0')}`);
+  else months = [...new Set([...sales,...expenses].map(r=>(r.date||'').slice(0,7)).filter(Boolean))].sort();
+  return { keys: months, labels: months.map(formatMonth), daily:false };
+}
+// sum a field from rows whose date matches a bucket key (full-date match when daily, else month-prefix match)
+function sumBucket(rows, field, key, daily){
+  return round2(rows.filter(r => daily ? r.date === key : (r.date||'').slice(0,7) === key).reduce((a,r)=>a+(r[field]||0),0));
+}
+// theme-aware "ink" color for the expense/black series — black in light, light in dark
+function inkChart(){ return document.documentElement.getAttribute('data-theme') === 'light' ? '#2c2c2a' : '#d8d4c4'; }
+
+function drawBar(id, labels, datasets) {
+  if (charts[id]) charts[id].destroy();
+  const ctx = document.getElementById(id);
+  if (!ctx) return;
+  charts[id] = new Chart(ctx, {
+    type:'bar', data:{labels, datasets},
+    options:{...CHART_DEFAULTS, plugins:{...CHART_DEFAULTS.plugins}}
+  });
+}
+function hexA(hex,a){ const n=parseInt(hex.slice(1),16); return `rgba(${(n>>16)&255},${(n>>8)&255},${n&255},${a})`; }
+function areaGradient(ctx, hex){ const g=ctx.createLinearGradient(0,0,0,260); g.addColorStop(0, hexA(hex,.28)); g.addColorStop(1, hexA(hex,0)); return g; }
+
+const crosshairPlugin = { id:'crosshair', afterDraw(chart){ const t=chart.tooltip; if(t && t.getActiveElements && t.getActiveElements().length){ const x=t.getActiveElements()[0].element.x; const {top,bottom}=chart.chartArea; const c=chart.ctx; c.save(); c.beginPath(); c.setLineDash([4,4]); c.lineWidth=1; c.strokeStyle='rgba(160,160,140,.45)'; c.moveTo(x,top); c.lineTo(x,bottom); c.stroke(); c.restore(); } } };
+
+function pctChange(cur, prev){
+  if (prev === 0 || prev === undefined || prev === null) return 'n/a';
+  const p = ((cur - prev) / Math.abs(prev)) * 100;
+  const sign = p >= 0 ? '+' : '−';
+  return sign + Math.abs(p).toFixed(1) + '%';
+}
+
+function drawLine(id, labels, datasets) {
+  if (charts[id]) charts[id].destroy();
+  const ctx = document.getElementById(id);
+  if (!ctx) return;
+  const gctx = ctx.getContext('2d');
+  datasets.forEach(ds => {
+    const bc = (typeof ds.borderColor === 'string') ? ds.borderColor : '#d9a400';
+    if (typeof ds.backgroundColor !== 'object') {
+      ds.backgroundColor = areaGradient(gctx, bc);
+    }
+    ds.fill = true;
+    ds.tension = (ds.tension != null ? ds.tension : .4);
+    ds.borderWidth = ds.borderWidth || 2;
+    ds.pointRadius = 0;
+    ds.pointHoverRadius = 5;
+    ds.pointHoverBackgroundColor = ds.borderColor || '#d9a400';
+    ds.pointHoverBorderColor = '#fff';
+    ds.pointHoverBorderWidth = 2;
+  });
+  const opts = {
+    ...CHART_DEFAULTS,
+    interaction: { mode:'index', intersect:false },
+    plugins: {
+      ...CHART_DEFAULTS.plugins,
+      tooltip: {
+        backgroundColor:'rgba(28,28,22,.95)', borderColor:'rgba(200,198,160,.18)', borderWidth:1,
+        titleColor:'#8f8f82', bodyColor:'#ecece6', padding:10, cornerRadius:8, displayColors:false,
+        callbacks: {
+          title: items => items.length ? items[0].label : '',
+          label: ctx => fmt(ctx.parsed.y),
+          afterLabel: ctx => {
+            const arr = ctx.dataset.data;
+            const prev = ctx.dataIndex > 0 ? arr[ctx.dataIndex - 1] : undefined;
+            return pctChange(ctx.parsed.y, prev);
+          }
+        }
+      }
+    },
+    scales: {
+      x: { ...CHART_DEFAULTS.scales.x, grid:{ display:false } },
+      y: { ...CHART_DEFAULTS.scales.y, grid:{ color:'rgba(128,128,128,.08)' } }
+    }
+  };
+  charts[id] = new Chart(ctx, {
+    type:'line', data:{labels, datasets},
+    options: opts,
+    plugins: [crosshairPlugin]
+  });
+}
+let dashGraph = 'balance';
+const DASH_TITLES = { balance:'dash.balanceChart', income:'dash.incomeChart', expense:'charts.dailyExpense', profit:'dash.netProfit', margin:'dash.marginChart' };
+function drawDashGraph(){
+  switch (dashGraph){
+    case 'income':  drawSalesTrend('balanceLineDash'); break;
+    case 'expense': drawExpenseTrend('balanceLineDash'); break;
+    case 'profit':  drawProfitTrend('balanceLineDash'); break;
+    case 'margin':  drawMarginTrend('balanceLineDash'); break;
+    default:        drawBalanceChart('balanceLineDash');
+  }
+}
+function showDashGraph(which){
+  dashGraph = which;
+  const title = document.getElementById('dashGraphTitle');
+  const key = DASH_TITLES[which] || 'dash.balanceChart';
+  if (title){ title.setAttribute('data-i18n', key); title.textContent = t(key); }
+  drawDashGraph();
+  const card = document.getElementById('dashGraphCard');
+  if (card){ card.style.animation='none'; void card.offsetWidth; card.style.animation='fadeUp .42s cubic-bezier(.22,.61,.36,1)'; }
+}
+function drawSalesTrend(id){
+  const b = periodBuckets();
+  drawLine(id, b.labels, [{ label: t('ds.income'), data: b.keys.map(k=>sumBucket(sales,'paid',k,b.daily)), borderColor:'#d9a400', fill:true, tension:.4 }]);
+}
+function drawProfitTrend(id){
+  const b = periodBuckets();
+  const data = b.keys.map(k => round2(sumBucket(sales,'paid',k,b.daily) - sumBucket(expenses,'amount',k,b.daily)));
+  drawLine(id, b.labels, [{ label: t('ds.profit'), data, borderColor:'#d9a400', fill:true, tension:.4 }]);
+}
+function drawMarginTrend(id){
+  const b = periodBuckets();
+  const data = b.keys.map(k => { const inc=sumBucket(sales,'paid',k,b.daily), exp=sumBucket(expenses,'amount',k,b.daily); return inc>0 ? round2((inc-exp)/inc*100) : 0; });
+  drawLine(id, b.labels, [{ label: t('charts.gauge'), data, borderColor:'#d9a400', fill:true, tension:.4 }]);
+}
+
+function drawExpenseTrend(id){
+  if (!document.getElementById(id)) return;
+  let labels = [], data = [];
+  // Specific month → daily expense totals
+  if (currentMonth && currentMonth.length === 7) {
+    const ym = currentMonth;
+    const nDays = daysInMonth(ym);
+    for (let d = 1; d <= nDays; d++) {
+      const ds = `${ym}-${String(d).padStart(2,'0')}`;
+      const de = expenses.filter(e => e.date === ds).reduce((a,e) => a + (e.amount||0), 0);
+      labels.push(String(d)); data.push(round2(de));
+    }
+  } else {
+    // Specific year → 12 months; else all-time months
+    let months;
+    if (currentMonth && currentMonth.length === 4) {
+      months = Array.from({length:12}, (_,i) => `${currentMonth}-${String(i+1).padStart(2,'0')}`);
+    } else {
+      months = [...new Set(expenses.map(r => (r.date||'').slice(0,7)).filter(Boolean))].sort();
+    }
+    labels = months.map(formatMonth);
+    data = months.map(m => round2(expenses.filter(e => (e.date||'').slice(0,7) === m).reduce((a,e) => a + (e.amount||0), 0)));
+  }
+  drawLine(id, labels, [{
+    label: t('charts.dailyExpense'), data,
+    borderColor: '#d9a400', fill: true, tension: .4
+  }]);
+}
+
+function drawPie(id, labels, data) {
+  if (charts[id]) charts[id].destroy();
+  const ctx = document.getElementById(id);
+  if (!ctx) return;
+  // Theme coloring: biggest slice = gold, 2nd biggest = black, the rest muted neutrals
+  const _cs0 = getComputedStyle(document.documentElement);
+  const legendCol = (_cs0.getPropertyValue('--muted').trim() || '#8d8876');
+  const neutralRamp = ['#c9a85c','#9d958a','#d7c79f','#b0a890','#857f70','#c1b48f','#a39a83','#8f8676','#cdbf9a','#766f60'];
+  const sliceColors = new Array(data.length).fill('#9d958a');
+  data.map((v,i)=>[+v||0,i]).sort((a,b)=>b[0]-a[0]).forEach((pair,rank)=>{
+    const idx = pair[1];
+    sliceColors[idx] = rank===0 ? '#d9a400' : rank===1 ? inkChart() : neutralRamp[(rank-2) % neutralRamp.length];
+  });
+  const centerTotalPlugin = {
+    id: 'centerTotal'+id,
+    afterDraw(chart) {
+      const ds = chart.data.datasets[0];
+      if (!ds || !ds.data || !ds.data.length) return;
+      const total = ds.data.reduce((s,v) => s + (+v||0), 0);
+      const _cs = getComputedStyle(document.documentElement);
+      const TXT = (_cs.getPropertyValue('--text').trim() || '#1c1a12');
+      const MUT = (_cs.getPropertyValue('--muted').trim() || '#8d8876');
+      const {ctx:c} = chart;
+      const cx = (chart.chartArea.left + chart.chartArea.right) / 2;
+      const cy = (chart.chartArea.top + chart.chartArea.bottom) / 2;
+      c.save();
+      c.textAlign = 'center'; c.textBaseline = 'middle';
+      c.fillStyle = MUT; c.font = '11px sans-serif';
+      c.fillText(t('chart.totalLabel'), cx, cy - 11);
+      c.fillStyle = TXT; c.font = '500 18px sans-serif';
+      c.fillText(fmt(total), cx, cy + 8);
+      c.restore();
+    }
+  };
+  charts[id] = new Chart(ctx, {
+    type:'doughnut',
+    data:{ labels, datasets:[{ data, backgroundColor: sliceColors, borderWidth:0 }] },
+    options:{ responsive:true, maintainAspectRatio:true, cutout:'64%',
+      plugins:{ legend:{ position:'bottom', labels:{color:legendCol,font:{size:11},padding:10} } } },
+    plugins:[centerTotalPlugin]
+  });
+}
+
+// ═══════════════════════════════════════════════════
+//  STACKED INCOME vs EXPENSE (monthly)
+// ═══════════════════════════════════════════════════
+function drawIncomeExpenseStacked(id) {
+  if (charts[id]) charts[id].destroy();
+  const ctx = document.getElementById(id);
+  if (!ctx) return;
+  const _cs = getComputedStyle(document.documentElement);
+  const MUT = (_cs.getPropertyValue('--muted').trim() || '#8d8876');
+
+  const b = periodBuckets();
+
+  charts[id] = new Chart(ctx, {
+    type:'bar',
+    data:{ labels: b.labels, datasets:[
+      { label: t('ds.income'),  data: b.keys.map(k => sumBucket(sales, 'paid', k, b.daily)), backgroundColor:'#d9a400' },
+      { label: t('ds.expense'), data: b.keys.map(k => sumBucket(expenses, 'amount', k, b.daily)), backgroundColor:inkChart() }
+    ]},
+    options:{ responsive:true, maintainAspectRatio:true,
+      animation:{ duration:850, easing:'easeOutQuart' },
+      plugins:{ legend:{ display:false } },
+      scales:{
+        x:{ stacked:true, ticks:{color:MUT,font:{size:10}}, grid:{display:false} },
+        y:{ stacked:true, ticks:{color:MUT,font:{size:10},callback:v=>fmt(v)}, grid:{color:'rgba(128,128,128,.08)'} }
+      }
+    }
+  });
+}
+
+// ═══════════════════════════════════════════════════
+//  PROFIT-MARGIN GAUGE (semicircle)
+// ═══════════════════════════════════════════════════
+function drawMarginGauge(id) {
+  if (charts[id]) charts[id].destroy();
+  const ctx = document.getElementById(id);
+  if (!ctx) return;
+  const fSales = filtered(sales);
+  const fExp   = filtered(expenses);
+  const income  = round2(fSales.reduce((s,r) => s + (r.paid||0), 0));
+  const expense = round2(fExp.reduce((s,r) => s + (r.amount||0), 0));
+  const margin  = income > 0 ? ((income - expense) / income * 100) : 0;
+  const fill    = Math.max(0, Math.min(100, margin));
+
+  const gaugeText = {
+    id: 'gaugeText'+id,
+    afterDraw(chart) {
+      const _cs = getComputedStyle(document.documentElement);
+      const TXT = (_cs.getPropertyValue('--text').trim() || '#1c1a12');
+      const MUT = (_cs.getPropertyValue('--muted').trim() || '#8d8876');
+      const {ctx:c} = chart;
+      const cx = (chart.chartArea.left + chart.chartArea.right) / 2;
+      const cy = chart.chartArea.bottom;
+      c.save();
+      c.textAlign = 'center'; c.textBaseline = 'middle';
+      c.fillStyle = margin < 0 ? '#d2483d' : TXT;
+      c.font = '500 22px sans-serif';
+      c.fillText(margin.toFixed(1) + '%', cx, cy - 18);
+      c.fillStyle = MUT; c.font = '11px sans-serif';
+      c.fillText(t('charts.gauge'), cx, cy);
+      c.restore();
+    }
+  };
+
+  charts[id] = new Chart(ctx, {
+    type:'doughnut',
+    data:{ datasets:[{ data:[fill, 100-fill], backgroundColor:['#d9a400','rgba(150,148,135,.18)'], borderWidth:0 }] },
+    options:{ responsive:true, maintainAspectRatio:true, circumference:180, rotation:270, cutout:'72%',
+      plugins:{ legend:{ display:false }, tooltip:{ enabled:false } } },
+    plugins:[gaugeText]
+  });
+}
+
+// ═══════════════════════════════════════════════════
+//  IMPORT: SALES FILE (XLS / HTML from accounting app)
+// ═══════════════════════════════════════════════════
+function importSalesFile(input) {
+  if (CURRENT_BRANCH === 'combined') { toast(_isTH()?'สลับไปสาขา A หรือ B ก่อนนำเข้า':'Switch to Place A or B before importing.', 'err'); input.value=''; return; }
+  const file = input.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = e => {
+    try {
+      const content = e.target.result;
+      const rows = parseSalesHTML(content);
+      if (!rows.length) {
+        toast(t('toast.salesNoTable'), 'err');
+        document.getElementById('salesImportStatus').innerHTML = '<i class="fi fi-rr-cross-small"></i> ' + t('import.salesNoFound');
+        return;
+      }
+      let added = 0, updated = 0;
+      rows.forEach(r => {
+        // overwrite by date: replace existing day's record, else add
+        const idx = sales.findIndex(s => s.date === r.date);
+        if (idx >= 0) {
+          r.note = sales[idx].note || r.note;   // keep any manual note
+          sales[idx] = r;
+          updated++;
+        } else {
+          sales.push(r);
+          added++;
+        }
+      });
+      save(); refreshAll();
+      document.getElementById('salesImportStatus').innerHTML = '<i class="fi fi-rr-check"></i> ' + tf('import.salesOkStatus', {added, updated, total: rows.length});
+      toast(tf('import.salesOkToast', {added, updated}), 'ok');
+    } catch(err) {
+      toast(t('toast.readFail') + err.message, 'err');
+    }
+  };
+  reader.readAsText(file, 'UTF-8');
+  input.value = '';
+}
+
+function parseSalesHTML(html) {
+  // Parse the HTML table from the accounting system export
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(html, 'text/html');
+  const rows = doc.querySelectorAll('tr');
+  const results = [];
+
+  // Detect Thai Buddhist year dates like 01/06/2569
+  const dateRe = /^(\d{2})\/(\d{2})\/(\d{4})$/;
+
+  rows.forEach(row => {
+    const cells = [...row.querySelectorAll('td')].map(c => c.textContent.trim().replace(/,/g,''));
+    if (!cells.length) return;
+    const dateMatch = cells[0].match(dateRe);
+    if (!dateMatch) return;
+    // Skip non-data rows (report header/title/totals) — the ยอดรวม cell must be numeric
+    if (cells[2] === undefined || isNaN(parseFloat(cells[2]))) return;
+
+    let [, dd, mm, yyyy] = dateMatch;
+    // Convert Buddhist year if > 2400
+    const year = +yyyy > 2400 ? +yyyy - 543 : +yyyy;
+    const isoDate = `${year}-${mm.padStart(2,'0')}-${dd.padStart(2,'0')}`;
+
+    // Column order: [date, empty, total, goodsValue, vat, paid, unpaid, overpaid?]
+    const total      = parseFloat(cells[2]) || 0;
+    const goodsValue = parseFloat(cells[3]) || 0;
+    const vat        = parseFloat(cells[4]) || 0;
+    const paid       = parseFloat(cells[5]) || 0;
+    const unpaid     = parseFloat(cells[6]) || 0;
+
+    results.push({ date: isoDate, total, goodsValue, vat, paid, unpaid, note: '' });
+  });
+
+  return results;
+}
+
+// ═══════════════════════════════════════════════════
+//  IMPORT: EXPENSE CSV
+// ═══════════════════════════════════════════════════
+// ═══════════════════════════════════════════════════
+//  IMPORT: DAILY EXPENSE TABLE (.xlsx via SheetJS)
+//  - "รายจ่ายรายวัน" column → per-day total expense → expenses[] (Dashboard)
+//  - other category columns → KPI actuals (sum per column)
+//  - "จำนวนลูกค้า" → customer metric
+//  - month/year parsed from the title row
+// ═══════════════════════════════════════════════════
+const THAI_MONTHS_FULL = ['มกราคม','กุมภาพันธ์','มีนาคม','เมษายน','พฤษภาคม','มิถุนายน','กรกฎาคม','สิงหาคม','กันยายน','ตุลาคม','พฤศจิกายน','ธันวาคม'];
+const THAI_MONTHS_ABBR = ['ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.'];
+
+function num(v) {
+  if (typeof v === 'number') return v;
+  if (v === null || v === undefined) return 0;
+  const n = parseFloat(String(v).replace(/,/g, '').trim());
+  return isNaN(n) ? 0 : n;
+}
+
+function parseTitleMonth(rows) {
+  // scan first 4 rows' cells for a Thai month name + a year
+  const text = rows.slice(0, 4).flat().filter(c => typeof c === 'string').join(' ');
+  let mi = -1;
+  for (let i = 0; i < 12; i++) {
+    if (text.includes(THAI_MONTHS_FULL[i]) || text.includes(THAI_MONTHS_ABBR[i])) { mi = i; break; }
+  }
+  const ym4 = text.match(/(\d{4})/);
+  if (mi < 0 || !ym4) return null;
+  let year = +ym4[1];
+  if (year > 2400) year -= 543;   // Buddhist → Gregorian
+  return `${year}-${String(mi + 1).padStart(2, '0')}`;
+}
+
+function parseExpenseWorkbook(rows) {
+  // find header row (contains "วันที่")
+  let hr = -1;
+  for (let i = 0; i < rows.length; i++) {
+    if (rows[i].some(c => typeof c === 'string' && c.trim() === 'วันที่')) { hr = i; break; }
+  }
+  if (hr < 0) throw new Error('ไม่พบหัวตาราง "วันที่"');
+  const header = rows[hr].map(c => (c == null ? '' : String(c).trim()));
+  const colDay   = header.indexOf('วันที่');
+  const colDaily = header.indexOf('รายจ่ายรายวัน');
+  const colCust  = header.indexOf('จำนวนลูกค้า');
+  if (colDaily < 0) throw new Error('ไม่พบคอลัมน์ "รายจ่ายรายวัน"');
+
+  const catCols = [];
+  header.forEach((h, idx) => {
+    if (h && idx !== colDay && idx !== colDaily && idx !== colCust) catCols.push(idx);
+  });
+  const cats = catCols.map(ci => header[ci]);
+
+  const sheetRows = {};
+  for (let i = hr + 1; i < rows.length; i++) {
+    const row = rows[i];
+    const dv = row[colDay];
+    const day = (typeof dv === 'number') ? dv : parseInt(dv, 10);
+    if (!(day >= 1 && day <= 31)) continue;      // skips รวม / blank / note rows
+    const vals = {};
+    catCols.forEach(ci => { vals[header[ci]] = num(row[ci]); });
+    sheetRows[day] = { vals, cust: colCust >= 0 ? num(row[colCust]) : 0, daily: num(row[colDaily]) };
+  }
+
+  return { ym: parseTitleMonth(rows), cats, rows: sheetRows };
+}
+
+function importDailyExpenseXLSX(input) {
+  if (CURRENT_BRANCH === 'combined') { toast(_isTH()?'สลับไปสาขา A หรือ B ก่อนนำเข้า':'Switch to Place A or B before importing.', 'err'); input.value=''; return; }
+  const file = input.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = e => {
+    try {
+      const wb = XLSX.read(new Uint8Array(e.target.result), { type: 'array' });
+      const ws = wb.Sheets[wb.SheetNames[0]];
+      const rows = XLSX.utils.sheet_to_json(ws, { header: 1, raw: true, defval: null });
+      const parsed = parseExpenseWorkbook(rows);
+
+      if (!parsed.ym) { toast(t('toast.expMonthFail'), 'err'); input.value=''; return; }
+      const nRows = Object.keys(parsed.rows).length;
+      if (!nRows) { toast(t('toast.expNoRows'), 'err'); input.value=''; return; }
+      const ym = parsed.ym;
+
+      // store the full daily×category sheet, then derive expenses[] + kpi[ym]
+      expenseSheets[ym] = { cats: parsed.cats, rows: parsed.rows };
+      deriveExpensesFromSheet(ym);
+      dirty.expenses = false; dirty.kpi = false;
+      save();
+
+      // point the expense + KPI views at the imported month
+      setMonthYear(document.getElementById('exMonthSel'),  document.getElementById('exYearSel'),  ym);
+      setMonthYear(document.getElementById('kpiMonthSel'), document.getElementById('kpiYearSel'), ym);
+      refreshAll();
+
+      const totalDaily = Object.values(parsed.rows).reduce((a,r) => a + (r.daily||0), 0);
+      const custTotal  = Object.values(parsed.rows).reduce((a,r) => a + (r.cust||0), 0);
+      document.getElementById('dailyExpImportStatus').innerHTML =
+        '<i class="fi fi-rr-check"></i> ' + tf('import.expOkStatus', {month: formatMonth(ym), days: nRows, total: fmt(totalDaily), cats: parsed.cats.length, cust: custTotal.toLocaleString()});
+      toast(tf('import.expOkToast', {month: formatMonth(ym)}), 'ok');
+    } catch(err) {
+      toast(t('toast.readFail') + err.message, 'err');
+      document.getElementById('dailyExpImportStatus').innerHTML = '<i class="fi fi-rr-cross-small"></i> ' + err.message;
+    }
+  };
+  reader.readAsArrayBuffer(file);
+  input.value = '';
+}
+
+// ═══════════════════════════════════════════════════
+//  KPI PAGE
+// ═══════════════════════════════════════════════════
+let kpiCats = [];
+const KPI_EXCLUDE = ['ค่าพัสดุปลายทาง'];   // categories hidden from KPI page/chart
+
+function getKpiYM() {
+  const m = document.getElementById('kpiMonthSel'), y = document.getElementById('kpiYearSel');
+  return (m && y && m.value && y.value) ? `${y.value}-${m.value}` : '';
+}
+
+function initKpiUI() {
+  const mSel = document.getElementById('kpiMonthSel'), ySel = document.getElementById('kpiYearSel');
+  if (!mSel || !ySel) return;
+  fillMonthSelect(mSel); fillYearSelect(ySel);
+  const months = Object.keys(kpi).sort();
+  const ym = months.length ? months[months.length-1] : new Date().toISOString().slice(0,7);
+  ySel.value = ym.slice(0,4); mSel.value = ym.slice(5,7);
+  renderKPI();
+}
+
+function monthExpenseTotal(ym) {
+  return round2(expenses.filter(r => (r.date||'').startsWith(ym)).reduce((a,r) => a + (r.amount||0), 0));
+}
+
+function renderKPI() {
+  const tbody = document.getElementById('kpiTbody');
+  const mSel = document.getElementById('kpiMonthSel');
+  if (!tbody || !mSel) return;
+  if (!mSel.options.length) { fillMonthSelect(mSel); fillYearSelect(document.getElementById('kpiYearSel')); }
+  const ym = getKpiYM();
+  const data = kpi[ym];
+  kpiCats = data ? Object.keys(data.actual).filter(c => !KPI_EXCLUDE.includes(c)) : [];
+
+  if (!data || !kpiCats.length) {
+    tbody.innerHTML = `<tr><td colspan="5"><div class="empty-state"><div class="empty-icon"><i class="fi fi-rr-bullseye-arrow"></i></div>${t('empty.noKpi')}<br><small style="color:var(--muted)">${t('empty.importXlsx')}</small></div></td></tr>`;
+    document.getElementById('kpiBudgetTotal').textContent = '-';
+    document.getElementById('kpiActualTotal').textContent = '-';
+    document.getElementById('kpiPctTotal').textContent = '-';
+    document.getElementById('kpiSummary').innerHTML = '';
+    if (charts['kpiPie']) { charts['kpiPie'].destroy(); delete charts['kpiPie']; }
+    return;
+  }
+
+  const inStyle = "width:110px;text-align:right;background:var(--surface2);border:1px solid var(--border);color:var(--text);border-radius:6px;padding:5px 8px;font-family:'IBM Plex Mono',monospace;font-size:12px;outline:none;";
+  tbody.innerHTML = kpiCats.map((cat, i) => {
+    const bud  = (data.budget && data.budget[cat] != null) ? data.budget[cat] : '';
+    const act  = data.actual[cat] || 0;
+    const note = (data.notes && data.notes[cat]) || '';
+    // เกิดขึ้นจริง is read-only — derived from the daily ค่าใช้จ่าย sheet
+    return `<tr>
+      <td>${cat}</td>
+      <td class="text-right"><input type="number" step="0.01" min="0" id="kpibud-${i}" value="${bud}" placeholder="-" oninput="onKpiEdit()" style="${inStyle}"></td>
+      <td class="text-right mono red-text">${fmt(act)}</td>
+      <td class="text-right mono" id="kpipct-${i}">-</td>
+      <td><input type="text" id="kpinote-${i}" value="${note.replace(/"/g,'&quot;')}" placeholder="${t('th.note')}..." oninput="onKpiEdit()" style="width:100%;background:var(--surface2);border:1px solid var(--border);color:var(--text);border-radius:6px;padding:5px 8px;font-size:12px;outline:none;"></td>
+    </tr>`;
+  }).join('');
+
+  lastKpiYM = ym;
+  updateKpiDerived();
+}
+
+// Recompute totals, %, target card, and pie. Actual comes from data (the sheet),
+// budget from the inputs.
+function updateKpiDerived() {
+  const ym = getKpiYM();
+  const data = kpi[ym];
+  if (!data) return;
+  let totBud = 0, totAct = 0;
+  const labels = [], values = [];
+  kpiCats.forEach((cat, i) => {
+    const bEl = document.getElementById('kpibud-' + i);
+    const bud = bEl ? parseFloat(bEl.value) : NaN;
+    const act = data.actual[cat] || 0;
+    totAct += act;
+    if (act > 0) { labels.push(cat); values.push(act); }
+    const pctEl = document.getElementById('kpipct-' + i);
+    if (!isNaN(bud) && bud > 0) {
+      totBud += bud;
+      const pct = act / bud * 100;
+      if (pctEl) { pctEl.textContent = pct.toFixed(0) + '%'; pctEl.className = 'text-right mono ' + (pct > 100 ? 'red-text' : 'green-text'); }
+    } else if (pctEl) { pctEl.textContent = '-'; pctEl.className = 'text-right mono'; }
+  });
+
+  document.getElementById('kpiBudgetTotal').textContent = totBud ? fmt(totBud) : '-';
+  document.getElementById('kpiActualTotal').textContent = fmt(totAct);
+  document.getElementById('kpiPctTotal').textContent = totBud ? (totAct/totBud*100).toFixed(0)+'%' : '-';
+
+  const target  = totAct * 10;            // target from KPI spent
+  const realExp = monthExpenseTotal(ym);
+  document.getElementById('kpiSummary').innerHTML = `
+    <div class="kpi"><div class="kpi-label">${t('kpi.realMonth')}</div><div class="kpi-value red">${fmt(realExp)}</div><div class="kpi-sub">${t('kpi.fromDaily')}</div></div>
+    <div class="kpi"><div class="kpi-label">${t('kpi.spentLabel')}</div><div class="kpi-value">${fmt(totAct)}</div><div class="kpi-sub">${t('kpi.spentSub')}</div></div>
+    <div class="kpi"><div class="kpi-label">${t('col.customers')}</div><div class="kpi-value blue">${(data.customers||0).toLocaleString()}</div><div class="kpi-sub">${t('kpi.custUnit')}</div></div>
+    <div class="kpi" style="border-color:rgba(245,200,66,.25);background:rgba(245,200,66,.04);"><div class="kpi-label" style="color:var(--yellow)">${t('kpi.salesTarget')}</div><div class="kpi-value" style="color:var(--yellow)">${fmt(target)}</div><div class="kpi-sub">${t('kpi.targetSub')}</div></div>
+  `;
+
+  drawPie('kpiPie', labels, values);
+}
+
+// Save only the editable fields (budget + note). Actual is derived, not editable.
+function saveKPI() {
+  const ym = getKpiYM();
+  const data = kpi[ym];
+  if (!data) { toast(t('empty.noKpi'), 'err'); return; }
+  data.budget = data.budget || {};
+  data.notes  = data.notes  || {};
+  kpiCats.forEach((cat, i) => {
+    const bEl = document.getElementById('kpibud-' + i);
+    const nEl = document.getElementById('kpinote-' + i);
+    const b = bEl ? parseFloat(bEl.value) : NaN;
+    if (!isNaN(b)) data.budget[cat] = b; else delete data.budget[cat];
+    data.notes[cat] = nEl ? nEl.value.trim() : '';
+  });
+  save();
+  dirty.kpi = false;
+  toast(t('toast.kpiSaved'), 'ok');
+}
+
+// month/year change + edit guards for the KPI page
+function changeKpiMonth() {
+  if (dirty.kpi && !confirm(t('confirm.unsavedKpi'))) {
+    if (lastKpiYM) { document.getElementById('kpiYearSel').value = lastKpiYM.slice(0,4); document.getElementById('kpiMonthSel').value = lastKpiYM.slice(5,7); }
+    return;
+  }
+  dirty.kpi = false;
+  renderKPI();
+}
+function onKpiEdit() { dirty.kpi = true; updateKpiDerived(); }
+
+// ═══════════════════════════════════════════════════
+//  DELETE
+// ═══════════════════════════════════════════════════
+function deleteSale(i) {
+  if (!confirm(t('confirm.delete'))) return;
+  sales.splice(i, 1);
+  save(); refreshAll();
+  toast(t('toast.deleted'), 'ok');
+}
+
+// ═══════════════════════════════════════════════════
+//  EXPORT CSV
+// ═══════════════════════════════════════════════════
+function exportCSV() {
+  const inScope = ym => !currentMonth ? true : ym.startsWith(currentMonth);
+  const q = s => {
+    let str = String(s == null ? '' : s);
+    if (/^[=+\-@\t\r]/.test(str)) str = "'" + str;   // neutralize CSV formula injection
+    return `"${str.replace(/"/g,'""')}"`;
+  };
+  const fSales = filtered(sales);
+
+  let csv = '\uFEFF'; // BOM for Excel UTF-8
+  // ── Section 1: ยอดขาย ──
+  csv += '== ยอดขาย ==\n';
+  csv += 'วันที่,ยอดรวม,มูลค่าสินค้า,VAT,ยอดชำระ,ค้างชำระ,หมายเหตุ\n';
+  fSales.forEach(r => {
+    csv += `${r.date},${r.total},${r.goodsValue},${r.vat},${r.paid},${r.unpaid},${q(r.note)}\n`;
+  });
+
+  // ── Section 2: ค่าใช้จ่ายรายวัน (daily×category sheets) ──
+  Object.keys(expenseSheets).filter(inScope).sort().forEach(ym => {
+    const sh = expenseSheets[ym];
+    csv += `\n== ค่าใช้จ่ายรายวัน ${formatMonth(ym)} ==\n`;
+    csv += ['วันที่', ...sh.cats, 'จำนวนลูกค้า', 'รายจ่ายรายวัน'].map(q).join(',') + '\n';
+    Object.keys(sh.rows).map(Number).sort((a,b)=>a-b).forEach(d => {
+      const r = sh.rows[d];
+      csv += [d, ...sh.cats.map(c => r.vals[c]||0), r.cust||0, r.daily||0].join(',') + '\n';
+    });
+  });
+
+  // ── Section 3: KPI (budget vs actual) ──
+  Object.keys(kpi).filter(inScope).sort().forEach(ym => {
+    const d = kpi[ym];
+    csv += `\n== KPI ${formatMonth(ym)} ==\n`;
+    csv += 'รายการ,ประมาณการ,เกิดขึ้นจริง,หมายเหตุ\n';
+    Object.keys(d.actual).forEach(cat => {
+      const bud = (d.budget && d.budget[cat] != null) ? d.budget[cat] : '';
+      csv += `${q(cat)},${bud},${d.actual[cat]||0},${q(d.notes && d.notes[cat])}\n`;
+    });
+    csv += `จำนวนลูกค้า,,${d.customers||0},\n`;
+  });
+
+  const blob = new Blob([csv], {type:'text/csv;charset=utf-8'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `finance_${currentMonth || 'all'}_${new Date().toISOString().slice(0,10)}.csv`;
+  a.click();
+  URL.revokeObjectURL(url);
+  toast(t('toast.csvOk'), 'ok');
+}
+
+// ═══════════════════════════════════════════════════
+//  CLEAR ALL
+// ═══════════════════════════════════════════════════
+function openClearModal()  { document.getElementById('clearModal').classList.add('show'); }
+
+// ── Settings panel + theme ──
+function openSettingsModal()  { updateThemeLabel(); const m=document.getElementById('settingsMenu'); if(m) m.classList.add('open'); }
+function closeSettingsModal() { const m=document.getElementById('settingsMenu'); if(m) m.classList.remove('open'); }
+function toggleSettingsMenu(e){ if(e) e.stopPropagation(); const m=document.getElementById('settingsMenu'); if(!m) return; const open=m.classList.toggle('open'); if(open) updateThemeLabel(); }
+document.addEventListener('click', e=>{ if(!e.target.closest('.settings-wrap')) closeSettingsModal(); });
+
+// KPI cards: keyboard activation (Enter/Space triggers the graph swap)
+document.addEventListener('keydown', e => {
+  const c = e.target.closest && e.target.closest('.kpi.clickable');
+  if (c && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); c.click(); }
+});
+
+// Spreadsheet-style keyboard nav for the Expenses grid and the KPI table inputs
+document.addEventListener('keydown', e => {
+  const el = e.target;
+  if (!(el instanceof HTMLInputElement)) return;
+  if (!el.closest('#expenseTableWrap') && !el.closest('#kpiTbody')) return;
+  const td = el.closest('td'); if (!td) return;
+  const tr = td.closest('tr'); if (!tr) return;
+  const ci = td.cellIndex;
+  const focusInRow = row => {
+    if (!row || !row.cells || !row.cells[ci]) return false;
+    const inp = row.cells[ci].querySelector('input,select,textarea');
+    if (!inp) return false;
+    inp.focus(); try { inp.select && inp.select(); } catch(_) {}
+    return true;
+  };
+  const focusSibling = dir => {
+    let cell = dir > 0 ? td.nextElementSibling : td.previousElementSibling;
+    while (cell) {
+      const inp = cell.querySelector('input,select,textarea');
+      if (inp) { inp.focus(); try { inp.select && inp.select(); } catch(_) {} return true; }
+      cell = dir > 0 ? cell.nextElementSibling : cell.previousElementSibling;
+    }
+    return false;
+  };
+  const k = e.key;
+  if (k === 'Enter' || k === 'ArrowDown') { e.preventDefault(); focusInRow(tr.nextElementSibling); }
+  else if (k === 'ArrowUp') { e.preventDefault(); focusInRow(tr.previousElementSibling); }
+  else if (k === 'ArrowRight') { if (el.type === 'number' || el.selectionStart === el.value.length) { if (focusSibling(1)) e.preventDefault(); } }
+  else if (k === 'ArrowLeft') { if (el.type === 'number' || el.selectionStart === 0) { if (focusSibling(-1)) e.preventDefault(); } }
+});
+
+// ═══════════════════════════════════════════════════
+//  CHART DETAIL MODAL
+// ═══════════════════════════════════════════════════
+let cmContext = 'balance';      // current metric context
+let cmPeriod = '';              // local period override (''=all, 'YYYY'=year monthly, 'YYYY-MM'=month daily)
+
+const CHART_CTX = {
+  balance:       { title:'dash.balanceChart',  kind:'line', draw:id=>drawBalanceChart(id) },
+  income:        { title:'kpi.totalPaid',       kind:'line', draw:id=>drawSalesTrend(id) },
+  expense:       { title:'kpi.totalExpenses',   kind:'line', draw:id=>drawExpenseTrend(id), breakdown:true },
+  profit:        { title:'kpi.netProfit',       kind:'line', draw:id=>drawProfitTrend(id) },
+  margin:        { title:'kpi.profitMargin',    kind:'line', draw:id=>drawMarginTrend(id), pct:true },
+  incomeexpense: { title:'dash.incomeVsExpense',kind:'bar',  draw:id=>cmDrawIE(id) },
+  categories:    { title:'charts.expenseShare', kind:'pie',  draw:id=>cmDrawCategories(id), breakdown:true }
+};
+
+// income-vs-expense bar for the modal (reuse periodBuckets + inkChart)
+function cmDrawIE(id){ const b=periodBuckets(); drawBar(id, b.labels, [
+  { label:t('ds.income'), data:b.keys.map(k=>sumBucket(sales,'paid',k,b.daily)), backgroundColor:'#d9a400' },
+  { label:t('ds.expense'),data:b.keys.map(k=>sumBucket(expenses,'amount',k,b.daily)), backgroundColor:inkChart() } ]); }
+// category breakdown pie (reuse the dashboard donut aggregation over kpi[m].actual, filtered by currentMonth)
+function cmDrawCategories(id){
+  const agg={}; const months = currentMonth ? Object.keys(kpi).filter(m=>m.startsWith(currentMonth)) : Object.keys(kpi);
+  months.forEach(m=>{ const d=kpi[m]; if(!d||!d.actual) return; Object.entries(d.actual).forEach(([c,v])=>{agg[c]=(agg[c]||0)+(v||0);}); });
+  const labels=[],vals=[]; Object.entries(agg).forEach(([k,v])=>{ if(v>0){labels.push(k);vals.push(v);} }); drawPie(id,labels,vals);
+}
+
+function openChartModal(ctx){
+  cmContext = (ctx && CHART_CTX[ctx]) ? ctx : 'balance';
+  cmPeriod = currentMonth;                      // default the modal to the app's current filter
+  document.getElementById('chartModalBox').classList.remove('full');
+  document.getElementById('chartModal').classList.add('show');
+  renderChartModal();
+}
+function closeChartModal(){ document.getElementById('chartModal').classList.remove('show'); if(charts['cmCanvas']){charts['cmCanvas'].destroy(); delete charts['cmCanvas'];} }
+function toggleChartModalFull(){ document.getElementById('chartModalBox').classList.toggle('full'); if(charts['cmCanvas']) charts['cmCanvas'].resize(); }
+function setCmRange(p){ cmPeriod = p; renderChartModal(); }
+
+function renderChartModal(){
+  const cfg = CHART_CTX[cmContext];
+  document.getElementById('cmTitle').textContent = t(cfg.title);
+  // pills
+  const curMonth = (cmPeriod && cmPeriod.length===7) ? cmPeriod : ( (currentMonth&&currentMonth.length===7)?currentMonth : (new Date().toISOString().slice(0,7)) );
+  const curYear  = (cmPeriod && cmPeriod.length>=4) ? cmPeriod.slice(0,4) : String(new Date().getFullYear());
+  const pills = [ ['cm.daily', curMonth], ['cm.monthly', curYear], ['cm.all',''] ];
+  document.getElementById('cmPills').innerHTML = pills.map(([k,p])=>
+    `<button class="cm-pill ${cmPeriod===p?'on':''}" onclick="setCmRange('${p}')">${t(k)}</button>`).join('');
+  // draw chart with the local period override
+  const _saved = currentMonth;
+  let labels = [], ds = [];
+  try {
+    currentMonth = cmPeriod;
+    cfg.draw('cmCanvas');
+    const ch = charts['cmCanvas']; labels = (ch&&ch.data.labels)||[]; ds = (ch&&ch.data.datasets)||[];
+  } finally { currentMonth = _saved; }
+  if (charts['cmCanvas'] && cfg.kind !== 'pie'){ charts['cmCanvas'].options.maintainAspectRatio = false; charts['cmCanvas'].resize(); }
+  // STATS
+  let stats=[];
+  if (cfg.kind==='pie'){
+    const vals=(ds[0]&&ds[0].data)||[]; const total=vals.reduce((a,b)=>a+(+b||0),0);
+    const top = labels[vals.indexOf(Math.max(...vals,0))]||'-';
+    stats=[[t('cm.total'),fmt(total)],[t('cm.categories'),String(labels.length)],[t('cm.top'),top]];
+  } else if (cmContext==='incomeexpense'){
+    const inc=((ds[0]&&ds[0].data)||[]).reduce((a,b)=>a+(+b||0),0); const exp=((ds[1]&&ds[1].data)||[]).reduce((a,b)=>a+(+b||0),0);
+    stats=[[t('ds.income'),fmt(inc)],[t('ds.expense'),fmt(exp)],[t('cm.net'),fmt(round2(inc-exp))]];
+  } else {
+    const vals=((ds[0]&&ds[0].data)||[]).map(Number); const total=round2(vals.reduce((a,b)=>a+b,0));
+    const avg= vals.length?round2(total/vals.length):0; const peak=vals.length?Math.max(...vals):0;
+    stats= cfg.pct
+      ? [[t('cm.avg'),avg+'%'],[t('cm.peak'),peak+'%'],[t('cm.points'),String(vals.length)]]
+      : [[t('cm.total'),fmt(total)],[t('cm.avg'),fmt(avg)],[t('cm.peak'),fmt(peak)]];
+  }
+  document.getElementById('cmStats').innerHTML = stats.map(([l,v])=>`<div class="cm-stat"><div class="l">${l}</div><div class="v">${v}</div></div>`).join('');
+  // BREAKDOWN (expense / categories only): expense-by-category list
+  const bd=document.getElementById('cmBreakdown');
+  if (cfg.breakdown){
+    const _s=currentMonth; let rows=[];
+    try {
+      currentMonth=cmPeriod;
+      const agg={}; const months=currentMonth?Object.keys(kpi).filter(m=>m.startsWith(currentMonth)):Object.keys(kpi);
+      months.forEach(m=>{const d=kpi[m]; if(!d||!d.actual)return; Object.entries(d.actual).forEach(([c,v])=>{agg[c]=(agg[c]||0)+(v||0);});});
+      rows=Object.entries(agg).filter(([,v])=>v>0).sort((a,b)=>b[1]-a[1]);
+    } finally { currentMonth=_s; }
+    bd.innerHTML = rows.length ? `<div style="font-size:12px;color:var(--muted);margin-bottom:6px">${t('charts.expenseShare')}</div>`+
+      rows.map(([c,v])=>`<div style="display:flex;justify-content:space-between;padding:4px 0;font-size:13px;border-bottom:1px solid var(--glass-border)"><span>${c}</span><span class="mono">${fmt(v)}</span></div>`).join('') : '';
+  } else bd.innerHTML='';
+  // TABLE (labels + value(s))
+  let head, body;
+  if (cmContext==='incomeexpense'){
+    head=`<th>${t('th.date')}</th><th class="text-right">${t('ds.income')}</th><th class="text-right">${t('ds.expense')}</th>`;
+    body=labels.map((l,i)=>`<tr><td>${l}</td><td class="text-right mono">${fmt(ds[0].data[i])}</td><td class="text-right mono">${fmt(ds[1].data[i])}</td></tr>`).join('');
+  } else {
+    head=`<th>${cfg.kind==='pie'?t('th.type'):t('th.date')}</th><th class="text-right">${t('cm.value')}</th>`;
+    body=labels.map((l,i)=>`<tr><td>${l}</td><td class="text-right mono">${cfg.pct?(round2(ds[0].data[i])+'%'):fmt(ds[0].data[i])}</td></tr>`).join('');
+  }
+  document.getElementById('cmTable').innerHTML = `<table><thead><tr>${head}</tr></thead><tbody>${body}</tbody></table>`;
+}
+function cmExportCSV(){
+  const ch=charts['cmCanvas']; if(!ch) return; const labels=ch.data.labels||[]; const ds=ch.data.datasets||[];
+  let rows=[]; if(ds.length>1){ rows.push(['label',...ds.map(d=>d.label)]); labels.forEach((l,i)=>rows.push([l,...ds.map(d=>d.data[i])])); }
+  else { rows.push(['label','value']); labels.forEach((l,i)=>rows.push([l, ds[0]?ds[0].data[i]:''])); }
+  const csv=rows.map(r=>r.join(',')).join('\n'); const blob=new Blob([csv],{type:'text/csv'}); const url=URL.createObjectURL(blob);
+  const a=document.createElement('a'); a.href=url; a.download=`${cmContext}_${cmPeriod||'all'}.csv`; a.click(); URL.revokeObjectURL(url);
+}
+function cmExportPNG(){ const ch=charts['cmCanvas']; if(!ch) return; const a=document.createElement('a'); a.href=ch.toBase64Image(); a.download=`${cmContext}_${cmPeriod||'all'}.png`; a.click(); }
+
+const THEME_KEY = 'kpft_theme';
+function currentTheme() { return localStorage.getItem(THEME_KEY) === 'dark' ? 'dark' : 'light'; }
+function applyTheme(theme) {
+  if (theme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+  else document.documentElement.removeAttribute('data-theme');
+  updateThemeLabel();
+}
+function applyStoredTheme() { applyTheme(currentTheme()); }
+
+// ── Collapsible sidebar ──
+const SIDEBAR_KEY = 'kpft_sidebar';
+function applySidebar(){ const c = localStorage.getItem(SIDEBAR_KEY)==='collapsed'; const sb=document.getElementById('sidebar'); if(sb) sb.classList.toggle('collapsed', c); }
+function toggleSidebar(){ const sb=document.getElementById('sidebar'); sb.classList.toggle('collapsed'); localStorage.setItem(SIDEBAR_KEY, sb.classList.contains('collapsed')?'collapsed':'expanded'); moveNavIndicator(); }
+function moveNavIndicator(){
+  const ind = document.getElementById('navIndicator');
+  const act = document.querySelector('.nav-item.active');
+  if (!ind) return;
+  if (!act){ ind.style.opacity='0'; return; }
+  ind.style.opacity='1';
+  ind.style.height = act.offsetHeight + 'px';
+  ind.style.transform = 'translateY(' + act.offsetTop + 'px)';
+}
+function toggleTheme() {
+  const next = currentTheme() === 'light' ? 'dark' : 'light';
+  localStorage.setItem(THEME_KEY, next);
+  applyTheme(next);
+  refreshAll();
+}
+function updateThemeLabel() {
+  const el = document.getElementById('themeStateLabel');
+  if (el) el.textContent = currentTheme() === 'light' ? t('theme.light') : t('theme.dark');
+}
+
+// ── JSON backup / restore — lossless, full state, ignores the active filter ──
+function backupJSON() {
+  const payload = {
+    _app: 'kp-finance-tracker', _version: 1, _exported: new Date().toISOString(),
+    sales, expenses, openingBalance, kpi, expenseSheets
+  };
+  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `finance_backup_${new Date().toISOString().slice(0,10)}.json`;
+  a.click();
+  URL.revokeObjectURL(url);
+  toast(t('toast.backupOk'), 'ok');
+}
+
+function restoreJSONFile(input) {
+  const file = input.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = e => {
+    let data;
+    try { data = JSON.parse(e.target.result); }
+    catch { toast(t('toast.badJson'), 'err'); input.value = ''; return; }
+    if (!data || data._app !== 'kp-finance-tracker') {
+      toast(t('toast.notAppFile'), 'err'); input.value = ''; return;
+    }
+    const nSales  = Array.isArray(data.sales) ? data.sales.length : 0;
+    const nSheets = data.expenseSheets ? Object.keys(data.expenseSheets).length : 0;
+    const ob      = (data.openingBalance && data.openingBalance.amount) || 0;
+    if (!confirm(tf('restore.confirm', {nSales, nSheets, ob}))) {
+      input.value = ''; return;
+    }
+    sales          = Array.isArray(data.sales) ? data.sales : [];
+    expenses       = Array.isArray(data.expenses) ? data.expenses : [];
+    openingBalance = (data.openingBalance && typeof data.openingBalance === 'object') ? data.openingBalance : { amount: 0, note: '' };
+    kpi            = (data.kpi && typeof data.kpi === 'object') ? data.kpi : {};
+    expenseSheets  = (data.expenseSheets && typeof data.expenseSheets === 'object') ? data.expenseSheets : {};
+    dirty.expenses = false; dirty.kpi = false;
+    save();
+    refreshAll(); initOpeningBalanceUI(); initExpenseMonthUI(); initKpiUI();
+    closeSettingsModal();
+    toast(tf('restore.success', {nSales: sales.length, nSheets: Object.keys(expenseSheets).length}), 'ok');
+    input.value = '';
+  };
+  reader.readAsText(file, 'UTF-8');
+}
+function closeClearModal() { document.getElementById('clearModal').classList.remove('show'); }
+function clearAll() {
+  sales = []; expenses = []; kpi = {}; expenseSheets = {};
+  openingBalance = { amount: 0, note: '' };
+  save(); refreshAll(); closeClearModal();
+  const obI = document.getElementById('openingBalanceInput'); if (obI) obI.value = '';
+  const obN = document.getElementById('openingBalanceNote');  if (obN) obN.value = '';
+  const obS = document.getElementById('openingBalanceStatus'); if (obS) obS.textContent = '';
+  toast(t('toast.cleared'), 'ok');
+}
+
+// ═══════════════════════════════════════════════════
+//  DRAG & DROP
+// ═══════════════════════════════════════════════════
+function handleDrag(e, id) { e.preventDefault(); document.getElementById(id).classList.add('drag'); }
+function handleDragLeave(id) { document.getElementById(id).classList.remove('drag'); }
+function handleDrop(e, type) {
+  e.preventDefault();
+  const f = e.dataTransfer.files[0];
+  if (!f) return;
+  const fakeInput = { files:[f], value:'' };
+  if (type === 'sales') { document.getElementById('salesDropZone').classList.remove('drag'); importSalesFile(fakeInput); }
+  else if (type === 'dailyexp') { document.getElementById('dailyExpDropZone').classList.remove('drag'); importDailyExpenseXLSX(fakeInput); }
+}
+
+// ═══════════════════════════════════════════════════
+//  TOAST
+// ═══════════════════════════════════════════════════
+let toastTimer;
+function toast(msg, type='ok') {
+  const el = document.getElementById('toast');
+  el.innerHTML = '<i class="fi fi-rr-' + (type==='err'?'cross-small':'check') + '" style="margin-right:7px"></i>' + msg;
+  el.className = 'show ' + type;
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => el.className = '', 3000);
+}
+
+// ═══════════════════════════════════════════════════
+//  HELPERS
+// ═══════════════════════════════════════════════════
+function round2(v) { return Math.round((Number(v) + Number.EPSILON) * 100) / 100; }
+function fmt(v) {
+  if (v === undefined || v === null || v === '') return '-';
+  return Number(v).toLocaleString('th-TH', {minimumFractionDigits:2, maximumFractionDigits:2});
+}
+function formatDate(d) {
+  if (!d) return '-';
+  const [y,m,day] = d.split('-');
+  return `${+day} ${monthName(+m-1)} ${+y+543}`;
+}
+
+// ═══════════════════════════════════════════════════
+//  INIT
+// ═══════════════════════════════════════════════════
+window.addEventListener('beforeunload', e => {
+  if (dirty.expenses || dirty.kpi) { e.preventDefault(); e.returnValue = ''; }
+});
+applyStoredTheme();
+applySidebar();
+function setHeaderH(){ const h = document.querySelector('header'); if (h) document.documentElement.style.setProperty('--header-h', h.offsetHeight + 'px'); }
+setHeaderH();
+window.addEventListener('resize', () => { setHeaderH(); moveNavIndicator(); });
+moveNavIndicator();
+setTimeout(moveNavIndicator, 250);
+applyLang();
+// Data rendering is now gated behind login. startAuthGate() shows the login
+// screen, then loads the active branch from the cloud and renders the app.
+startAuthGate();
+playCascade(document.querySelector('.page.active'));
+</script>
+</body>
+</html>
