@@ -33,6 +33,11 @@
   .sync-dot{ font-size:11px; color:#8f8f82; margin-left:2px; white-space:nowrap; }
   .sync-dot.ok{ color:#7bbf6a; } .sync-dot.saving{ color:#e8b923; } .sync-dot.off{ color:#e0685f; }
   #combinedBanner{ display:none; background:linear-gradient(90deg,rgba(232,185,35,.16),rgba(232,185,35,.05)); border-bottom:1px solid rgba(232,185,35,.35); color:var(--accent-strong); font-size:12.5px; padding:8px 18px; text-align:center; font-family:'IBM Plex Sans Thai',sans-serif; }
+  #splitToggleWrap{ margin-left:16px; display:inline-flex; gap:6px; align-items:center; vertical-align:middle; }
+  #splitToggleWrap .split-lbl{ opacity:.8; margin-right:2px; }
+  .split-tgl{ cursor:pointer; font-family:inherit; font-size:11.5px; line-height:1; padding:4px 11px; border-radius:999px; border:1px solid rgba(232,185,35,.5); background:transparent; color:var(--accent-strong); transition:background .15s,color .15s; }
+  .split-tgl:hover{ border-color:var(--accent); }
+  .split-tgl.on{ background:var(--accent); color:#1a1402; border-color:var(--accent); font-weight:600; }
   body.combined-mode .upload-zone{ opacity:.5; pointer-events:none; }
 </style>
 
@@ -171,8 +176,11 @@ async function switchBranch(b){
   _combinedUI(b==='combined');
   if(b==='combined'){
     const res=await Promise.all([pullBranch('A'), pullBranch('B')]);
+    window.__branchA = _normalize(res[0]);   // raw per-store data for split view
+    window.__branchB = _normalize(res[1]);
     assignData(mergeData(res[0], res[1]));
   } else {
+    window.__branchA = null; window.__branchB = null;
     assignData(await pullBranch(b));
   }
   if(typeof currentMonth!=='undefined') currentMonth='';
@@ -183,11 +191,12 @@ async function switchBranch(b){
 }
 function _combinedUI(on){
   const ban=document.getElementById('combinedBanner');
-  if(ban){ ban.style.display = on?'block':'none';
-    if(on) ban.textContent = _isTH()
-      ? '🔒 มุมมองรวม (สาขา A + สาขา B) — อ่านอย่างเดียว สลับไปสาขาเดียวเพื่อแก้ไขหรือนำเข้า'
-      : '🔒 Combined view (Place A + Place B) — read-only. Switch to a single place to edit or import.';
-  }
+  const txt=document.getElementById('combinedBannerText');
+  if(ban) ban.style.display = on?'block':'none';
+  if(txt && on) txt.textContent = _isTH()
+    ? '🔒 มุมมองรวม (KP Cooling + Ngoenphool) — อ่านอย่างเดียว สลับไปสาขาเดียวเพื่อแก้ไขหรือนำเข้า'
+    : '🔒 Combined view (KP Cooling + Ngoenphool) — read-only. Switch to a single store to edit or import.';
+  if(typeof updateSplitButtons==='function') updateSplitButtons();
   document.body.classList.toggle('combined-mode', on);
 }
 
@@ -770,9 +779,9 @@ function startAuthGate(){
   <div class="logo" onclick="navigate('dashboard')" role="button" tabindex="0" title="Dashboard" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();navigate('dashboard');}"><i class="fi fi-rr-chart-pie-alt logo-ico"></i>KP <span>Finance</span></div>
   <div class="header-actions">
     <select id="branchSel" class="branch-sel" onchange="switchBranch(this.value)" title="Location / สถานที่">
-      <option value="A">Place A</option>
-      <option value="B">Place B</option>
-      <option value="combined">Both (total)</option>
+      <option value="A">KP Cooling</option>
+      <option value="B">Ngoenphool</option>
+      <option value="combined">Both</option>
     </select>
     <span id="syncDot" class="sync-dot"></span>
     <button id="fAllBtn" class="btn btn-primary btn-sm" onclick="filterAll()" data-i18n="hdr.all">All</button>
@@ -815,7 +824,7 @@ function startAuthGate(){
   </div>
 </header>
 
-<div id="combinedBanner">🔒 <span data-combined-th="โหมดรวม (สาขา A + B) — อ่านอย่างเดียว สลับไปสาขาเดียวเพื่อแก้ไขหรือนำเข้า">Combined view (Place A + Place B) — read-only. Switch to a single place to edit or import.</span></div>
+<div id="combinedBanner"><span id="combinedBannerText">🔒 Combined view (KP Cooling + Ngoenphool) — read-only. Switch to a single store to edit or import.</span><span id="splitToggleWrap"><span class="split-lbl" data-i18n="split.view">View:</span><button id="btnSplit" class="split-tgl" onclick="setSplit(true)" data-i18n="split.bystore">Split by store</button><button id="btnCombo" class="split-tgl" onclick="setSplit(false)" data-i18n="split.combined">Combined</button></span></div>
 
 <div class="app">
   <nav class="sidebar" id="sidebar">
@@ -840,7 +849,7 @@ function startAuthGate(){
       </div>
       <div class="kpi-grid" id="kpiGrid"></div>
       <div class="chart-card" style="margin-bottom:20px;" id="dashGraphCard">
-        <div class="chart-title" id="dashGraphTitle" data-i18n="dash.balanceChart">Total Balance — by filter above (month=daily · year/all=monthly)</div>
+        <div class="chart-title" id="dashGraphTitle" data-i18n="dash.balanceChart">Total Balance</div>
         <button class="chart-expand" onclick="openChartModal(dashGraph)" aria-label="Expand"><i class="fi fi-rr-expand"></i></button>
         <canvas id="balanceLineDash"></canvas>
       </div>
@@ -857,7 +866,7 @@ function startAuthGate(){
         </div>
       </div>
       <div class="chart-card" style="margin-bottom:20px;">
-        <div class="chart-title" data-i18n="dash.incomeVsExpense">Income vs Expense (daily)</div>
+        <div class="chart-title" data-i18n="dash.incomeVsExpense">Income vs Expense</div>
         <button class="chart-expand" onclick="openChartModal('incomeexpense')" aria-label="Expand"><i class="fi fi-rr-expand"></i></button>
         <canvas id="barChart"></canvas>
       </div>
@@ -883,7 +892,7 @@ function startAuthGate(){
     <div id="page-charts" class="page">
       <div class="section-title mb" data-i18n="charts.title">Charts & Statistics</div>
       <div class="chart-card" style="margin-bottom:20px;">
-        <div class="chart-title" data-i18n="dash.balanceChart">Total Balance — by filter above (month=daily · year/all=monthly)</div>
+        <div class="chart-title" data-i18n="dash.balanceChart">Total Balance</div>
         <button class="chart-expand" onclick="openChartModal('balance')" aria-label="Expand"><i class="fi fi-rr-expand"></i></button>
         <canvas id="balanceLineCharts"></canvas>
       </div>
@@ -917,7 +926,7 @@ function startAuthGate(){
         <canvas id="expenseTrendCharts"></canvas>
       </div>
       <div class="chart-card" style="margin-bottom:20px;">
-        <div class="chart-title" data-i18n="charts.ieStacked">Income vs Expense (monthly)</div>
+        <div class="chart-title" data-i18n="charts.ieStacked">Income vs Expense</div>
         <button class="chart-expand" onclick="openChartModal('incomeexpense')" aria-label="Expand"><i class="fi fi-rr-expand"></i></button>
         <canvas id="incomeExpenseStacked"></canvas>
       </div>
@@ -1171,9 +1180,9 @@ const I18N = {
 
   // dashboard (static)
   'dash.title':           { en:'Business Overview', th:'ภาพรวมธุรกิจ' },
-  'dash.balanceChart':    { en:'Total Balance — by filter above (month=daily · year/all=monthly)', th:'ยอดเงินรวม (Balance) — ตามตัวกรองด้านบน (เดือน=รายวัน · ปี/ทั้งหมด=รายเดือน)' },
-  'dash.incomeVsExpense': { en:'Income vs Expense (daily)', th:'รายได้ vs ค่าใช้จ่าย (รายวัน)' },
-  'dash.netProfit':       { en:'Net Profit (daily)', th:'กำไรสุทธิ (รายวัน)' },
+  'dash.balanceChart':    { en:'Total Balance', th:'ยอดเงินรวม (Balance)' },
+  'dash.incomeVsExpense': { en:'Income vs Expense', th:'รายได้ vs ค่าใช้จ่าย' },
+  'dash.netProfit':       { en:'Net Profit', th:'กำไรสุทธิ' },
   'dash.incomeChart':     { en:'Income', th:'รายได้' },
   'dash.marginChart':     { en:'Profit Margin', th:'อัตรากำไร' },
   'dash.recent':          { en:'Recent Transactions', th:'รายการล่าสุด' },
@@ -1217,7 +1226,10 @@ const I18N = {
   'charts.monthlyProfit':{ en:'Monthly Net Profit', th:'กำไรสุทธิรายเดือน' },
   'charts.dailyExpense': { en:'Daily Expenses', th:'ค่าใช้จ่ายรายวัน' },
   'charts.expenseTrend': { en:'Expense Trend', th:'แนวโน้มค่าใช้จ่าย' },
-  'charts.ieStacked':    { en:'Income vs Expense (monthly)', th:'รายได้ vs ค่าใช้จ่าย (รายเดือน)' },
+  'charts.ieStacked':    { en:'Income vs Expense', th:'รายได้ vs ค่าใช้จ่าย' },
+  'split.view':          { en:'View:', th:'มุมมอง:' },
+  'split.bystore':       { en:'Split by store', th:'แยกร้าน' },
+  'split.combined':      { en:'Combined', th:'รวม' },
   'charts.gauge':        { en:'Profit Margin', th:'อัตรากำไร' },
   'chart.totalLabel':    { en:'Total', th:'รวม' },
 
@@ -1784,29 +1796,18 @@ function refreshDashboard(fSales, fExp) {
 
   // Bar chart — period-aware (daily for a specific month, monthly for year/all)
   const barB = periodBuckets();
-  const sData = barB.keys.map(k => sumBucket(sales, 'paid', k, barB.daily));
-  const eData = barB.keys.map(k => sumBucket(expenses, 'amount', k, barB.daily));
-
-  drawBar('barChart', barB.labels, [
-    { label:t('ds.sales'), data: sData, backgroundColor:'rgba(217,164,0,.7)' },
-    { label:t('ds.expense'), data: eData, backgroundColor:inkChart() }
-  ]);
+  drawBar('barChart', barB.labels, splitIEDatasets(
+    () => barB.keys.map(k => sumBucket(sales, 'paid', k, barB.daily)),
+    () => barB.keys.map(k => sumBucket(expenses, 'amount', k, barB.daily))
+  ));
   // Daily Net Profit chart removed from the dashboard to declutter — monthly profit lives on the Charts tab
 
   drawDashGraph();
 
   // Expense-by-category donut (reuses the same aggregation that feeds 'expensePie')
-  const dashCatAgg = {};
-  const dashCatMonths = currentMonth ? Object.keys(kpi).filter(m => m.startsWith(currentMonth)) : Object.keys(kpi);
-  dashCatMonths.forEach(m => {
-    const d = kpi[m]; if (!d || !d.actual) return;
-    Object.entries(d.actual).forEach(([cat, v]) => { dashCatAgg[cat] = (dashCatAgg[cat] || 0) + (v || 0); });
-  });
-  const dashPieLabels = [], dashPieVals = [];
-  Object.entries(dashCatAgg).forEach(([k, v]) => { if (v > 0) { dashPieLabels.push(k); dashPieVals.push(v); } });
-  drawPie('expenseDonutDash', dashPieLabels, dashPieVals);
+  drawPieSplittable('expenseDonutDash', expenseCatAgg);
 
-  drawMarginGauge('marginGauge');
+  drawMarginGaugeSplittable('marginGauge');
 
 }
 
@@ -1984,38 +1985,21 @@ function onExpEdit() { dirty.expenses = true; recalcExpenseSheet(); }
 function refreshCharts(fSales, fExp) {
   // Monthly sales bar — period-aware
   const salesB = periodBuckets();
-  drawBar('monthlySalesBar', salesB.labels, [{
-    label:t('ds.paid'), data: salesB.keys.map(k => sumBucket(sales, 'paid', k, salesB.daily)),
-    backgroundColor:'rgba(217,164,0,.75)'
-  }]);
+  drawBar('monthlySalesBar', salesB.labels, splitDatasets(
+    () => salesB.keys.map(k => sumBucket(sales, 'paid', k, salesB.daily)), t('ds.paid'), 'rgba(217,164,0,.75)'));
 
   // Expense pie — ALL imported expense categories (from the daily expense file)
-  const catAgg = {};
-  const catMonths = currentMonth ? Object.keys(kpi).filter(m => m.startsWith(currentMonth)) : Object.keys(kpi);
-  catMonths.forEach(m => {
-    const d = kpi[m]; if (!d || !d.actual) return;
-    Object.entries(d.actual).forEach(([cat, v]) => {
-      catAgg[cat] = (catAgg[cat] || 0) + (v || 0);
-    });
-  });
-  const pieLabels = [], pieVals = [];
-  Object.entries(catAgg).forEach(([k, v]) => { if (v > 0) { pieLabels.push(k); pieVals.push(v); } });
-  drawPie('expensePie', pieLabels, pieVals);
+  drawPieSplittable('expensePie', expenseCatAgg);
 
   // Monthly profit line — period-aware
   const profitB = periodBuckets();
-  const profitData = profitB.keys.map(k => round2(sumBucket(sales,'paid',k,profitB.daily) - sumBucket(expenses,'amount',k,profitB.daily)));
-  drawLine('monthlyProfitLine', profitB.labels, [{
-    label:t('ds.profit'), data: profitData,
-    borderColor:'#d9a400', backgroundColor:'rgba(217,164,0,.16)', fill:true, tension:.35
-  }]);
+  drawLine('monthlyProfitLine', profitB.labels, splitDatasets(
+    () => profitB.keys.map(k => round2(sumBucket(sales,'paid',k,profitB.daily) - sumBucket(expenses,'amount',k,profitB.daily))), t('ds.profit'), '#d9a400'));
 
   // Expense bar — period-aware
   const expB = periodBuckets();
-  drawBar('expenseBar', expB.labels, [{
-    label:t('ds.expense'), data: expB.keys.map(k => sumBucket(expenses, 'amount', k, expB.daily)),
-    backgroundColor:inkChart()
-  }]);
+  drawBar('expenseBar', expB.labels, splitDatasets(
+    () => expB.keys.map(k => sumBucket(expenses, 'amount', k, expB.daily)), t('ds.expense'), inkChart()));
 
   drawBalanceChart('balanceLineCharts');
   drawExpenseTrend('expenseTrendCharts');
@@ -2028,27 +2012,26 @@ function refreshCharts(fSales, fExp) {
 // ═══════════════════════════════════════════════════
 function drawBalanceChart(id) {
   if (!document.getElementById(id)) return;
-  const ob = openingBalance.amount || 0;
 
   // Specific month → DAILY running balance, continuing from carried-in (ยอดยกมา)
   if (currentMonth && currentMonth.length === 7) {
     const ym = currentMonth;
-    const carriedIn = ob + cumNetProfit(prevMonth(ym));
     const nDays = daysInMonth(ym);
-    let bal = carriedIn;
-    const labels = [], data = [];
-    for (let d = 1; d <= nDays; d++) {
-      const ds = `${ym}-${String(d).padStart(2,'0')}`;
-      const dp = sales.filter(s => s.date === ds).reduce((a,s) => a + (s.paid||0), 0);
-      const de = expenses.filter(e => e.date === ds).reduce((a,e) => a + (e.amount||0), 0);
-      bal += dp - de;
-      labels.push(String(d)); data.push(round2(bal));
-    }
-    drawLine(id, labels, [{
-      label: t('ds.totalBalanceDaily'), data,
-      borderColor: '#d9a400', backgroundColor: 'rgba(217,164,0,.16)',
-      fill: true, tension: .3, pointRadius: 2
-    }]);
+    const labels = [];
+    for (let d = 1; d <= nDays; d++) labels.push(String(d));
+    const dailyBalances = () => {
+      const ob = openingBalance.amount || 0;
+      let bal = ob + cumNetProfit(prevMonth(ym));
+      const data = [];
+      for (let d = 1; d <= nDays; d++) {
+        const ds = `${ym}-${String(d).padStart(2,'0')}`;
+        const dp = sales.filter(s => s.date === ds).reduce((a,s) => a + (s.paid||0), 0);
+        const de = expenses.filter(e => e.date === ds).reduce((a,e) => a + (e.amount||0), 0);
+        bal += dp - de; data.push(round2(bal));
+      }
+      return data;
+    };
+    drawLine(id, labels, splitDatasets(dailyBalances, t('ds.totalBalanceDaily'), '#d9a400'));
     return;
   }
 
@@ -2059,12 +2042,8 @@ function drawBalanceChart(id) {
   } else {
     months = [...new Set([...sales, ...expenses].map(r => (r.date||'').slice(0,7)).filter(Boolean))].sort();
   }
-  const data = months.map(m => ob + cumNetProfit(m));
-  drawLine(id, months.map(formatMonth), [{
-    label: t('ds.totalBalance'), data,
-    borderColor: '#d9a400', backgroundColor: 'rgba(217,164,0,.16)',
-    fill: true, tension: .3, pointRadius: 3
-  }]);
+  const monthlyBalances = () => { const ob = openingBalance.amount || 0; return months.map(m => ob + cumNetProfit(m)); };
+  drawLine(id, months.map(formatMonth), splitDatasets(monthlyBalances, t('ds.totalBalance'), '#d9a400'));
 }
 
 // ═══════════════════════════════════════════════════
@@ -2100,6 +2079,105 @@ function sumBucket(rows, field, key, daily){
 // theme-aware "ink" color for the expense/black series — black in light, light in dark
 function inkChart(){ return document.documentElement.getAttribute('data-theme') === 'light' ? '#2c2c2a' : '#d8d4c4'; }
 
+// ═══════════════════════════════════════════════════
+//  SPLIT-BY-STORE (Both view) — KP Cooling (A) vs Ngoenphool (B)
+// ═══════════════════════════════════════════════════
+const STORE_A_NAME = 'KP Cooling';   // branch A
+const STORE_B_NAME = 'Ngoenphool';   // branch B
+let SPLIT_STORES = true;             // default: split-first when entering Both view
+let __forceCombined = false;         // set true while the expand modal renders (keeps it single-series)
+
+// split is only meaningful in the read-only "Both" view, and needs A/B data stashed
+function splitActive(){ return CURRENT_BRANCH === 'combined' && SPLIT_STORES && !__forceCombined && !!window.__branchA && !!window.__branchB; }
+function storeColor(which){ return which === 'A' ? '#d9a400' : inkChart(); }
+
+// toggle handlers (buttons live in the combined banner)
+function setSplit(on){ SPLIT_STORES = !!on; updateSplitButtons(); if (typeof refreshAll === 'function') refreshAll(); }
+function updateSplitButtons(){
+  const a = document.getElementById('btnSplit'), c = document.getElementById('btnCombo');
+  if (a) a.classList.toggle('on', SPLIT_STORES);
+  if (c) c.classList.toggle('on', !SPLIT_STORES);
+}
+
+// run fn() with the data globals temporarily swapped to a specific store's data
+function _swapData(d){
+  const prev = { sales, expenses, kpi, expenseSheets, openingBalance };
+  sales = d.sales; expenses = d.expenses; kpi = d.kpi; expenseSheets = d.expenseSheets; openingBalance = d.openingBalance;
+  return prev;
+}
+function withData(d, fn){ const prev = _swapData(d); try { return fn(); } finally { _swapData(prev); } }
+
+// single-metric line/bar: one combined series, or one per store when split is on.
+// valueFn() reads the current data globals and returns the y-array for the shared label set.
+function splitDatasets(valueFn, comboLabel, comboColor){
+  if(!splitActive()){
+    return [{ label: comboLabel, data: valueFn(), borderColor: comboColor || '#d9a400', backgroundColor: comboColor || '#d9a400' }];
+  }
+  return [
+    { label: STORE_A_NAME, data: withData(window.__branchA, valueFn), borderColor: storeColor('A'), backgroundColor: storeColor('A') },
+    { label: STORE_B_NAME, data: withData(window.__branchB, valueFn), borderColor: storeColor('B'), backgroundColor: storeColor('B') }
+  ];
+}
+
+// income-vs-expense bars: 2 datasets combined, or 4 (income+expense per store) when split.
+function splitIEDatasets(incFn, expFn){
+  if(!splitActive()){
+    return [
+      { label: t('ds.income'),  data: incFn(), backgroundColor: 'rgba(217,164,0,.7)' },
+      { label: t('ds.expense'), data: expFn(), backgroundColor: inkChart() }
+    ];
+  }
+  return [
+    { label: STORE_A_NAME + ' · ' + t('ds.income'),  data: withData(window.__branchA, incFn), backgroundColor: 'rgba(217,164,0,.85)' },
+    { label: STORE_A_NAME + ' · ' + t('ds.expense'), data: withData(window.__branchA, expFn), backgroundColor: 'rgba(217,164,0,.35)' },
+    { label: STORE_B_NAME + ' · ' + t('ds.income'),  data: withData(window.__branchB, incFn), backgroundColor: inkChart() },
+    { label: STORE_B_NAME + ' · ' + t('ds.expense'), data: withData(window.__branchB, expFn), backgroundColor: 'rgba(140,136,118,.55)' }
+  ];
+}
+
+// ── doughnut/gauge split DOM: swap the single canvas for two labelled side-by-side canvases ──
+function _splitWrap(id){
+  const canvas = document.getElementById(id);
+  if(!canvas) return null;
+  let wrap = document.getElementById(id + '__splitwrap');
+  if(!wrap){
+    wrap = document.createElement('div');
+    wrap.id = id + '__splitwrap';
+    wrap.style.cssText = 'display:flex;gap:10px;width:100%;align-items:flex-start;';
+    wrap.innerHTML =
+      '<div style="flex:1;min-width:0;text-align:center;">'
+        + '<div style="font-size:11px;font-weight:600;color:var(--muted);margin-bottom:4px;text-transform:uppercase;letter-spacing:.4px;">' + STORE_A_NAME + '</div>'
+        + '<canvas id="' + id + '__A"></canvas></div>'
+      + '<div style="flex:1;min-width:0;text-align:center;">'
+        + '<div style="font-size:11px;font-weight:600;color:var(--muted);margin-bottom:4px;text-transform:uppercase;letter-spacing:.4px;">' + STORE_B_NAME + '</div>'
+        + '<canvas id="' + id + '__B"></canvas></div>';
+    canvas.parentNode.insertBefore(wrap, canvas.nextSibling);
+  }
+  canvas.style.display = 'none';
+  wrap.style.display = 'flex';
+  return wrap;
+}
+function _unsplitWrap(id){
+  const canvas = document.getElementById(id);
+  if(canvas) canvas.style.display = '';
+  const wrap = document.getElementById(id + '__splitwrap');
+  if(wrap){
+    if(charts[id+'__A']){ charts[id+'__A'].destroy(); delete charts[id+'__A']; }
+    if(charts[id+'__B']){ charts[id+'__B'].destroy(); delete charts[id+'__B']; }
+    wrap.style.display = 'none';
+  }
+}
+// pie/doughnut: aggFn() -> {labels,data} from current globals
+function drawPieSplittable(id, aggFn){
+  if(!document.getElementById(id)) return;
+  if(!splitActive()){ _unsplitWrap(id); const r = aggFn(); drawPie(id, r.labels, r.data); return; }
+  _splitWrap(id);
+  const ra = withData(window.__branchA, aggFn);
+  const rb = withData(window.__branchB, aggFn);
+  drawPie(id + '__A', ra.labels, ra.data);
+  drawPie(id + '__B', rb.labels, rb.data);
+}
+
 function drawBar(id, labels, datasets) {
   if (charts[id]) charts[id].destroy();
   const ctx = document.getElementById(id);
@@ -2126,12 +2204,13 @@ function drawLine(id, labels, datasets) {
   const ctx = document.getElementById(id);
   if (!ctx) return;
   const gctx = ctx.getContext('2d');
+  const _multi = datasets.length > 1;   // 2+ series (e.g. split by store) → no area fill, just lines
   datasets.forEach(ds => {
     const bc = (typeof ds.borderColor === 'string') ? ds.borderColor : '#d9a400';
-    if (typeof ds.backgroundColor !== 'object') {
+    if (ds.fill === undefined) ds.fill = !_multi;
+    if (ds.fill && typeof ds.backgroundColor !== 'object') {
       ds.backgroundColor = areaGradient(gctx, bc);
     }
-    ds.fill = true;
     ds.tension = (ds.tension != null ? ds.tension : .4);
     ds.borderWidth = ds.borderWidth || 2;
     ds.pointRadius = 0;
@@ -2192,33 +2271,34 @@ function showDashGraph(which){
 }
 function drawSalesTrend(id){
   const b = periodBuckets();
-  drawLine(id, b.labels, [{ label: t('ds.income'), data: b.keys.map(k=>sumBucket(sales,'paid',k,b.daily)), borderColor:'#d9a400', fill:true, tension:.4 }]);
+  drawLine(id, b.labels, splitDatasets(() => b.keys.map(k=>sumBucket(sales,'paid',k,b.daily)), t('ds.income'), '#d9a400'));
 }
 function drawProfitTrend(id){
   const b = periodBuckets();
-  const data = b.keys.map(k => round2(sumBucket(sales,'paid',k,b.daily) - sumBucket(expenses,'amount',k,b.daily)));
-  drawLine(id, b.labels, [{ label: t('ds.profit'), data, borderColor:'#d9a400', fill:true, tension:.4 }]);
+  drawLine(id, b.labels, splitDatasets(() => b.keys.map(k => round2(sumBucket(sales,'paid',k,b.daily) - sumBucket(expenses,'amount',k,b.daily))), t('ds.profit'), '#d9a400'));
 }
 function drawMarginTrend(id){
   const b = periodBuckets();
-  const data = b.keys.map(k => { const inc=sumBucket(sales,'paid',k,b.daily), exp=sumBucket(expenses,'amount',k,b.daily); return inc>0 ? round2((inc-exp)/inc*100) : 0; });
-  drawLine(id, b.labels, [{ label: t('charts.gauge'), data, borderColor:'#d9a400', fill:true, tension:.4 }]);
+  drawLine(id, b.labels, splitDatasets(() => b.keys.map(k => { const inc=sumBucket(sales,'paid',k,b.daily), exp=sumBucket(expenses,'amount',k,b.daily); return inc>0 ? round2((inc-exp)/inc*100) : 0; }), t('charts.gauge'), '#d9a400'));
 }
 
 function drawExpenseTrend(id){
   if (!document.getElementById(id)) return;
-  let labels = [], data = [];
+  let labels = [], valueFn;
   // Specific month → daily expense totals
   if (currentMonth && currentMonth.length === 7) {
     const ym = currentMonth;
     const nDays = daysInMonth(ym);
-    for (let d = 1; d <= nDays; d++) {
-      const ds = `${ym}-${String(d).padStart(2,'0')}`;
-      const de = expenses.filter(e => e.date === ds).reduce((a,e) => a + (e.amount||0), 0);
-      labels.push(String(d)); data.push(round2(de));
-    }
+    for (let d = 1; d <= nDays; d++) labels.push(String(d));
+    valueFn = () => { const out = [];
+      for (let d = 1; d <= nDays; d++) {
+        const ds = `${ym}-${String(d).padStart(2,'0')}`;
+        out.push(round2(expenses.filter(e => e.date === ds).reduce((a,e) => a + (e.amount||0), 0)));
+      }
+      return out;
+    };
   } else {
-    // Specific year → 12 months; else all-time months
+    // Specific year → 12 months; else all-time months (label set from merged data)
     let months;
     if (currentMonth && currentMonth.length === 4) {
       months = Array.from({length:12}, (_,i) => `${currentMonth}-${String(i+1).padStart(2,'0')}`);
@@ -2226,12 +2306,9 @@ function drawExpenseTrend(id){
       months = [...new Set(expenses.map(r => (r.date||'').slice(0,7)).filter(Boolean))].sort();
     }
     labels = months.map(formatMonth);
-    data = months.map(m => round2(expenses.filter(e => (e.date||'').slice(0,7) === m).reduce((a,e) => a + (e.amount||0), 0)));
+    valueFn = () => months.map(m => round2(expenses.filter(e => (e.date||'').slice(0,7) === m).reduce((a,e) => a + (e.amount||0), 0)));
   }
-  drawLine(id, labels, [{
-    label: t('charts.dailyExpense'), data,
-    borderColor: '#d9a400', fill: true, tension: .4
-  }]);
+  drawLine(id, labels, splitDatasets(valueFn, t('charts.dailyExpense'), '#d9a400'));
 }
 
 function drawPie(id, labels, data) {
@@ -2288,19 +2365,22 @@ function drawIncomeExpenseStacked(id) {
   const MUT = (_cs.getPropertyValue('--muted').trim() || '#8d8876');
 
   const b = periodBuckets();
+  const datasets = splitIEDatasets(
+    () => b.keys.map(k => sumBucket(sales, 'paid', k, b.daily)),
+    () => b.keys.map(k => sumBucket(expenses, 'amount', k, b.daily))
+  );
+  if (!splitActive()) { datasets[0].backgroundColor = '#d9a400'; datasets[1].backgroundColor = inkChart(); }
+  const stack = !splitActive();   // stack income+expense in combined; group the 4 store series when split
 
   charts[id] = new Chart(ctx, {
     type:'bar',
-    data:{ labels: b.labels, datasets:[
-      { label: t('ds.income'),  data: b.keys.map(k => sumBucket(sales, 'paid', k, b.daily)), backgroundColor:'#d9a400' },
-      { label: t('ds.expense'), data: b.keys.map(k => sumBucket(expenses, 'amount', k, b.daily)), backgroundColor:inkChart() }
-    ]},
+    data:{ labels: b.labels, datasets },
     options:{ responsive:true, maintainAspectRatio:true,
       animation:{ duration:850, easing:'easeOutQuart' },
-      plugins:{ legend:{ display:false } },
+      plugins:{ legend:{ display: splitActive() } },
       scales:{
-        x:{ stacked:true, ticks:{color:MUT,font:{size:10}}, grid:{display:false} },
-        y:{ stacked:true, ticks:{color:MUT,font:{size:10},callback:v=>fmt(v)}, grid:{color:'rgba(128,128,128,.08)'} }
+        x:{ stacked:stack, ticks:{color:MUT,font:{size:10}}, grid:{display:false} },
+        y:{ stacked:stack, ticks:{color:MUT,font:{size:10},callback:v=>fmt(v)}, grid:{color:'rgba(128,128,128,.08)'} }
       }
     }
   });
@@ -2347,6 +2427,25 @@ function drawMarginGauge(id) {
       plugins:{ legend:{ display:false }, tooltip:{ enabled:false } } },
     plugins:[gaugeText]
   });
+}
+
+// Expense-by-category aggregation over kpi[m].actual (filtered by currentMonth) → {labels,data}
+function expenseCatAgg(){
+  const agg = {};
+  const months = currentMonth ? Object.keys(kpi).filter(m => m.startsWith(currentMonth)) : Object.keys(kpi);
+  months.forEach(m => { const d = kpi[m]; if (!d || !d.actual) return; Object.entries(d.actual).forEach(([cat, v]) => { agg[cat] = (agg[cat] || 0) + (v || 0); }); });
+  const labels = [], data = [];
+  Object.entries(agg).forEach(([k, v]) => { if (v > 0) { labels.push(k); data.push(v); } });
+  return { labels, data };
+}
+
+// Margin gauge — single, or one gauge per store side-by-side when split is on
+function drawMarginGaugeSplittable(id){
+  if(!document.getElementById(id)) return;
+  if(!splitActive()){ _unsplitWrap(id); drawMarginGauge(id); return; }
+  _splitWrap(id);
+  withData(window.__branchA, () => drawMarginGauge(id + '__A'));
+  withData(window.__branchB, () => drawMarginGauge(id + '__B'));
 }
 
 // ═══════════════════════════════════════════════════
@@ -2633,7 +2732,12 @@ function updateKpiDerived() {
     <div class="kpi" style="border-color:rgba(245,200,66,.25);background:rgba(245,200,66,.04);"><div class="kpi-label" style="color:var(--yellow)">${t('kpi.salesTarget')}</div><div class="kpi-value" style="color:var(--yellow)">${fmt(target)}</div><div class="kpi-sub">${t('kpi.targetSub')}</div></div>
   `;
 
-  drawPie('kpiPie', labels, values);
+  drawPieSplittable('kpiPie', () => {
+    const out = { labels: [], data: [] };
+    const dd = kpi[getKpiYM()];
+    if (dd && dd.actual) (kpiCats || []).forEach(cat => { const a = dd.actual[cat] || 0; if (a > 0) { out.labels.push(cat); out.data.push(a); } });
+    return out;
+  });
 }
 
 // Save only the editable fields (budget + note). Actual is derived, not editable.
@@ -2826,12 +2930,13 @@ function renderChartModal(){
     `<button class="cm-pill ${cmPeriod===p?'on':''}" onclick="setCmRange('${p}')">${t(k)}</button>`).join('');
   // draw chart with the local period override
   const _saved = currentMonth;
+  const _savedFC = __forceCombined; __forceCombined = true;   // expand modal always shows a single combined series
   let labels = [], ds = [];
   try {
     currentMonth = cmPeriod;
     cfg.draw('cmCanvas');
     const ch = charts['cmCanvas']; labels = (ch&&ch.data.labels)||[]; ds = (ch&&ch.data.datasets)||[];
-  } finally { currentMonth = _saved; }
+  } finally { currentMonth = _saved; __forceCombined = _savedFC; }
   if (charts['cmCanvas'] && cfg.kind !== 'pie'){ charts['cmCanvas'].options.maintainAspectRatio = false; charts['cmCanvas'].resize(); }
   // STATS
   let stats=[];
